@@ -1,23 +1,61 @@
-序号,候选id,站点,host,分类数,成人分类,首页条数,详情,搜索条数,三端点ms,均值ms,结论,处置
-1,maoyanapi_top,猫眼影视,api.maoyanapi.top,53,伦理片|里番动漫,30,通,1,999/336/384,573,可用,纳入公开配置
-2,ikunzy_cc,爱坤影视,ikunzy.cc,53,伦理片|里番动漫,20,通,3,594/643/751,662,可用,纳入公开配置
-3,360zy_com,360资源,360zy.com,51,伦理片,20,通,3,706/705/1117,842,可用,纳入公开配置
-4,cj_lziapi_com,量子资源,cj.lziapi.com,40,伦理片,20,通,20,670/363/2166,1066,可用,纳入公开配置（http降级）
-5,iqiyizyapi_com,爱奇艺资源,iqiyizyapi.com,43,里番动漫|伦理片,20,通,2,906/894/1535,1111,可用,纳入公开配置
-6,xiguazy_tv,西瓜资源,xiguazy.tv,43,伦理片,20,通,7,1055/1579/2495,1709,可用,纳入公开配置
-7,api_ffzyapi_com,非凡资源,api.ffzyapi.com,31,伦理片,20,通,8,713/3345/1499,1852,可用,纳入公开配置
-8,caiji_dyttzyapi_com,天堂影视,caiji.dyttzyapi.com,32,伦理片,20,通,7,745/3573/1313,1877,可用,纳入公开配置
-9,jhysj_jiaheyy_top,龙马资源,jhysj.jiaheyy.top,7,,21,通,3,173/2695/3765,2211,可用,纳入公开配置（http降级）
-10,std_js_vod_suoni,索尼资源,suoniapi.com,61,伦理|港台三级|韩国伦理|西方伦理|日本伦理|写真热舞,20,通,-1,1077/5531/0,2202,间歇,搜索端点失败
-11,std_js_vod_huohu,火狐资源,hhzyapi.com,48,伦理片,20,失败,-1,1019/0/0,,间歇,详情与搜索端点失败
-12,std_js_vod_jinying,金鹰资源,jyzyapi.com,44,伦理片,20,通,-1,1479/1574/0,1017,间歇,搜索端点失败
-13,std_js_vod_baofeng,暴风资源,bfzyapi.com,49,福利,20,通,20,6010/786/2054,2950,可用但慢速,未纳入
-14,std_js_vod_ruyi,如意资源,www.ryzyw.com,43,伦理片,20,通,3,1792/3242/3242,2758,可用但慢速,未纳入
-15,std_js_vod_hongniu,红牛资源,www.hongniuzy2.com,44,伦理片,20,失败,-1,2679/9226/7297,6400,不纳入,端点失败
-16,std_js_vod_huya,虎牙资源,www.huyaapi.com,44,伦理片,20,失败,-1,1476/7366/6329,5057,不纳入,端点失败
-17,std_js_vod_niuniu,牛牛资源,api.niuniuzy.me,59,伦理|港台三级|韩国伦理|西方伦理|日本伦理|写真热舞,20,通,-1,5788/6671/10435,7631,不纳入,搜索失败
-18,std_js_vod_zuida,最大资源,api.zuidapi.com,,,,,,,未探通,首轮与重试均超时
-19,std_js_vod_jisu,极速资源,jszyapi.com,,,,,,,未探通,首轮与重试均超时
-20,std_js_vod_piaoling,飘零资源,p2100.net,,,,,,,未探通,首轮与重试均超时
-21,std_js_vod_modu,魔都资源,www.mdzyapi.com,,,,,,,未探通,首轮与重试均超时
-22,std_js_vod_wujin,无尽资源,api.wujinapi.com,,,,,,,未探通,第二轮 ac=list 仍失败
+﻿序号,id,名称,api,分类数,成人分类数,list,分类取片,详情,播放,搜索,结论,处置,档位,证据
+1,jhysj_jiaheyy_top,龙马资源,http://jhysj.jiaheyy.top/api.php/provide/vod,7,0,通,通,通,通,通,收录,公开配置,快速,
+2,www_lovedan_net,艾旦影视,https://www.lovedan.net/api.php/provide/vod,70,7,通,通,通,通,通,收录,公开配置,间歇,
+3,bfzyapi_com,暴风资源,https://bfzyapi.com/api.php/provide/vod,49,1,通,通,通,通,通,收录,公开配置,快速,
+4,caiji_dyttzyapi_com,天堂资源,https://caiji.dyttzyapi.com/api.php/provide/vod,32,1,通,通,通,通,通,收录,公开配置,快速,
+5,cj_lziapi_com,量子资源,http://cj.lziapi.com/api.php/provide/vod,40,1,通,通,通,通,通,收录,公开配置,极速,
+6,cj_ffzyapi_com,非凡资源,http://cj.ffzyapi.com/api.php/provide/vod,31,1,通,通,通,通,通,剔除,同后端重复,,分类 31 条且首集 id 2701/7449 与 api_ffzyapi_com 完全一致
+7,www_ryzyw_com,如意资源,https://www.ryzyw.com/api.php/provide/vod,43,1,通,通,通,通,通,收录,公开配置,慢速,
+8,caiji_maotaizy_cc,茅台影视,https://caiji.maotaizy.cc/api.php/provide/vod,0,0,失败,失败,失败,失败,失败,未收录,无响应/无内容,,list: status=0 ms=31 method=FAIL err=URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+9,api_zuidapi_com,最大资源,https://api.zuidapi.com/api.php/provide/vod,59,6,通,通,失败,失败,通,收录,公开配置,间歇,
+10,api_apibdzy_com,百度资源,https://api.apibdzy.com/api.php/provide/vod,54,6,通,通,失败,失败,通,收录,公开配置,间歇,
+11,suoniapi_com,索尼短剧,https://suoniapi.com/api.php/provide/vod,61,6,通,失败,失败,失败,失败,未收录,无响应/无内容,,cat t=4 ac=videolist: status=200 ms=2797 err=
+12,hhzyapi_com,火狐资源,https://hhzyapi.com/api.php/provide/vod,48,1,通,通,通,通,通,收录,公开配置,快速,
+13,jszyapi_com,极速资源,https://jszyapi.com/api.php/provide/vod,48,1,通,通,通,通,通,收录,公开配置,间歇,
+14,api_guangsuapi_com,光速资源,https://api.guangsuapi.com/api.php/provide/vod,44,1,通,通,通,通,失败,收录,公开配置,间歇,
+15,subocaiji_com,速播资源,https://subocaiji.com/api.php/provide/vod,44,1,通,通,通,通,通,收录,公开配置,慢速,
+16,www_hongniuzy2_com,红牛资源,https://www.hongniuzy2.com/api.php/provide/vod,44,1,通,通,通,通,失败,收录,公开配置,间歇,
+17,jyzyapi_com,金鹰资源,https://jyzyapi.com/api.php/provide/vod,44,1,通,通,通,通,通,收录,公开配置,慢速,
+18,www_huyaapi_com,虎牙资源,https://www.huyaapi.com/api.php/provide/vod,44,1,通,通,通,通,通,收录,公开配置,间歇,
+19,m3u8_apiyhzy_com,樱花资源,https://m3u8.apiyhzy.com/api.php/provide/vod,33,1,通,通,通,通,失败,收录,公开配置,间歇,
+20,p2100_net,飘零影视,https://p2100.net/api.php/provide/vod,27,0,通,通,通,通,失败,收录,公开配置,间歇,
+21,360zy_com,360资源,https://360zy.com/api.php/provide/vod,51,1,通,通,通,通,通,收录,公开配置,极速,
+22,ikunzy_cc,ikun资源,https://ikunzy.cc/api.php/provide/vod,53,2,通,通,通,通,通,收录,公开配置,极速,
+23,iqiyizyapi_com,爱奇艺资源,https://iqiyizyapi.com/api.php/provide/vod,43,2,通,通,通,通,通,收录,公开配置,快速,
+24,caiji_moduapi_cc,魔都动漫,https://caiji.moduapi.cc/api.php/provide/vod,0,0,失败,失败,失败,失败,失败,未收录,无响应/无内容,,list: status=0 ms=20731 method=FAIL err=TimeoutError: The read operation timed out
+25,www_mdzyapi_com,魔都资源,https://www.mdzyapi.com/api.php/provide/vod,42,2,通,通,通,通,通,收录,公开配置,间歇,
+26,xiguazy_tv,西瓜资源,https://xiguazy.tv/api.php/provide/vod,43,1,通,通,通,通,通,收录,公开配置,极速,
+27,cdn_dzzyapi_com,大众影视,https://cdn.dzzyapi.com/api.php/provide/vod,32,1,通,通,通,通,失败,收录,公开配置,间歇,
+28,api_ukuapi88_com,U酷资源,https://api.ukuapi88.com/api.php/provide/vod,29,1,通,通,通,通,通,收录,公开配置,间歇,
+29,api_maoyanapi_top,猫眼影视,https://api.maoyanapi.top/api.php/provide/vod,53,2,通,通,通,通,通,收录,公开配置,极速,
+30,api_acfuns_net,AcFuns,http://api.acfuns.net/api.php/provide/vod,0,0,失败,失败,失败,失败,失败,未收录,无响应/无内容,,"list: 200 但 class 为空 body=b'{""code"":1,""msg"":""\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x97\xe8\xa1\xa8"",""page"
+31,ffzy5_tv,非凡资源,https://ffzy5.tv/api.php/provide/vod,31,1,通,通,通,通,通,剔除,同后端重复,,分类 31 条且首集 id 2701/7449 与 api_ffzyapi_com 完全一致
+32,api_ffzyapi_com,非凡资源,https://api.ffzyapi.com/api.php/provide/vod,31,1,通,通,通,通,通,收录,公开配置,快速,
+33,360zyzz_com,360资源,https://360zyzz.com/api.php/provide/vod,51,1,通,通,通,通,通,收录,公开配置,极速,
+34,api_wujinapi_com,无尽资源,https://api.wujinapi.com/api.php/provide/vod,63,6,通,通,通,通,失败,收录,公开配置,间歇,
+35,api_niuniuzy_me,牛牛资源,https://api.niuniuzy.me/api.php/provide/vod,59,6,通,失败,失败,失败,失败,未收录,无响应/无内容,,cat t=4 ac=videolist: status=0 ms=20358 err=URLError: <urlopen error _ssl.c:989: The handshake opera
+36,bhziyuan_com,成人｜bhziyuan,https://bhziyuan.com/api.php/provide/vod,22,2,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+37,api_vnzyz_com,成人｜vnzyz,https://api.vnzyz.com/api.php/provide/vod,21,4,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+38,jkunzyapi_com,成人｜jkunzy,https://jkunzyapi.com/api.php/provide/vod,25,5,通,通,通,失败,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+39,heiliaozyapi_com,成人｜heiliaozy,https://heiliaozyapi.com/api.php/provide/vod,24,4,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+40,thzy1_me,成人｜thzy1,https://thzy1.me/api.php/provide/vod,15,2,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+41,fqzy_me,成人｜fqzy,https://fqzy.me/api.php/provide/vod,29,3,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+42,xxavs_com,成人｜xxavs,https://xxavs.com/api.php/provide/vod,3,0,通,通,通,失败,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+43,caiji_kuaichezy_org,快车资源(快),https://caiji.kuaichezy.org/api.php/provide/vod,59,6,通,通,失败,失败,失败,收录,公开配置,间歇,
+44,jinyingzy_com,金鹰点播,https://jinyingzy.com/api.php/provide/vod,44,1,通,通,通,通,通,收录,公开配置,间歇,
+45,tyyszy_com,天涯影视,https://tyyszy.com/api.php/provide/vod,39,1,通,通,通,通,失败,收录,公开配置,间歇,
+46,api_xinlangapi_com,新浪资源,https://api.xinlangapi.com/xinlangapi.php/provide/vod,48,1,通,通,通,通,通,收录,公开配置,间歇,
+47,api_wujinapi_me,无尽资源(me),https://api.wujinapi.me/api.php/provide/vod,63,6,通,失败,失败,失败,失败,未收录,无响应/无内容,,list: status=0 ms=21107 method=FAIL err=TimeoutError: The read operation timed out
+48,aosikazy_com,奥斯卡资源,https://aosikazy.com/api.php/provide/vod,28,4,通,通,通,通,失败,收录,成人源分流至私有域,成人,样例 nsfw=true
+49,api_douapi_cc,豆豆资源,https://api.douapi.cc/api.php/provide/vod,28,4,通,通,通,通,失败,收录,成人源分流至私有域,成人,样例 nsfw=true
+50,api_souavzy_vip,souav资源,https://api.souavzy.vip/api.php/provide/vod,0,0,失败,失败,失败,失败,失败,未收录,无响应/无内容,,list: status=0 ms=20654 method=FAIL err=TimeoutError: The read operation timed out
+51,sdzyapi_com,闪电资源,https://sdzyapi.com/api.php/provide/vod,59,6,通,失败,失败,失败,失败,未收录,无响应/无内容,,list: status=0 ms=25216 method=FAIL err=TimeoutError: The read operation timed out
+52,xsd_sdzyapi_com,闪电资源(xsd),https://xsd.sdzyapi.com/api.php/provide/vod,59,6,通,通,失败,失败,失败,收录,公开配置,间歇,
+53,lbapi9_com,乐播资源,https://lbapi9.com/api.php/provide/vod,17,4,通,通,通,通,通,收录,公开配置,间歇,
+54,beiyong_slapibf_com,森林资源,https://beiyong.slapibf.com/api.php/provide/vod,42,4,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+55,ckzy_me,CK资源,https://ckzy.me/api.php/provide/vod,2,1,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+56,cj_yayazy_net,鸭鸭资源,https://cj.yayazy.net/api.php/provide/vod,59,6,通,通,失败,失败,失败,收录,公开配置,间歇,
+57,api_wsyzy_net,无水印资源,https://api.wsyzy.net/api.php/provide/vod,60,6,通,通,通,通,失败,收录,公开配置,间歇,
+58,fhapi9_com,番号资源,https://fhapi9.com/api.php/provide/vod,32,3,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+59,apidanaizi_com,大奶子资源,https://apidanaizi.com/api.php/provide/vod,36,2,通,通,通,通,通,收录,成人源分流至私有域,成人,样例 nsfw=true
+60,apilsbzy1_com,老色逼资源,https://apilsbzy1.com/api.php/provide/vod,25,4,通,通,通,通,失败,收录,成人源分流至私有域,成人,样例 nsfw=true

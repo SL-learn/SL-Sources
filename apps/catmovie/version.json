@@ -1,10 +1,10 @@
 {
   "id": "catmovie",
   "name": "小猫影视",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "updated": "2026-11-07",
   "status": "beta",
   "config": "config.json",
-  "sites": 9,
-  "lives": 1
+  "sites": 36,
+  "lives": 6
 }
