@@ -1,0 +1,10 @@
+{
+  "id": "reading",
+  "name": "阅读/Legado",
+  "version": "1.0.0",
+  "updated": "2026-11-07",
+  "status": "beta",
+  "modules": ["书源", "订阅源"],
+  "templates": ["书源/模板.json", "订阅源/模板.json"],
+  "sourceBaseline": "参考资料/阅读3.0-hectorqin@da17bb2"
+}

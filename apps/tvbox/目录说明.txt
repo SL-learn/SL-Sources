@@ -1,5 +1,5 @@
-tvboxSL 包 v1.0.1
-=====================
+tvbox 包 v2.0.0
+================
 
 定位
 ----
@@ -8,28 +8,28 @@ tvboxSL 包 v1.0.1
 
 三个入口，别填错
 ----------------
-文件名                适用场景                       填法
-api_index_local.json  整包拷到手机，本地离线用        clan://localhost/tvboxSL/api_index_local.json
-api_index.json        在线直拉（raw，含 jar 引用）     https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_index.json
-api_all.json          客户端不支持多线路索引时        https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_all.json
+文件名                适用场景                         填法
+api_index_local.json  整包拷到手机，本地离线用          clan://localhost/tvbox/api_index_local.json
+api_index.json        在线直拉（raw，含 jar 引用）       https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json
+api_all.json          客户端不支持多线路索引时          https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json
 
 关于 jsDelivr：
-- api_all.json 可换用 https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@main/apps/tvbox/packages/tvboxSL/api_all.json
+- api_all.json 可换用 https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@main/apps/tvbox/api_all.json
   （它内部全部是绝对 raw 地址，CDN 只负责下发这一份 JSON）。
 - api_index.json 不要换 jsDelivr：线路配置用 ./spider.jar 这类相对引用，会跟着解析到 CDN，
   而 jsDelivr 对 .jar 一律返回 403（实测两次均 403），导致整条线路加载失败。
 
-区别：
-- api_index_local.json 用 clan:// 指向本地三条线路，不联网；整包必须放在 /sdcard/TVBox/tvboxSL/，目录名不能改。
+三种入口的区别：
+- api_index_local.json 用 clan:// 指向本地三条线路，不联网；整包必须放在 /sdcard/TVBox/tvbox/。
 - api_index.json 只含三条线路地址（绝对 URL），选线路后各自加载，站点分开管理。
 - api_all.json 把三条线路 151 个站点合成一份，只有一个站点列表；适合不认 urls 索引的客户端。
 
 安装（本地，推荐）
 ------------------
-1. 把整个 tvboxSL 目录放到手机存储：/sdcard/TVBox/tvboxSL/
-   目录名必须保持 tvboxSL，不能改名。
+1. 把整个 apps/tvbox 目录下的内容放到手机存储：/sdcard/TVBox/tvbox/
+   目录名必须保持 tvbox，不能改名。
 2. 打开 TVBox → 设置 → 配置地址，填：
-   clan://localhost/tvboxSL/api_index_local.json
+   clan://localhost/tvbox/api_index_local.json
 3. 客户端识别出 3 条线路并自动加载第一条（综合线路）。
 4. 设置页出现「线路」一行，点开即可在 综合 / 少儿 / 长辈 之间切换。
 
@@ -40,24 +40,22 @@ api_all.json          客户端不支持多线路索引时        https://raw.gi
 
 重要：路径里不要用百分号编码
 ----------------------------
-线路目录名含中文和空格（如 SL 综合线路）。索引里必须写原样的中文，
-不要写成 SL%20%E7%BB%BC...；本地文件服务不解码百分号，写编码会 404，
-表现为「选了线路但站点是空的」。
+线路目录已改为 ASCII 短名（std / kids / elders），
+索引里不要再写中文目录名，也不要写 SL%20%E7%BB%BC 这类百分号编码。
 
 线路与站点数
 ------------
-- SL 综合线路（std）：123 站
-- SL 少儿线路（kid）：17 站
-- SL 长辈线路（eld）：11 站
+- std（综合）：123 站
+- kids（少儿）：17 站
+- elders（长辈）：11 站
 - api_all.json 合计：151 站
 
 目录说明
 --------
 _common/jar/       公共 jar，线路内以 ../_common/jar/xxx.jar 引用
 _common/md5.txt    jar 校验清单（文件名,md5,大小）
-spider.jar         该线路顶层入口 jar（固定名，必须存在，否则整份配置加载失败）
-api.json           该线路唯一配置
-js/ py/ open/ ext/ lib/ api/ config/   该线路脚本与规则
+std/ kids/ elders/ 三条线路目录，各含 api.json、spider.jar（固定名）与 js/py/open/ext/lib/api/config
+version.json       包版本与线路登记（客户端不读取）
 
 内容屏蔽
 --------
@@ -69,10 +67,10 @@ js/ py/ open/ ext/ lib/ api/ config/   该线路脚本与规则
 
 版本与校验
 ----------
-版本：1.0.1（2026-11-07）
+版本：2.0.0（2026-11-07）
 所有 jar 引用均带 ;md5;，md5 见 _common/md5.txt 与各 api.json。
 
 免责声明
 --------
 本包只做配置聚合，不存储、不转存任何影视内容；所有内容版权归原站点所有。
-如有侵权，请联系仓库所有者，收到通知后立即移除对应条目。
+如有侵权，请通知仓库所有者，收到通知后立即移除对应条目。

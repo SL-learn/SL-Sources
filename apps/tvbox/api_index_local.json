@@ -1,0 +1,16 @@
+{
+  "urls": [
+    {
+      "name": "综合",
+      "url": "clan://localhost/tvbox/std/api.json"
+    },
+    {
+      "name": "少儿",
+      "url": "clan://localhost/tvbox/kids/api.json"
+    },
+    {
+      "name": "长辈",
+      "url": "clan://localhost/tvbox/elders/api.json"
+    }
+  ]
+}

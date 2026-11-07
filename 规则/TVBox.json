@@ -1,0 +1,71 @@
+{
+  "应用": "TVBox",
+  "suite": "TVBoxP0",
+  "baseline": "TVBox 自建源统一规格规范（R-KEY/R-NAME/R-CFG/R-EXT/R-CHG）",
+  "入口形态": "配置对象",
+  "域": {
+    "默认": "公开",
+    "取值": {
+      "公开": "阻断",
+      "私有": "打标"
+    },
+    "说明": "公开域命中成人内容判不通过；私有域只打标「成人域」并建议收敛曝光，不阻断。由 --域 覆盖。"
+  },
+  "顶层字段允许": ["spider", "jarCache", "danmaku", "wallpaper", "sites", "flags",
+                  "parses", "lives", "hosts", "rules", "doh", "ads", "proxy"],
+  "顶层字段禁用": [],
+  "sites必填": ["key", "type", "api"],
+  "sites字段允许": ["key", "type", "api", "name", "searchable", "quickSearch", "changeable",
+                  "playUrl", "ext", "jar", "playerType", "categories", "timeout", "click", "style"],
+  "sites字段禁用": ["filterable", "loader", "hidden", "private", "disabled"],
+  "keyRegex": "^[a-z][a-z0-9_]{2,31}$",
+  "禁用key": ["push_agent"],
+  "key前缀": {
+    "0": ["cms_"],
+    "1": ["cms_"],
+    "3": ["jar_", "js_", "py_"],
+    "4": ["rms_"]
+  },
+  "type允许": [0, 1, 3, 4],
+  "name禁止字符": ["$$$", "$", "#", "|", "\n", "\r"],
+  "name长度": [2, 10],
+  "数字开关字段": ["searchable", "quickSearch", "changeable"],
+  "数字字段": ["type", "playerType", "timeout"],
+  "playerType允许": [-1, 1, 2],
+  "timeout范围": [5, 60],
+  "classWordList": ["电影", "电视剧", "综艺", "动漫", "纪录片", "短剧", "直播", "体育", "少儿", "其它"],
+  "adultKeywordRegex": "成人|色情|情色|涩情|里番|H漫|无码|有码|R18|18\\+|18禁|AV女优|约炮|裸聊|🔞",
+  "adultDomainListPath": "D:\\Dev\\SL_Dev\\SL_TVBOX\\参考资料\\阅读3.0-hectorqin\\app\\src\\main\\assets\\18PlusList.txt",
+  "adultDomainSupplement": [],
+  "修复": {
+    "启用动作": ["F-01", "F-02", "F-03", "F-04", "F-05", "F-06", "F-07", "F-08", "F-09", "F-10", "F-11", "F-12"],
+    "默认字段": {
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1
+    },
+    "删除字段": ["filterable", "loader"],
+    "开关真值": 1,
+    "开关假值": 0,
+    "key非法字符": ["-", ".", " ", "—", "－", "：", "/"]
+  },
+  "补充": {
+    "启用动作": ["S-01", "S-02", "S-03", "S-04", "S-05", "S-06"],
+    "默认ext版本": 1,
+    "私有域收敛开关": {
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    }
+  },
+  "探活": {
+    "启用": true,
+    "站点采样上限": 20,
+    "单源请求上限": 6,
+    "总超时秒": 10,
+    "重试": 1,
+    "重试间隔秒": 1,
+    "关键词": "庆余年",
+    "说明": "TVBox 规范未单列探活章节；maccms 端点、超时、重试、采样沿用《小猫影视源规范》CAT-PRB-002/CAT-PRB-003（同为 maccms 接口），jar/js/py 与本地路径只判定可达或跳过，契约不执行。该口径作为待拍板项。"
+  }
+}

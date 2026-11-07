@@ -1,0 +1,139 @@
+{
+  "应用": "阅读",
+  "suite": "阅读P0",
+  "baseline": "hectorqin/legado@da17bb2",
+  "入口形态": "书源数组",
+  "域": {
+    "默认": "公开",
+    "取值": {
+      "公开": "阻断",
+      "私有": "打标"
+    },
+    "说明": "公开域命中成人内容判不通过；私有域只打标「成人域」，不阻断。由 --域 覆盖，不写死在代码里。"
+  },
+  "requiredTopKeys": [
+    "bookSourceUrl", "bookSourceName", "bookSourceGroup", "bookSourceType",
+    "bookUrlPattern", "customOrder", "enabled", "enabledExplore", "jsLib",
+    "enabledCookieJar", "concurrentRate", "header", "loginUrl", "loginUi",
+    "loginCheckJs", "coverDecodeJs", "bookSourceComment", "variableComment",
+    "lastUpdateTime", "respondTime", "weight", "exploreUrl", "exploreScreen",
+    "ruleExplore", "searchUrl", "ruleSearch", "ruleBookInfo", "ruleToc",
+    "ruleContent"
+  ],
+  "forbiddenTopKeys": ["ruleReview", "enabledReview"],
+  "allowedGroups": ["正版", "出版", "优质", "精选", "轻文", "听书", "漫画", "文件", "备用", "待校验"],
+  "groupSeparators": [",", ";", "，", "；"],
+  "forbiddenGroupSeparators": [";", "，", "；"],
+  "typeGroupRules": {
+    "听书": 1,
+    "漫画": 2,
+    "文件": 3,
+    "正版": 0,
+    "出版": 0
+  },
+  "nameRegex": "^[\\u4e00-\\u9fa5A-Za-z0-9·\\-（）()\\s]{2,24}$",
+  "urlRegex": "^https?://[a-z0-9.-]+$",
+  "commentRegex": "来源[:：][^；]+；基线[:：][^；]+；探活[:：][ABCD][^；]*；复探[:：]\\d{4}-\\d{2}-\\d{2}",
+  "credentialRegex": "Bearer\\s+[A-Za-z0-9\\-._~+/]{16,}|(?:Authorization|Cookie|Set-Cookie)\\s*[:=]\\s*[\"'][^\"']{16,}|token\\s*=\\s*[\"'][A-Za-z0-9\\-._~]{16,}|\\b1[3-9]\\d{9}\\b",
+  "forbiddenVars": ["searchKey", "searchPage"],
+  "adultGroupRegex": "18\\+|18plus|成人|色情|情色|涩情|里番|H漫|无码|R18|午夜|激情|福利姬",
+  "adultKeywordRegex": "成人|色情|情色|涩情|里番|H漫|无码|有码|R18|18\\+|AV女优|约炮|裸聊",
+  "adultDomainSupplement": [],
+  "limits": {
+    "nameMin": 2,
+    "nameMax": 24,
+    "maxGroups": 3,
+    "maxExploreKinds": 30,
+    "exploreTitleMin": 2,
+    "exploreTitleMax": 8,
+    "inlineJsMax": 400,
+    "jsLibMax": 262144,
+    "entryMax": 65536,
+    "weightMin": -100,
+    "weightMax": 100
+  },
+  "requiredSubFields": {
+    "search": ["bookList", "name", "author", "bookUrl"],
+    "explore": ["bookList", "name", "bookUrl"],
+    "toc": ["chapterList", "chapterName", "chapterUrl"],
+    "content": ["content"]
+  },
+  "plus18ListPath": "D:\\Dev\\SL_Dev\\SL_TVBOX\\参考资料\\阅读3.0-hectorqin\\app\\src\\main\\assets\\18PlusList.txt",
+  "修复": {
+    "启用动作": ["F-01", "F-02", "F-03", "F-04", "F-05", "F-06", "F-07", "F-08"],
+    "默认字段": {
+      "bookSourceGroup": "",
+      "bookUrlPattern": "",
+      "customOrder": 0,
+      "enabled": true,
+      "enabledExplore": true,
+      "jsLib": "",
+      "enabledCookieJar": true,
+      "concurrentRate": "",
+      "header": "",
+      "loginUrl": "",
+      "loginUi": "",
+      "loginCheckJs": "",
+      "coverDecodeJs": "",
+      "bookSourceComment": "",
+      "variableComment": "",
+      "lastUpdateTime": 0,
+      "respondTime": 180000,
+      "weight": 0,
+      "exploreUrl": "",
+      "exploreScreen": "",
+      "ruleExplore": {},
+      "searchUrl": "",
+      "ruleSearch": {},
+      "ruleBookInfo": {},
+      "ruleToc": {},
+      "ruleContent": {}
+    },
+    "分组别名": {
+      "优质源": "优质",
+      "精选源": "精选",
+      "正版源": "正版",
+      "出版源": "出版",
+      "轻文源": "轻文",
+      "听书源": "听书",
+      "漫画源": "漫画",
+      "文件源": "文件",
+      "备用源": "备用",
+      "待校验源": "待校验"
+    },
+    "分组分隔符": [",", ";", "，", "；"],
+    "canReName真值": "1",
+    "canReName假值": ""
+  },
+  "补充": {
+    "启用动作": ["S-01", "S-02", "S-03"],
+    "默认分组": "待校验",
+    "按类型分组": {
+      "0": "待校验",
+      "1": "听书",
+      "2": "漫画",
+      "3": "文件"
+    },
+    "checkKeyWord": {
+      "启用": true,
+      "长度最小": 2,
+      "长度最大": 6,
+      "剔除词": ["书源", "备用", "主线", "备线", "下载", "听书", "漫画", "正版", "出版", "精选", "优质", "轻文"]
+    },
+    "注释模板": "来源：待补；基线：{基线}；探活：C；复探：{日期}"
+  },
+  "探活": {
+    "启用": true,
+    "接口": "搜索",
+    "关键词": "我的",
+    "采样上限": 20,
+    "总超时秒": 60,
+    "连接超时秒": 15,
+    "总超时上限秒": 180,
+    "重试": 1,
+    "重试间隔秒": 1,
+    "最小响应字节": 200,
+    "A最大耗时毫秒": 15000,
+    "说明": "端点=searchUrl（checkKeyWord 缺省「我的」）；超时按 RBS-PRB-009（连接 15s/读 60s）；重试按 RBS-PRB-011（首轮+1 次）；总时长按 RBS-PRB-010（180s）。规则级解析本工具不执行，仅完成网络段，故 2xx 只判 C 待复核。"
+  }
+}

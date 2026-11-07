@@ -1,0 +1,2 @@
+日期,应用id,包id,包版本,对象总数,可用,间歇,不可用,无法判定,新增失效,恢复,报告路径,原始数据路径
+2026-11-07,tvbox,tvboxSL,1.0.0,21,17,0,0,4,0,0,records/2026-11-07/tvbox/探活报告-tvboxSL.md,records/2026-11-07/tvbox/tvboxSL.json

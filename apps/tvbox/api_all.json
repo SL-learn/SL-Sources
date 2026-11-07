@@ -1,5 +1,5 @@
 {
-  "spider": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323",
+  "spider": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323",
   "wallpaper": "",
   "sites": [
     {
@@ -10,17 +10,17 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_df5bf731.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_df5bf731.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "std_js_live_310",
       "name": "星星-310看球",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/drpy2.min.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/drpy2.min.js",
       "style": {
         "type": "list"
       },
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/310直播.js"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/310直播.js"
     },
     {
       "key": "std_jar_vod_360spider",
@@ -30,13 +30,13 @@
       "filterable": 1,
       "quickSearch": 1,
       "searchable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_df5bf731.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_df5bf731.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "std_js_vod_360zy",
       "name": "三六秒播",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 0
@@ -45,21 +45,21 @@
       "key": "std_js_live_360",
       "name": "星星-360看球",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/drpy2.min.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/drpy2.min.js",
       "style": {
         "type": "list"
       },
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/360吧.js"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/360吧.js"
     },
     {
       "key": "std_js_live_88",
       "name": "星星-八八看球",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/drpy2.min.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/drpy2.min.js",
       "style": {
         "type": "list"
       },
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/88看球.js"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/88看球.js"
     },
     {
       "key": "std_jar_vod_aid",
@@ -72,14 +72,14 @@
         "type": "rect",
         "ratio": 3.8
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_df5bf731.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_df5bf731.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "name": "师兄秒播",
       "key": "std_jar_vod_appv7dsx",
       "type": 3,
       "api": "csp_AppV7Amns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -90,7 +90,7 @@
       "key": "std_jar_vod_appv7mtq",
       "type": 3,
       "api": "csp_AppV7Amns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -101,7 +101,7 @@
       "key": "std_jar_vod_appv7xhr",
       "type": 3,
       "api": "csp_AppV7Amns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -112,7 +112,7 @@
       "key": "std_jar_vod_czzy",
       "type": 3,
       "api": "csp_CzzyAmns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -123,7 +123,7 @@
       "key": "std_jar_vod_dubk",
       "type": 3,
       "api": "csp_DubkAmns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -134,7 +134,7 @@
       "key": "std_jar_vod_guazi",
       "type": 3,
       "api": "csp_GuaziAmns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -145,7 +145,7 @@
       "key": "std_jar_vod_jinpai",
       "type": 3,
       "api": "csp_JinPaiAmns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
@@ -155,7 +155,7 @@
       "key": "std_jar_vod_newgrv2",
       "type": 3,
       "api": "csp_NewGrV2Amns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -165,7 +165,7 @@
       "key": "std_py_vod_s017",
       "name": "星星-秒播",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/py/毒蛇.py",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/py/毒蛇.py",
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
@@ -176,7 +176,7 @@
       "key": "std_py_vod_s018",
       "name": "星星-秒播2",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/py/热播.py",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/py/热播.py",
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
@@ -187,7 +187,7 @@
       "key": "std_py_vod_s019",
       "name": "星星-秒播3",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/py/瓜娃子.py",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/py/瓜娃子.py",
       "searchable": 1,
       "changeable": 1,
       "quickSearch": 1,
@@ -198,7 +198,7 @@
       "key": "std_py_vod_s020",
       "name": "星星-秒播4",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/py/金牌影视.py",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/py/金牌影视.py",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -224,7 +224,7 @@
         "json": "./json/哔哩合集.json",
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingxing_e3705c07.jar;md5;e3705c07efd0ca14175cd29acf5dc580"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingxing_e3705c07.jar;md5;e3705c07efd0ca14175cd29acf5dc580"
     },
     {
       "key": "std_jar_vod_s023",
@@ -239,7 +239,7 @@
         "ratio": 3.8
       },
       "gridview": "0-0-4.1",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingxing_e3705c07.jar;md5;e3705c07efd0ca14175cd29acf5dc580"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingxing_e3705c07.jar;md5;e3705c07efd0ca14175cd29acf5dc580"
     },
     {
       "key": "std_jar_vod_234xbpq",
@@ -259,7 +259,7 @@
         "分类url": "https://ikan234.com/list/{cateId}-{catePg}.html",
         "分类": "电视剧$2#电影$1#动漫$4#短剧$5#综艺$3"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_3602",
@@ -267,7 +267,7 @@
       "type": 3,
       "api": "csp_HBcms10",
       "ext": "https://360zy.com/api.php/provide/vod/",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_3qqq",
@@ -276,7 +276,7 @@
       "timeout": 15,
       "api": "csp_App3Q",
       "ext": "https://asd123sx23xdacsx.top",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_4kav",
@@ -284,14 +284,14 @@
       "type": 3,
       "api": "csp_HB4kav",
       "playerType": 2,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_js_vod_anime1",
       "name": "A1-动漫",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/ext/drpy2.min.js",
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/ext/Anime1.js"
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/ext/drpy2.min.js",
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/ext/Anime1.js"
     },
     {
       "key": "std_jar_vod_bili",
@@ -308,7 +308,7 @@
       "ext": {
         "json": "https://nos.netease.com/ysf/0075389dca9afadd4614e9713765ff17.txt"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_vod_biliych",
@@ -325,20 +325,20 @@
       "ext": {
         "json": "https://nos.netease.com/ysf/6496356286589c68f52c2f99c0c674c7.txt"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_live_s033",
       "name": "B站直播",
       "type": 3,
       "api": "csp_BilibiliLive",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_js_live_91",
       "name": "91电视丨直播",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/open/91live_zb.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/open/91live_zb.js",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1
@@ -347,18 +347,18 @@
       "key": "std_js_vod_97",
       "name": "97搜索丨搜索",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/open/97_search.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/open/97_search.js",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/config/env.json",
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/config/env.json",
       "类型": "搜索"
     },
     {
       "key": "std_js_vod_s036",
       "name": "哔哩网-APP",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cat_哔哩影视.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cat_哔哩影视.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -369,7 +369,7 @@
       "key": "std_js_live_s037",
       "name": "聚合丨央视",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/open/yangshi_juhe.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/open/yangshi_juhe.js",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1
@@ -378,7 +378,7 @@
       "key": "std_js_vod_s038",
       "name": "聚合丨知识",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/open/zhishi_juhe.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/open/zhishi_juhe.js",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1
@@ -387,8 +387,8 @@
       "key": "std_js_live_drjs",
       "name": "虎牙直播JS",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/drpy2.min.js",
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/虎牙直播.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/drpy2.min.js",
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/虎牙直播.js",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1
@@ -402,14 +402,14 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_live_douyu",
       "name": "手游-直播",
       "type": 3,
       "api": "csp_Douyu",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_a4f403a0.jar;md5;a4f403a000bc5e4ebdd9da27fcb05852",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_a4f403a0.jar;md5;a4f403a000bc5e4ebdd9da27fcb05852",
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
@@ -425,31 +425,31 @@
       "name": "瓜子弹幕",
       "type": 3,
       "api": "csp_HBGuaZi",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_hbpianku8",
       "name": "片库弹幕",
       "type": 3,
       "api": "csp_HBPianKu8",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_hbxingkong4k",
       "name": "空星弹幕",
       "type": 3,
       "api": "csp_HBXingKong4K",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_js_live_js",
       "name": "哔哩直播js",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/drpy2.min.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/drpy2.min.js",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/哔哩直播.js"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/哔哩直播.js"
     },
     {
       "key": "std_jar_live_live",
@@ -462,7 +462,7 @@
         "type": "rect",
         "ratio": 3.8
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_mtv",
@@ -479,7 +479,7 @@
       "ext": {
         "json": "https://nos.netease.com/ysf/5af5fbe12a88b7c45aa1c21e6551826c.txt"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_vod_uc",
@@ -492,7 +492,7 @@
       "ext": {
         "Cloud-drive": "tvfan/Cloud-drive.txt"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_vod_ygp",
@@ -502,7 +502,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_vod_yunzhenxiang",
@@ -516,7 +516,7 @@
         "index_url": "https://ss.trgfd.cn/cache/index/com.baiyunvideo.app.json",
         "key_api": "https://www.tangsan.fun/zx.php"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_live_alllive",
@@ -533,13 +533,13 @@
       "quickSearch": 0,
       "changeable": 0,
       "ext": "uqGL1fpJNAUN8ORQgIPD+b6l+CzC2t8=",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_js_vod_123tv",
       "name": "壹影网-APP",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cat_123TV.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cat_123TV.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -550,7 +550,7 @@
       "key": "std_js_vod_age",
       "name": "AGE-动漫",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/AGE动漫.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/AGE动漫.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -561,7 +561,7 @@
       "key": "std_js_vod_s055",
       "name": "剧踪网-APP",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/剧踪.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/剧踪.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -572,7 +572,7 @@
       "key": "std_js_vod_s056",
       "name": "哔哩-合集",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cat_哔哩.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cat_哔哩.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -583,7 +583,7 @@
       "key": "std_js_vod_s057",
       "name": "西瓜网-APP",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/西瓜视频.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/西瓜视频.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -594,7 +594,7 @@
       "key": "std_js_tool_s058",
       "name": "豆瓣-推荐",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/豆瓣.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/豆瓣.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -605,7 +605,7 @@
       "key": "std_js_vod_s059",
       "name": "电影网-APP",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cat_高工电影网.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cat_高工电影网.js",
       "style": {
         "type": "rect",
         "ratio": 1
@@ -628,7 +628,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "std_jar_vod_appte",
@@ -638,7 +638,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "api": "csp_AppTe",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_bbb",
@@ -656,7 +656,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "std_jar_vod_blsgod",
@@ -666,7 +666,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_bdys",
@@ -677,7 +677,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://v.xlys.ltd.ua",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_cjhj",
@@ -686,7 +686,7 @@
       "api": "csp_Cjhj",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_czsapp",
@@ -694,7 +694,7 @@
       "type": 3,
       "api": "csp_Czsapp",
       "ext": "https://www.4kcz.com",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_ddys",
@@ -704,7 +704,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_douban",
@@ -714,8 +714,8 @@
       "searchable": 0,
       "changeable": 1,
       "indexs": 1,
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/douban.json",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/douban.json",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_dygod",
@@ -725,7 +725,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_guazi2",
@@ -734,7 +734,7 @@
       "api": "csp_Guazi",
       "searchable": 1,
       "changeable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_guazisport",
@@ -743,7 +743,7 @@
       "api": "csp_GuaziSport",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_gz360",
@@ -753,7 +753,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "api": "csp_Gz360",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_ikanbot",
@@ -765,7 +765,7 @@
       "ext": {
         "host": "https://www1.ikanbot.com/"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_ikanbot2",
@@ -776,7 +776,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://v.aikanbot.com",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_jpys",
@@ -787,7 +787,7 @@
       "quickSearch": 0,
       "api": "csp_Jpys",
       "ext": "https://y2s52n7.com",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_juhesport",
@@ -796,7 +796,7 @@
       "api": "csp_JuheSport",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_kuaikan",
@@ -806,7 +806,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_liteapple",
@@ -816,7 +816,7 @@
       "filterable": 1,
       "quickSearch": 1,
       "searchable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_makkapakka",
@@ -826,7 +826,7 @@
       "searchable": 0,
       "indexs": 1,
       "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_meijutt",
@@ -837,7 +837,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://www.meijutt.net",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_new6v",
@@ -848,14 +848,14 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://www.xb6v.com",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_pianku8",
       "name": "山楂-热门4K",
       "type": 3,
       "api": "csp_PianKu8",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_qnmp4",
@@ -865,14 +865,14 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "std_jar_vod_saohuo",
       "name": "火火-高清影视",
       "type": 3,
       "api": "csp_SaoHuo",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_shuaijiao",
@@ -884,7 +884,7 @@
       "ext": {
         "sites": ""
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_wwys",
@@ -893,7 +893,7 @@
       "api": "csp_Wwys",
       "timeout": 12,
       "ext": "https://vip.wwgz.cn:5200",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_bilims",
@@ -910,7 +910,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_mtv2",
@@ -927,7 +927,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "std_jar_vod_wogg1",
@@ -936,7 +936,7 @@
       "changeable": "0",
       "api": "csp_Duopan",
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_c96b69de.jar;md5;c96b69de5ace48bcf0e522147364e048",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_c96b69de.jar;md5;c96b69de5ace48bcf0e522147364e048",
       "ext": {
         "site_urls": [
           "https://woog.nxog.fun",
@@ -959,7 +959,7 @@
       "changeable": "0",
       "api": "csp_Duopan",
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_c96b69de.jar;md5;c96b69de5ace48bcf0e522147364e048",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_c96b69de.jar;md5;c96b69de5ace48bcf0e522147364e048",
       "ext": {
         "site_urls": [
           "https://ogkk.nxog.fun",
@@ -995,22 +995,22 @@
         "分类url": "https://v.xlys.ltd.ua/s/all/{catePg}?type={cateId};;d0",
         "分类": "电影$0#电视剧$1"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_dmmiku",
       "name": "异世界动漫",
       "type": 3,
       "api": "csp_Ysj",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_tool_s093",
       "name": "虎斑-本地",
       "type": 3,
       "api": "csp_Douban",
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/huban_douban.json",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/lib/huban_douban.json",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_feiyuvideo",
@@ -1020,7 +1020,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiaomi_c14643ab.jar;md5;c14643abcd24f01a582bc987c948a16f"
     },
     {
       "key": "std_jar_vod_fishhxq",
@@ -1028,7 +1028,7 @@
       "type": 3,
       "api": "csp_FishHxq",
       "ext": "DyoqWQInJUMuGFdcDzo2Bjg3KgUuDwoENzYhHDhdUQEuUzRBDVAfHzsCBA8DJgYFDTFNHgAnKUg",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_jarcai",
@@ -1036,13 +1036,13 @@
       "type": 3,
       "api": "csp_Wcai",
       "ext": "https://www.jxshdzs.com/",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_py_vod_s098",
       "name": "文才-影视",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/ext/文才影视.py",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/ext/文才影视.py",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -1058,14 +1058,14 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "std_jar_vod_s100",
       "name": "三六-视频",
       "type": 3,
       "api": "csp_SP360",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "std_jar_vod_s101",
@@ -1079,14 +1079,14 @@
         "dataKey": "O3K6rYx75Q4xtiIE",
         "dataIv": "O3K6rYx75Q4xtiIE"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "std_jar_vod_s102",
       "name": "先生-影视",
       "type": 3,
       "api": "csp_XBPQ",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
       "ext": {
         "副标题": "欧歌专属",
         "请求头": "User-Agent$MOBILE_UA",
@@ -1103,14 +1103,14 @@
       "quickSearch": 1,
       "changeable": 0,
       "ext": "rfOIzPkSUkANv6AT2prC8en3+Trbx4j10CIoZMv3Ag4bdEYQqTMqu/Z3YPtC2NJv6n6YeZdgyWlo4WJjBL5gUt6B7LvCEDT4CLrWka31GRq7jwVkfQRB/Jy9HkG7E8xUBIJi5DdVFk3qAuGnwUWqQNRblRxzHW+tdSm6zoFcG/QkZ97bzWOXn0fzbgwjBDkBHgcPIYjlULlctCNKgJ9DzGNSl+zMZDZgmxczsZeeahRS38Cst3qvaHn1T2lmLBGVGXPaRovi77LPRRDOJSNRrdpvCHdRikYwgar0MU56hXMGeGBiKp/OmGTIYR8dFRGvZ/m8xGOqs8U13h6wvADOGlYoP9VaQBqTcDnz9Q0Urhw3oFXWyvIlUrDhX9la5L2NYzagbyk3afqhxeSXXp07nAFsNy2CojHRTbmz4eohLoIJTSi2DzPpheVx1DAapfgRdTc7Ax5ddYpN338GiDAa0GnEgLe04a1pZ5jF+/Q7HJswqlSO+DXCQ3FjRbb/ZPQcozcCWwzhUHE1QUAt799V9DPMuiHGyudIcZarGQmezB+Lb45RdHIRy0PXD+NRVPJlfDFD5FMGSqsiVklibvuwlVHT8J5vHgh/1nEZoI1RlYYLrkjTts2EeQmrpB/sgLyo1vnjFw==",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_vod_s104",
       "name": "农民-影视",
       "type": 3,
       "api": "csp_XBPQ",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
       "ext": {
         "副标题": "欧歌专属",
         "请求头": "User-Agent$MOBILE_UA",
@@ -1128,7 +1128,7 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "rfOX1voDIQhH8epBwpmIsuSluiuZl4+/lm1iJsy3HwNWMxpf9CY77fshI+kByoxy7DyPatUZ1jk0ty1p",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_vod_s106",
@@ -1140,7 +1140,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_vod_s107",
@@ -1152,7 +1152,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_jar_live_s108",
@@ -1165,13 +1165,13 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "std_js_vod_maoyan",
       "name": "猫眼-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1189,7 +1189,7 @@
       "key": "std_js_vod_feifan",
       "name": "非凡-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1198,7 +1198,7 @@
       "key": "std_js_vod_xigua",
       "name": "西瓜-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1207,7 +1207,7 @@
       "key": "std_js_vod_tiantang",
       "name": "天堂-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1216,7 +1216,7 @@
       "key": "std_js_vod_iqiyi",
       "name": "爱奇艺-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1225,7 +1225,7 @@
       "key": "std_js_vod_ikun",
       "name": "ikun-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1234,7 +1234,7 @@
       "key": "std_js_vod_baofeng",
       "name": "暴风-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1243,7 +1243,7 @@
       "key": "std_js_vod_suoni",
       "name": "索尼-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1252,7 +1252,7 @@
       "key": "std_js_vod_niuniu",
       "name": "牛牛-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1261,7 +1261,7 @@
       "key": "std_js_vod_liangzi",
       "name": "量子-快",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1270,7 +1270,7 @@
       "key": "std_js_vod_jisu",
       "name": "极速-中",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1279,7 +1279,7 @@
       "key": "std_js_vod_ruyi",
       "name": "如意-中",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1288,7 +1288,7 @@
       "key": "std_js_vod_zuida",
       "name": "最大-中",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1297,7 +1297,7 @@
       "key": "std_js_vod_jinying",
       "name": "金鹰-中",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1306,7 +1306,7 @@
       "key": "std_js_vod_piaoling",
       "name": "飘零-中",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1315,7 +1315,7 @@
       "key": "std_js_vod_huohu",
       "name": "火狐-慢",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1324,7 +1324,7 @@
       "key": "std_js_vod_hongniu",
       "name": "红牛-慢",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1333,7 +1333,7 @@
       "key": "std_js_vod_wujin",
       "name": "无尽-慢",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1342,7 +1342,7 @@
       "key": "std_js_vod_modu",
       "name": "魔都-慢",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1351,7 +1351,7 @@
       "key": "std_js_vod_huya",
       "name": "虎牙-慢",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/js/cms.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/js/cms.js",
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 1
@@ -1361,7 +1361,7 @@
       "key": "kid_jar_vod_appv7fz",
       "type": 3,
       "api": "csp_AppV7Amns",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
@@ -1371,7 +1371,7 @@
       "key": "kid_js_vod_s002",
       "name": "聚合丨儿童",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/open/erge_juhe.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/open/erge_juhe.js",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1
@@ -1383,7 +1383,7 @@
       "api": "csp_BeiLeHu",
       "searchable": 0,
       "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "kid_jar_vod_bili",
@@ -1393,8 +1393,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/lib/少儿教育.json",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/lib/少儿教育.json",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "kid_jar_vod_bili2",
@@ -1404,8 +1404,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/lib/幼儿乐园.json",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/lib/幼儿乐园.json",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "kid_jar_vod_xyqhiker",
@@ -1415,8 +1415,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/lib/兔小贝.json",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/lib/兔小贝.json",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "kid_jar_vod_bilirt",
@@ -1433,14 +1433,14 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "kid_js_vod_s008",
       "name": "儿童-启蒙",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/api/drpy2.min.js",
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/js/兔小贝.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/api/drpy2.min.js",
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/js/兔小贝.js",
       "style": {
         "type": "rect",
         "ratio": 1.597
@@ -1465,7 +1465,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s010",
@@ -1483,7 +1483,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s011",
@@ -1500,7 +1500,7 @@
       "ext": {
         "json": "https://nos.netease.com/ysf/89370c8ddf36b5e1beb4d71adb921bda.txt"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
     },
     {
       "key": "kid_jar_vod_s012",
@@ -1518,7 +1518,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s013",
@@ -1536,7 +1536,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s014",
@@ -1554,7 +1554,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s015",
@@ -1572,7 +1572,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s016",
@@ -1590,7 +1590,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s017",
@@ -1608,13 +1608,13 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "eld_js_vod_s001",
       "name": "梨园丨戏曲",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/open/liyuan_xi.js",
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/open/liyuan_xi.js",
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 1
@@ -1627,8 +1627,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/lib/戏曲多多.json",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/lib/戏曲多多.json",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
     },
     {
       "key": "eld_jar_vod_xq",
@@ -1637,15 +1637,15 @@
       "api": "csp_Lyxq",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
       "key": "eld_jar_vod_s004",
       "name": "养生-知识",
       "type": 3,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
       "api": "csp_XBPQ",
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/ext/养生堂.json",
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/ext/养生堂.json",
       "style": {
         "type": "rect",
         "ratio": 1.597
@@ -1667,7 +1667,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s006",
@@ -1685,7 +1685,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s007",
@@ -1703,7 +1703,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s008",
@@ -1713,21 +1713,21 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/xingxing_e3705c07.jar;md5;e3705c07efd0ca14175cd29acf5dc580"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xingxing_e3705c07.jar;md5;e3705c07efd0ca14175cd29acf5dc580"
     },
     {
       "key": "eld_js_vod_s009",
       "name": "随身-听看",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/api/jiduo_drpy2.min.js",
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/js/随身评书.js"
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/api/jiduo_drpy2.min.js",
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/js/随身评书.js"
     },
     {
       "key": "eld_js_vod_s010",
       "name": "养生京城",
       "type": 3,
-      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/api/huban_drpy2.min.js",
-      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/js/养生.js"
+      "api": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/api/huban_drpy2.min.js",
+      "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/js/养生.js"
     },
     {
       "key": "eld_jar_vod_s011",
@@ -1745,7 +1745,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     }
   ],
   "lives": [],

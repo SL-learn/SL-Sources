@@ -1,25 +1,26 @@
 {
-  "id": "tvboxSL",
-  "name": "综合",
-  "version": "1.0.3",
+  "id": "tvbox",
+  "name": "TVBox",
+  "version": "2.0.0",
   "updated": "2026-11-07",
   "status": "beta",
   "index": "api_index.json",
   "index_local": "api_index_local.json",
   "index_all": "api_all.json",
+  "local_root": "tvbox",
   "lines": [
     {
       "code": "std",
-      "name": "标准",
-      "dir": "SL 综合线路",
+      "name": "综合",
+      "dir": "std",
       "api": "api.json",
       "spider": "spider.jar",
       "sites": 123
     },
     {
       "code": "kid",
-      "name": "儿童",
-      "dir": "SL 少儿线路",
+      "name": "少儿",
+      "dir": "kids",
       "api": "api.json",
       "spider": "spider.jar",
       "sites": 17
@@ -27,7 +28,7 @@
     {
       "code": "eld",
       "name": "长辈",
-      "dir": "SL 长辈线路",
+      "dir": "elders",
       "api": "api.json",
       "spider": "spider.jar",
       "sites": 11

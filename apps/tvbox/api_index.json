@@ -1,0 +1,16 @@
+{
+  "urls": [
+    {
+      "name": "综合",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/api.json"
+    },
+    {
+      "name": "少儿",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/api.json"
+    },
+    {
+      "name": "长辈",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/api.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+版本号,短SHA,日期,综合站点数,少儿站点数,长辈站点数,说明
+1.0.0,9b0e26d,2026-11-07,123,17,11,首个可用版本；索引为 ./百分号编码 相对路径
+1.0.1,ed706d8,2026-11-07,123,17,11,索引改绝对 raw URL 与中文原样；新增 api_index_local.json、api_all.json
+1.0.2,cc602e6,2026-11-07,123,17,11,spider_std/kid/eld.jar 收敛为 spider.jar；补 R-NAM-22/23、R-CLI-18、R-VER-08~10
+1.0.3,pending,2026-11-07,123,17,11,修正 23 处站点级 jar 仍指向 spider_std/kid/eld.jar 的引用

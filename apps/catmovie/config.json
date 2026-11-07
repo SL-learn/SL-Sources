@@ -1,0 +1,14 @@
+{
+  "sites": [
+    {
+      "id": "jhysj_jiaheyy_top",
+      "name": "标准｜龙马资源",
+      "api": "http://jhysj.jiaheyy.top/api.php/provide/vod/",
+      "nsfw": false,
+      "logo": "",
+      "type": 0
+    }
+  ],
+  "data": [],
+  "lives": []
+}
