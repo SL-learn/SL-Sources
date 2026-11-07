@@ -6,20 +6,28 @@
 
 `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json`
 
-## 当前内容
+## 当前内容（1.1.0）
 
-| 源 | 类型 | 上游 | 成人分类 |
+| 名称 | 上游 | 分类数 | 成人分类 |
 |---|---|---|---|
-| 标准｜龙马资源 | maccms（`type:0`） | `http://jhysj.jiaheyy.top/api.php/provide/vod/` | 无 |
+| 极速｜猫眼影视 | `https://api.maoyanapi.top/api.php/provide/vod/` | 53 | 伦理片、里番动漫 |
+| 极速｜爱坤影视 | `https://ikunzy.cc/api.php/provide/vod/` | 53 | 伦理片、里番动漫 |
+| 快速｜360资源 | `https://360zy.com/api.php/provide/vod/` | 51 | 伦理片 |
+| 快速｜量子资源 | `http://cj.lziapi.com/api.php/provide/vod/` | 40 | 伦理片 |
+| 快速｜爱奇艺资源 | `https://iqiyizyapi.com/api.php/provide/vod/` | 43 | 里番动漫、伦理片 |
+| 标准｜西瓜资源 | `https://xiguazy.tv/api.php/provide/vod/` | 43 | 伦理片 |
+| 标准｜非凡资源 | `https://api.ffzyapi.com/api.php/provide/vod/` | 31 | 伦理片 |
+| 标准｜天堂影视 | `https://caiji.dyttzyapi.com/api.php/provide/vod/` | 32 | 伦理片 |
+| 标准｜龙马资源 | `http://jhysj.jiaheyy.top/api.php/provide/vod/` | 7 | 无 |
 
-只收上游本身零成人分类的源，`lives` 为空（第三方直播列表无法逐频道核验成人内容）。
+另含 1 条综合直播（VBSKY 综合）。
 
-## `extra.category` 取舍：不写
+## 归类口径
 
-- 取 **保守写法**：配置文件完全不写 `extra.category`，因此不依赖这个尚未真机验证的字段。
-- 代价：只能收录上游分类表里本身不含成人分类的源，目前只有龙马资源一个。
-- 理由：该字段是否只认数组（JSON 字符串写法会不会被忽略）尚未在真机上验证；若写入后客户端不认，会退回显示全部分类，含成人分类，与「公开域零成人」冲突。宁可源少，不留可证伪的漏洞。
-- 后续：其余含「伦理片／理论片／里番」分类的源，只有满足以下任一条件才纳入——① 上游自行移除成人分类；② `extra.category` 在真机验证为生效。
+- 分类按上游原样列出，顺序保持上游返回顺序。
+- 成人分类不删除、不隐藏，只移至该源分类序列末尾，并在名称后加 `（成人）`。
+- `extra.category` 以 JSON 字符串写入，值为 `[{"text":"分类名","id":"分类id"}]`。
+- 不写 `nsfw`；成人按「源」分流，不按「分类」屏蔽。
 
 ## 与规范的关系
 

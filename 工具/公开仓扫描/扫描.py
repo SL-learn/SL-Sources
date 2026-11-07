@@ -20,7 +20,11 @@ FORBIDDEN_NAMES = [
     re.compile(r".*清单\.csv$"),
     re.compile(r"^站点目录.*\.(json|csv)$"),
     re.compile(r"^探活明细.*"),
+    re.compile(r"^词表.*\.(txt|csv)$"),
 ]
+# 成人主体源文件：文件名含「成人」的数据文件一律视为私有域内容。
+ADULT_FILE = re.compile(r"成人.*\.(json|csv|txt)$", re.IGNORECASE)
+PRIVATE_DIRS = {"私有域"}
 PLACEHOLDER = re.compile(r"[<>{}\[\]]|YYYY|\*|\.\.\.|版本|示例")
 PATH_REF = re.compile(r"`((?:apps|规范|使用|规则|工具|变更|记录)/[^`\n]+?)`")
 MD_LINK = re.compile(r"\]\(([^)\s]+)\)")
@@ -47,9 +51,14 @@ def scan_words(root: str, words: list[str]) -> list[str]:
     hits = []
     for p in iter_files(root):
         rel = os.path.relpath(p, root)
+        base = os.path.basename(p)
         for pat in FORBIDDEN_NAMES:
-            if pat.match(os.path.basename(p)):
-                hits.append(f"{rel}: 文件本身属维护侧清单，不得入公开仓")
+            if pat.match(base):
+                hits.append(f"{rel}: 文件本身属维护侧元数据，不得入公开仓")
+        if ADULT_FILE.search(base):
+            hits.append(f"{rel}: 成人主体源文件属私有域，不得入公开仓（成人分类留在普通配置中即可）")
+        if any(part in PRIVATE_DIRS for part in rel.split(os.sep)):
+            hits.append(f"{rel}: 位于私有域目录，不得入公开仓")
         ext = os.path.splitext(p)[1].lower()
         if ext not in TEXT_EXT and os.path.basename(p) != ".gitignore":
             continue

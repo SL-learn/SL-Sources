@@ -1,0 +1,23 @@
+序号,候选id,站点,host,分类数,成人分类,首页条数,详情,搜索条数,三端点ms,均值ms,结论,处置
+1,maoyanapi_top,猫眼影视,api.maoyanapi.top,53,伦理片|里番动漫,30,通,1,999/336/384,573,可用,纳入公开配置
+2,ikunzy_cc,爱坤影视,ikunzy.cc,53,伦理片|里番动漫,20,通,3,594/643/751,662,可用,纳入公开配置
+3,360zy_com,360资源,360zy.com,51,伦理片,20,通,3,706/705/1117,842,可用,纳入公开配置
+4,cj_lziapi_com,量子资源,cj.lziapi.com,40,伦理片,20,通,20,670/363/2166,1066,可用,纳入公开配置（http降级）
+5,iqiyizyapi_com,爱奇艺资源,iqiyizyapi.com,43,里番动漫|伦理片,20,通,2,906/894/1535,1111,可用,纳入公开配置
+6,xiguazy_tv,西瓜资源,xiguazy.tv,43,伦理片,20,通,7,1055/1579/2495,1709,可用,纳入公开配置
+7,api_ffzyapi_com,非凡资源,api.ffzyapi.com,31,伦理片,20,通,8,713/3345/1499,1852,可用,纳入公开配置
+8,caiji_dyttzyapi_com,天堂影视,caiji.dyttzyapi.com,32,伦理片,20,通,7,745/3573/1313,1877,可用,纳入公开配置
+9,jhysj_jiaheyy_top,龙马资源,jhysj.jiaheyy.top,7,,21,通,3,173/2695/3765,2211,可用,纳入公开配置（http降级）
+10,std_js_vod_suoni,索尼资源,suoniapi.com,61,伦理|港台三级|韩国伦理|西方伦理|日本伦理|写真热舞,20,通,-1,1077/5531/0,2202,间歇,搜索端点失败
+11,std_js_vod_huohu,火狐资源,hhzyapi.com,48,伦理片,20,失败,-1,1019/0/0,,间歇,详情与搜索端点失败
+12,std_js_vod_jinying,金鹰资源,jyzyapi.com,44,伦理片,20,通,-1,1479/1574/0,1017,间歇,搜索端点失败
+13,std_js_vod_baofeng,暴风资源,bfzyapi.com,49,福利,20,通,20,6010/786/2054,2950,可用但慢速,未纳入
+14,std_js_vod_ruyi,如意资源,www.ryzyw.com,43,伦理片,20,通,3,1792/3242/3242,2758,可用但慢速,未纳入
+15,std_js_vod_hongniu,红牛资源,www.hongniuzy2.com,44,伦理片,20,失败,-1,2679/9226/7297,6400,不纳入,端点失败
+16,std_js_vod_huya,虎牙资源,www.huyaapi.com,44,伦理片,20,失败,-1,1476/7366/6329,5057,不纳入,端点失败
+17,std_js_vod_niuniu,牛牛资源,api.niuniuzy.me,59,伦理|港台三级|韩国伦理|西方伦理|日本伦理|写真热舞,20,通,-1,5788/6671/10435,7631,不纳入,搜索失败
+18,std_js_vod_zuida,最大资源,api.zuidapi.com,,,,,,,未探通,首轮与重试均超时
+19,std_js_vod_jisu,极速资源,jszyapi.com,,,,,,,未探通,首轮与重试均超时
+20,std_js_vod_piaoling,飘零资源,p2100.net,,,,,,,未探通,首轮与重试均超时
+21,std_js_vod_modu,魔都资源,www.mdzyapi.com,,,,,,,未探通,首轮与重试均超时
+22,std_js_vod_wujin,无尽资源,api.wujinapi.com,,,,,,,未探通,第二轮 ac=list 仍失败
