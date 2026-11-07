@@ -3,8 +3,15 @@
   "wallpaper": "",
   "sites": [
     {
+      "key": "eld_js_vod_s009",
+      "name": "🎬随身-听看",
+      "type": 3,
+      "api": "./api/jiduo_drpy2.min.js",
+      "ext": "./js/随身评书.js"
+    },
+    {
       "key": "eld_js_vod_s001",
-      "name": "梨园丨戏曲",
+      "name": "📚梨园·戏曲",
       "type": 3,
       "api": "./open/liyuan_xi.js",
       "searchable": 1,
@@ -13,7 +20,7 @@
     },
     {
       "key": "eld_jar_vod_xyqhiker",
-      "name": "戏曲多多",
+      "name": "📚戏曲多多",
       "type": 3,
       "api": "csp_XYQHiker",
       "searchable": 1,
@@ -24,7 +31,7 @@
     },
     {
       "key": "eld_jar_vod_xq",
-      "name": "戏曲-听看",
+      "name": "📚戏曲-听看",
       "type": 3,
       "api": "csp_Lyxq",
       "searchable": 1,
@@ -32,20 +39,8 @@
       "jar": "../_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
     },
     {
-      "key": "eld_jar_vod_s004",
-      "name": "养生-知识",
-      "type": 3,
-      "jar": "../_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
-      "api": "csp_XBPQ",
-      "ext": "./ext/养生堂.json",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      }
-    },
-    {
       "key": "eld_jar_vod_s005",
-      "name": "哔哩小品",
+      "name": "📚哔哩小品",
       "type": 3,
       "api": "csp_Bili",
       "searchable": 0,
@@ -63,7 +58,7 @@
     },
     {
       "key": "eld_jar_vod_s006",
-      "name": "哔哩戏曲",
+      "name": "📚哔哩戏曲",
       "type": 3,
       "api": "csp_Bili",
       "searchable": 0,
@@ -81,7 +76,7 @@
     },
     {
       "key": "eld_jar_vod_s007",
-      "name": "哔哩相声",
+      "name": "📚哔哩相声",
       "type": 3,
       "api": "csp_Bili",
       "searchable": 0,
@@ -99,7 +94,7 @@
     },
     {
       "key": "eld_jar_vod_s008",
-      "name": "星星-戏曲多多",
+      "name": "📚星星-戏曲多多",
       "type": 3,
       "api": "csp_AppLY",
       "searchable": 1,
@@ -108,22 +103,8 @@
       "jar": "../_common/jar/xingxing_e3705c07.jar;md5;e3705c07efd0ca14175cd29acf5dc580"
     },
     {
-      "key": "eld_js_vod_s009",
-      "name": "随身-听看",
-      "type": 3,
-      "api": "./api/jiduo_drpy2.min.js",
-      "ext": "./js/随身评书.js"
-    },
-    {
-      "key": "eld_js_vod_s010",
-      "name": "养生京城",
-      "type": 3,
-      "api": "./api/huban_drpy2.min.js",
-      "ext": "./js/养生.js"
-    },
-    {
       "key": "eld_jar_vod_s011",
-      "name": "戏曲-哔哩",
+      "name": "📚戏曲-哔哩",
       "type": 3,
       "api": "csp_Bili",
       "searchable": 0,
@@ -138,6 +119,25 @@
         "ratio": 1.597
       },
       "jar": "../_common/jar/ouge_367b3061.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "eld_jar_vod_s004",
+      "name": "🩺养生-知识",
+      "type": 3,
+      "jar": "../_common/jar/ouge_4d860d06.jar;md5;4d860d06ec233dbcb891b76055f099d5",
+      "api": "csp_XBPQ",
+      "ext": "./ext/养生堂.json",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      }
+    },
+    {
+      "key": "eld_js_vod_s010",
+      "name": "🩺养生京城",
+      "type": 3,
+      "api": "./api/huban_drpy2.min.js",
+      "ext": "./js/养生.js"
     }
   ],
   "lives": [],

@@ -1,5 +1,9 @@
-版本号,短SHA,日期,综合站点数,少儿站点数,长辈站点数,说明
-1.0.0,9b0e26d,2026-11-07,123,17,11,首个可用版本；索引为 ./百分号编码 相对路径
-1.0.1,ed706d8,2026-11-07,123,17,11,索引改绝对 raw URL 与中文原样；新增 api_index_local.json、api_all.json
-1.0.2,cc602e6,2026-11-07,123,17,11,spider_std/kid/eld.jar 收敛为 spider.jar；补 R-NAM-22/23、R-CLI-18、R-VER-08~10
-1.0.3,pending,2026-11-07,123,17,11,修正 23 处站点级 jar 仍指向 spider_std/kid/eld.jar 的引用
+应用,版本号,短SHA,日期,综合站点数,少儿站点数,长辈站点数,说明
+tvbox,1.0.0,9b0e26d,2026-11-07,123,17,11,首个可用版本；索引为 ./百分号编码 相对路径
+tvbox,1.0.1,ed706d8,2026-11-07,123,17,11,索引改绝对 raw URL 与中文原样；新增 api_index_local.json、api_all.json
+tvbox,1.0.2,cc602e6,2026-11-07,123,17,11,spider_std/kid/eld.jar 收敛为 spider.jar；补 NAM/CLI/VER 条款
+tvbox,1.0.3,f9a344c,2026-11-07,123,17,11,修正 23 处站点级 jar 仍指向 spider_std/kid/eld.jar 的引用
+tvbox,2.0.0,0e9f6a9,2026-11-07,123,17,11,结构重整：去掉 packages 包裹层，线路目录改 std/kids/elders；三入口重建；key 逐条不变
+tvbox,2.1.0,pending,2026-11-07,123,17,11,151 站逐条体检；名称改内容符号+清洗名+速度符号；按内容与速度重排；key 与路径不变
+catmovie,1.0.0,0e9f6a9,2026-11-07,-,-,-,首个正式包 config.json；1 个零成人分类 maccms 源；不写 extra.category
+reading,1.0.0,0e9f6a9,2026-11-07,-,-,-,书源/订阅源分目录提交模板与校验规则；个人源不入库
