@@ -1,0 +1,17 @@
+旧路径,新路径,类型,说明
+apps/tvbox/packages/tvboxSL/SL 综合线路,apps/tvbox/std,目录,线路目录改 ASCII 短名
+apps/tvbox/packages/tvboxSL/SL 少儿线路,apps/tvbox/kids,目录,线路目录改 ASCII 短名
+apps/tvbox/packages/tvboxSL/SL 长辈线路,apps/tvbox/elders,目录,线路目录改 ASCII 短名
+apps/tvbox/packages/tvboxSL/_common,apps/tvbox/_common,目录,共用 jar 上提一层
+apps/tvbox/packages/tvboxSL/api_index.json,apps/tvbox/api_index.json,文件,在线索引入口
+apps/tvbox/packages/tvboxSL/api_index_local.json,apps/tvbox/api_index_local.json,文件,本地索引入口
+apps/tvbox/packages/tvboxSL/api_all.json,apps/tvbox/api_all.json,文件,单文件全量入口
+apps/tvbox/packages/tvboxSL/version.json,apps/tvbox/version.json,文件,应用版本登记
+apps/tvbox/packages/tvboxSL/目录说明.txt,apps/tvbox/目录说明.txt,文件,随包安装说明
+records/,记录/,目录,记录目录改中文名
+records/2026-11-07/tvbox/tvboxSL.json,记录/2026-11-07/tvbox/tvbox.json,文件,去掉应用旧名
+records/2026-11-07/tvbox/探活报告-tvboxSL.md,记录/2026-11-07/tvbox/探活报告.md,文件,去掉应用旧名
+records/2026-11-07/tvbox/冲突处置-tvboxSL.md,记录/2026-11-07/tvbox/冲突处置.md,文件,去掉应用旧名
+records/探活索引.csv,记录/探活索引.csv,文件,随记录目录改名
+records/冲突处置索引.csv,记录/冲突处置索引.csv,文件,随记录目录改名
+records/版本对照表.csv,记录/版本对照表.csv,文件,随记录目录改名
