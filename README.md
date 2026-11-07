@@ -62,6 +62,7 @@
 | R-CLI-15 | 客户端只有一份当前配置（`API_URL` 单键）；不同包不会同时并列显示，只能通过接口历史切换 | `HawkConfig.API_URL` |
 | R-CLI-16 | 配置每次启动都尝试拉取，只有拉取失败才回退本地缓存 | `HomeActivity` 调用 `loadConfig(useCache=false)` |
 | R-CLI-17 | 本地文件服务把请求路径**原样**拼到存储根，不做百分号解码；因此 `clan://localhost/<包>/SL 综合线路/api.json` 只能写中文原样，写成 `SL%20%E7%BB%BC...` 会 404，表现为「选了线路但站点为空」 | `RemoteServer.java:158-166`；可用本地包 `本地仓.txt` 全部写中文原样 |
+| R-CLI-18 | jsDelivr 对 `.jar` 一律返回 403（连续两次实测），只适合下发 JSON；因此在线索引必须走 raw，不能换 CDN | 实测 `cdn.jsdelivr.net/gh/.../xingwei_df5bf731.jar` → 403；同路径 JSON → 200 |
 
 【待验证】以下一项需实机确认，验证方法写在括号内：
 1. `UriUtil.resolve(<含中文空格的配置URL>, "../")` 的返回值是否等价于「上一级目录」（临时把一条 jar 站点指向 `../_common/jar/` 的空壳 jar，看是否 200）。
@@ -155,7 +156,7 @@ apps/tvbox/packages/tvboxSL/
 │   └── md5.txt                    ← jar 校验清单
 ├── SL 综合线路/                    ← 线路目录（中文含空格）
 │   ├── api.json
-│   ├── spider_std.jar
+│   ├── spider.jar
 │   ├── js/  py/  open/  ext/  lib/
 ├── SL 少儿线路/
 └── SL 长辈线路/
@@ -171,7 +172,7 @@ apps/tvbox/packages/tvboxSL/
 | `_common/jar/*.jar` | 跨线路共用的 jar | 是 | 是（被 `sites[].jar` 引用） |
 | `_common/md5.txt` | jar 校验清单 | 是 | 否 |
 | `<线路>/api.json` | 该线路唯一配置 | 是 | 是 |
-| `<线路>/spider_<代号>.jar` | 顶层 `spider` 入口 | 是 | 是 |
+| `<线路>/spider.jar` | 顶层 `spider` 入口（固定名） | 是 | 是 |
 | `<线路>/js/ py/ open/ ext/ lib/` | 该线路独占脚本与引擎 | 是 | 是（被 `api`/`ext` 引用） |
 | `.gitkeep` | 占位空目录 | 是 | 否 |
 
@@ -184,7 +185,7 @@ apps/tvbox/packages/tvboxSL/
 | R-NAM-03 | 线路配置 | 固定 `api.json`，不得改名 | `api.json` |
 | R-NAM-04 | 索引文件 | 固定 `api_index.json` | `api_index.json` |
 | R-NAM-05 | 站点 key | 四段式 `<线路代号>_<形态>_<用途>_<短名>`；正则 `^(std|kid|eld)_(jar|js|py|cms)_(vod|live|tool)_[a-z0-9]{2,12}$`，总长 8–32 | `std_jar_vod_xingxing` |
-| R-NAM-06 | 入口 jar | `spider_<线路代号>.jar` | `spider_std.jar` |
+| R-NAM-06 | 入口 jar | 固定 `spider.jar`（三条线路各自目录内同名，不带线路代号与版本号） | `SL 综合线路/spider.jar` |
 | R-NAM-07 | 公共 jar | `<来源>_<角色或内容hash8>.jar`，全 ASCII，禁中文/空格/括号 | `xingwei_main.jar`、`ouge_6f1e49c3.jar` |
 | R-NAM-08 | 线路内脚本 | 保留原包相对位置；跨线路同名时加来源前缀，不得直接覆盖 | `api/fantaijing_drpy2.min.js` |
 | R-NAM-09 | 图片 | 小写 ASCII + `.png`/`.jpg`；单文件 ≤200 KB；仅放该线路 `img/` | `logo_xingwei.png` |
@@ -213,6 +214,8 @@ apps/tvbox/packages/tvboxSL/
 | R-NAM-19 | 速度档位以探活实测首字节/整包耗时为准，写入 `_分析/sources_builtIn.csv` 的「耗时ms」列；无实测数据的老站点不得凭印象标档位 |
 | R-NAM-20 | 本地入口固定文件名 `api_index_local.json`，内容为 `clan://` 三条线路；在线入口固定 `api_index.json`，内容为绝对 URL；两者除 url 写法外必须完全一致 |
 | R-NAM-21 | 单文件全量配置固定文件名 `api_all.json`，把三条线路 `sites` 合并；所有 `api`/`jar`/`ext` 一律写绝对 raw URL，`;md5;` 段不得编码；`key` 与线路内保持完全一致 |
+| R-NAM-22 | 所有对外分享的路径与文件名**永久固定**，禁止写入版本号或日期（禁 `api_v1.2.json`、`tvboxSL_20261107/`、`spider_2.0.jar`、`-latest` 等）；改版只改内容，不改路径 |
+| R-NAM-23 | 版本只存在于两处：`version.json` 内的版本号；Git tag `tvboxSL-v<主>.<次>.<修订>`。标签一旦打过不再移动 |
 
 **不满足的处理**：出现百分号编码的中文目录、`file://`、`"./` 冲突序列中任一项，该文件判不合格，不进入验收。
 

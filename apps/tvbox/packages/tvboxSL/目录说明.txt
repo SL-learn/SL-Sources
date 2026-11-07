@@ -10,8 +10,14 @@ tvboxSL 包 v1.0.1
 ----------------
 文件名                适用场景                       填法
 api_index_local.json  整包拷到手机，本地离线用        clan://localhost/tvboxSL/api_index_local.json
-api_index.json        在线直拉（GitHub 可访问时）     https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_index.json
+api_index.json        在线直拉（raw，含 jar 引用）     https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_index.json
 api_all.json          客户端不支持多线路索引时        https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_all.json
+
+关于 jsDelivr：
+- api_all.json 可换用 https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@main/apps/tvbox/packages/tvboxSL/api_all.json
+  （它内部全部是绝对 raw 地址，CDN 只负责下发这一份 JSON）。
+- api_index.json 不要换 jsDelivr：线路配置用 ./spider.jar 这类相对引用，会跟着解析到 CDN，
+  而 jsDelivr 对 .jar 一律返回 403（实测两次均 403），导致整条线路加载失败。
 
 区别：
 - api_index_local.json 用 clan:// 指向本地三条线路，不联网；整包必须放在 /sdcard/TVBox/tvboxSL/，目录名不能改。
@@ -49,7 +55,7 @@ api_all.json          客户端不支持多线路索引时        https://raw.gi
 --------
 _common/jar/       公共 jar，线路内以 ../_common/jar/xxx.jar 引用
 _common/md5.txt    jar 校验清单（文件名,md5,大小）
-spider_<代号>.jar  该线路顶层入口 jar（必须存在，否则整份配置加载失败）
+spider.jar         该线路顶层入口 jar（固定名，必须存在，否则整份配置加载失败）
 api.json           该线路唯一配置
 js/ py/ open/ ext/ lib/ api/ config/   该线路脚本与规则
 
