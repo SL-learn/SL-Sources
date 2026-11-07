@@ -111,7 +111,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s010",
@@ -129,7 +129,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s011",
@@ -164,7 +164,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s013",
@@ -182,7 +182,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s014",
@@ -200,7 +200,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s015",
@@ -218,7 +218,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s016",
@@ -236,7 +236,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s017",
@@ -254,7 +254,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "./spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     }
   ],
   "lives": [],

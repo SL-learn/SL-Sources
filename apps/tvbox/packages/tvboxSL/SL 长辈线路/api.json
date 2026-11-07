@@ -59,7 +59,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_eld.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "./spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s006",
@@ -77,7 +77,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_eld.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "./spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s007",
@@ -95,7 +95,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "./spider_eld.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "./spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s008",

@@ -1,2 +1,2 @@
 包id,显示名,路径,线路数,版本,状态,入口-GitHub,入口-Gitee,最近探活日期,最近结论
-tvboxSL,综合,apps/tvbox/packages/tvboxSL,3,1.0.2,beta,https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_index.json,未建仓,2026-11-07,修复「选线路后站点为空」：索引改绝对 URL/本地 clan 原样中文；新增 api_index_local.json 与 api_all.json
+tvboxSL,综合,apps/tvbox/packages/tvboxSL,3,1.0.3,beta,https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_index.json,未建仓,2026-11-07,修复「选线路后站点为空」：索引改绝对 URL/本地 clan 原样中文；新增 api_index_local.json 与 api_all.json

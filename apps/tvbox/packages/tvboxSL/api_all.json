@@ -259,7 +259,7 @@
         "分类url": "https://ikan234.com/list/{cateId}-{catePg}.html",
         "分类": "电视剧$2#电影$1#动漫$4#短剧$5#综艺$3"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_3602",
@@ -267,7 +267,7 @@
       "type": 3,
       "api": "csp_HBcms10",
       "ext": "https://360zy.com/api.php/provide/vod/",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_3qqq",
@@ -284,7 +284,7 @@
       "type": 3,
       "api": "csp_HB4kav",
       "playerType": 2,
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_js_vod_anime1",
@@ -332,7 +332,7 @@
       "name": "B站直播",
       "type": 3,
       "api": "csp_BilibiliLive",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_js_live_91",
@@ -425,21 +425,21 @@
       "name": "瓜子弹幕",
       "type": 3,
       "api": "csp_HBGuaZi",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_hbpianku8",
       "name": "片库弹幕",
       "type": 3,
       "api": "csp_HBPianKu8",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_hbxingkong4k",
       "name": "空星弹幕",
       "type": 3,
       "api": "csp_HBXingKong4K",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_js_live_js",
@@ -995,14 +995,14 @@
         "分类url": "https://v.xlys.ltd.ua/s/all/{catePg}?type={cateId};;d0",
         "分类": "电影$0#电视剧$1"
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_dmmiku",
       "name": "异世界动漫",
       "type": 3,
       "api": "csp_Ysj",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_tool_s093",
@@ -1010,7 +1010,7 @@
       "type": 3,
       "api": "csp_Douban",
       "ext": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/lib/huban_douban.json",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_feiyuvideo",
@@ -1028,7 +1028,7 @@
       "type": 3,
       "api": "csp_FishHxq",
       "ext": "DyoqWQInJUMuGFdcDzo2Bjg3KgUuDwoENzYhHDhdUQEuUzRBDVAfHzsCBA8DJgYFDTFNHgAnKUg",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_jarcai",
@@ -1036,7 +1036,7 @@
       "type": 3,
       "api": "csp_Wcai",
       "ext": "https://www.jxshdzs.com/",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider_std.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_py_vod_s098",
@@ -1465,7 +1465,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s010",
@@ -1483,7 +1483,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s011",
@@ -1518,7 +1518,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s013",
@@ -1536,7 +1536,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s014",
@@ -1554,7 +1554,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s015",
@@ -1572,7 +1572,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s016",
@@ -1590,7 +1590,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "kid_jar_vod_s017",
@@ -1608,7 +1608,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/spider.jar;md5;367b30616fb382b237c4b9105e41d5f2"
     },
     {
       "key": "eld_js_vod_s001",
@@ -1667,7 +1667,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider_eld.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s006",
@@ -1685,7 +1685,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider_eld.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s007",
@@ -1703,7 +1703,7 @@
         "type": "rect",
         "ratio": 1.597
       },
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider_eld.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
+      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/spider.jar;md5;df5bf731ccca4deb35110ba0b505dcd2"
     },
     {
       "key": "eld_jar_vod_s008",
