@@ -1,0 +1,34 @@
+{
+  "id": "tvboxSL",
+  "name": "综合",
+  "version": "1.0.0",
+  "updated": "2026-11-07",
+  "status": "beta",
+  "index": "api_index.json",
+  "lines": [
+    {
+      "code": "std",
+      "name": "标准",
+      "dir": "SL 综合线路",
+      "api": "api.json",
+      "spider": "spider_std.jar",
+      "sites": 123
+    },
+    {
+      "code": "kid",
+      "name": "儿童",
+      "dir": "SL 少儿线路",
+      "api": "api.json",
+      "spider": "spider_kid.jar",
+      "sites": 17
+    },
+    {
+      "code": "eld",
+      "name": "长辈",
+      "dir": "SL 长辈线路",
+      "api": "api.json",
+      "spider": "spider_eld.jar",
+      "sites": 11
+    }
+  ]
+}

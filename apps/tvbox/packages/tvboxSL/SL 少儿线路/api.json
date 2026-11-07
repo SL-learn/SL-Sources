@@ -1,0 +1,263 @@
+{
+  "spider": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2",
+  "wallpaper": "",
+  "sites": [
+    {
+      "name": "小猪秒播",
+      "key": "kid_jar_vod_appv7fz",
+      "type": 3,
+      "api": "csp_AppV7Amns",
+      "jar": "../_common/jar/xingwei_0dece2d7.jar;md5;0dece2d78621ee5b2b15dc8ee49b94f3",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": "AppV7Fz"
+    },
+    {
+      "key": "kid_js_vod_s002",
+      "name": "聚合丨儿童",
+      "type": 3,
+      "api": "./open/erge_juhe.js",
+      "searchable": 1,
+      "quickSearch": 0,
+      "filterable": 1
+    },
+    {
+      "key": "kid_jar_vod_beilehu",
+      "name": "贝乐-儿童",
+      "type": 3,
+      "api": "csp_BeiLeHu",
+      "searchable": 0,
+      "changeable": 0,
+      "jar": "../_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+    },
+    {
+      "key": "kid_jar_vod_bili",
+      "name": "哔哩少儿",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "ext": "./lib/少儿教育.json",
+      "jar": "../_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+    },
+    {
+      "key": "kid_jar_vod_bili2",
+      "name": "哔哩幼儿",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 1,
+      "ext": "./lib/幼儿乐园.json",
+      "jar": "../_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+    },
+    {
+      "key": "kid_jar_vod_xyqhiker",
+      "name": "兔小贝XYQH",
+      "type": 3,
+      "api": "csp_XYQHiker",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./lib/兔小贝.json",
+      "jar": "../_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
+    },
+    {
+      "key": "kid_jar_vod_bilirt",
+      "name": "儿童-哗哩",
+      "type": 3,
+      "api": "csp_BiliJs",
+      "filterable": 1,
+      "searchable": 0,
+      "changeable": 0,
+      "ext": {
+        "type": "http://rihou.cc:88/json/bilirt.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.333
+      },
+      "jar": "../_common/jar/jiduo_12dee3dd.jar;md5;12dee3dd8aa01d52bee03a0556a85beb"
+    },
+    {
+      "key": "kid_js_vod_s008",
+      "name": "儿童-启蒙",
+      "type": 3,
+      "api": "./api/drpy2.min.js",
+      "ext": "./js/兔小贝.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "kid_jar_vod_s009",
+      "name": "口才-儿童",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/儿童口才.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "kid_jar_vod_s010",
+      "name": "少儿-哔哩",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/少儿合集.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "kid_jar_vod_s011",
+      "name": "少儿-教育",
+      "type": 3,
+      "api": "csp_BiliGuard",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": {
+        "json": "https://nos.netease.com/ysf/89370c8ddf36b5e1beb4d71adb921bda.txt"
+      },
+      "jar": "../_common/jar/fantaijing_22b7154a.jar;md5;22b7154a36907cabc183fcc53044d025"
+    },
+    {
+      "key": "kid_jar_vod_s012",
+      "name": "思维-儿童",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/儿童思维.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "kid_jar_vod_s013",
+      "name": "拼音-儿童",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/儿童拼音.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "kid_jar_vod_s014",
+      "name": "武术-哔哩",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/儿童武术.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "kid_jar_vod_s015",
+      "name": "编程-哔哩",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/儿童编程.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "kid_jar_vod_s016",
+      "name": "英语-儿童",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/儿童英语.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    },
+    {
+      "key": "kid_jar_vod_s017",
+      "name": "识字-儿童",
+      "type": 3,
+      "api": "csp_Bili",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "ext": {
+        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt",
+        "json": "./ext/儿童识字.json"
+      },
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "jar": "./spider_kid.jar;md5;367b30616fb382b237c4b9105e41d5f2"
+    }
+  ],
+  "lives": [],
+  "parses": [],
+  "flags": []
+}

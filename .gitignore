@@ -1,0 +1,14 @@
+# 分析产物，不进版本库（保留在本地）
+_分析/
+
+# 临时文件与系统垃圾
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+
+# 编辑器
+.idea/
+.vscode/
+
+# 说明：apps/tvbox/packages/ 下的 jar 属于发布内容，必须进版本库，禁止在此忽略 *.jar

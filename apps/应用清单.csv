@@ -1,0 +1,4 @@
+应用id,名称,状态,标准文档,包清单,入口格式,备注
+tvbox,TVBox,active,apps/tvbox/README.md,apps/tvbox/packages/包清单.csv,api_index,首个落地应用，含综合/少儿/长辈三条线路
+catvod,猫影视类,planned,—,—,multi_repo,预留，未建目录
+reader,阅读/Legado,planned,—,—,book_source,预留，未建目录

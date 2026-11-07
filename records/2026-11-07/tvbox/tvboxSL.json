@@ -1,0 +1,40 @@
+{
+  "日期": "2026-11-07",
+  "应用id": "tvbox",
+  "包id": "tvboxSL",
+  "包版本": "1.0.0",
+  "线路": [
+    {"代号": "std", "名称": "综合", "站点数": 123, "存量": 102, "新增": 21},
+    {"代号": "kid", "名称": "少儿", "站点数": 17, "存量": 17, "新增": 0},
+    {"代号": "eld", "名称": "长辈", "站点数": 11, "存量": 11, "新增": 0}
+  ],
+  "对象总数": 151,
+  "新增源实测": [
+    {"名称": "暴风-快", "key": "std_js_vod_baofeng", "上游": "https://bfzyapi.com/api.php/provide/vod", "耗时ms": 1108, "档位": "快", "上游分类数": 49, "上架分类数": 41, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "天堂-快", "key": "std_js_vod_tiantang", "上游": "https://caiji.dyttzyapi.com/api.php/provide/vod", "耗时ms": 973, "档位": "快", "上游分类数": 32, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "量子-快", "key": "std_js_vod_liangzi", "上游": "http://cj.lziapi.com/api.php/provide/vod", "耗时ms": 1469, "档位": "快", "上游分类数": 40, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "如意-中", "key": "std_js_vod_ruyi", "上游": "https://www.ryzyw.com/api.php/provide/vod", "耗时ms": 2708, "档位": "中", "上游分类数": 43, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "最大-中", "key": "std_js_vod_zuida", "上游": "https://api.zuidapi.com/api.php/provide/vod", "耗时ms": 3079, "档位": "中", "上游分类数": 59, "上架分类数": 51, "成人分类拦截": true, "结论": "可用（上游「电影」等父分类本身返回 0 条，属上游行为）"},
+    {"名称": "索尼-快", "key": "std_js_vod_suoni", "上游": "https://suoniapi.com/api.php/provide/vod", "耗时ms": 1323, "档位": "快", "上游分类数": 61, "上架分类数": 53, "成人分类拦截": true, "结论": "首轮分类可用；复测分类面板 0 项（间歇），搜索 20 条"},
+    {"名称": "极速-中", "key": "std_js_vod_jisu", "上游": "https://jszyapi.com/api.php/provide/vod", "耗时ms": 1717, "档位": "中", "上游分类数": 48, "上架分类数": 40, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "红牛-慢", "key": "std_js_vod_hongniu", "上游": "https://www.hongniuzy2.com/api.php/provide/vod", "耗时ms": 5582, "档位": "慢", "上游分类数": 44, "上架分类数": 42, "成人分类拦截": true, "结论": "首轮可用；复测请求失败（间歇，观察）"},
+    {"名称": "虎牙-慢", "key": "std_js_vod_huya", "上游": "https://www.huyaapi.com/api.php/provide/vod", "耗时ms": 9243, "档位": "慢", "上游分类数": 44, "上架分类数": 36, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "飘零-中", "key": "std_js_vod_piaoling", "上游": "https://p2100.net/api.php/provide/vod", "耗时ms": 3492, "档位": "中", "上游分类数": 27, "上架分类数": 20, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "ikun-快", "key": "std_js_vod_ikun", "上游": "https://ikunzy.cc/api.php/provide/vod", "耗时ms": 1072, "档位": "快", "上游分类数": 53, "上架分类数": 46, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "爱奇艺-快", "key": "std_js_vod_iqiyi", "上游": "https://iqiyizyapi.com/api.php/provide/vod", "耗时ms": 1048, "档位": "快", "上游分类数": 43, "上架分类数": 36, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "魔都-慢", "key": "std_js_vod_modu", "上游": "https://www.mdzyapi.com/api.php/provide/vod", "耗时ms": 6757, "档位": "慢", "上游分类数": 42, "上架分类数": 36, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "西瓜-快", "key": "std_js_vod_xigua", "上游": "https://xiguazy.tv/api.php/provide/vod", "耗时ms": 947, "档位": "快", "上游分类数": 43, "上架分类数": 36, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "猫眼-快", "key": "std_js_vod_maoyan", "上游": "https://api.maoyanapi.top/api.php/provide/vod", "耗时ms": 292, "档位": "快", "上游分类数": 53, "上架分类数": 45, "成人分类拦截": true, "结论": "可用"},
+    {"名称": "非凡-快", "key": "std_js_vod_feifan", "上游": "https://api.ffzyapi.com/api.php/provide/vod", "耗时ms": 855, "档位": "快", "上游分类数": 31, "上架分类数": 26, "成人分类拦截": true, "结论": "可用（含详情、播放地址字段校验）"},
+    {"名称": "三六秒播", "key": "std_js_vod_360zy", "上游": "https://360zy.com/api.php/provide/vod", "耗时ms": 943, "档位": "快", "上游分类数": 51, "上架分类数": 44, "成人分类拦截": true, "结论": "由直连 CMS 改走 JS 包装后可用"},
+    {"名称": "龙马-快", "key": "std_cms_vod_longma", "上游": "http://jhysj.jiaheyy.top/api.php/provide/vod", "耗时ms": 426, "档位": "快", "上游分类数": 7, "成人分类拦截": false, "结论": "上游分类无成人词，直连 type=1；包装未启用"},
+    {"名称": "火狐-慢", "key": "std_js_vod_huohu", "上游": "https://hhzyapi.com/api.php/provide/vod", "耗时ms": 4281, "档位": "慢", "上游分类数": 48, "成人分类拦截": true, "结论": "复测成人拦截生效、搜索 18 条；分类面板 0 项（间歇）"},
+    {"名称": "金鹰-中", "key": "std_js_vod_jinying", "上游": "https://jyzyapi.com/api.php/provide/vod", "耗时ms": 3400, "档位": "中", "上游分类数": 44, "成人分类拦截": true, "结论": "复测成人拦截生效、搜索 18 条；分类面板 0 项（间歇）"},
+    {"名称": "无尽-慢", "key": "std_js_vod_wujin", "上游": "https://api.wujinapi.com/api.php/provide/vod", "耗时ms": 4586, "档位": "慢", "上游分类数": 63, "结论": "未实测"},
+    {"名称": "牛牛-快", "key": "std_js_vod_niuniu", "上游": "https://api.niuniuzy.me/api.php/provide/vod", "耗时ms": 1341, "档位": "快", "上游分类数": 59, "结论": "未实测（包装 home 本轮返回空，疑网络波动）"}
+  ],
+  "统计": {"新增合计": 21, "包装实测可用": 16, "直连可用": 1, "部分验证": 2, "未实测": 2},
+  "存量站点": {"数量": 130, "结论": "沿用来源包结果，本轮未逐站请求（未实测）"},
+  "排除": {"网盘工具": 6, "间歇源": 4, "无分类": 1, "XML未包装": 1, "重复": 4, "成人源": 8, "不可用": 3, "无法判定": 3, "本机实例": 7},
+  "验收": {"自动": "A01-A10、B04-B07 全部通过（B06 于记录生成后复检）", "人工": "A11、A12、B01-B03、B08-B10 未实测"}
+}
