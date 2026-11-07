@@ -2,15 +2,15 @@
   "urls": [
     {
       "name": "综合",
-      "url": "./SL%20%E7%BB%BC%E5%90%88%E7%BA%BF%E8%B7%AF/api.json"
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/api.json"
     },
     {
       "name": "少儿",
-      "url": "./SL%20%E5%B0%91%E5%84%BF%E7%BA%BF%E8%B7%AF/api.json"
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 少儿线路/api.json"
     },
     {
       "name": "长辈",
-      "url": "./SL%20%E9%95%BF%E8%BE%88%E7%BA%BF%E8%B7%AF/api.json"
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 长辈线路/api.json"
     }
   ]
 }

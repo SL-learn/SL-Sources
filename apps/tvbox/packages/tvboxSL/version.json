@@ -1,10 +1,12 @@
 {
   "id": "tvboxSL",
   "name": "综合",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-11-07",
   "status": "beta",
   "index": "api_index.json",
+  "index_local": "api_index_local.json",
+  "index_all": "api_all.json",
   "lines": [
     {
       "code": "std",

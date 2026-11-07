@@ -12,6 +12,7 @@
 | v1.0.0 | 2026-11-07 | 全文 | 首次成稿：17 章 + 3 附录；确立多应用分层、中文线路目录、60% 重合阈值、四层门禁、探活与两级验收 | 用户批准方案，作为唯一执行依据 |
 | v1.0.1 | 2026-11-07 | 4.3、5.2 | 修正 R-NAM-05「正压」为「正则」；删除不存在的站点字段 `filter`，改为实际读取的 `changeable`，并补充 `filterable` 只写不读的说明 | 与客户端源码 `ApiConfig.java:765-772` 核对后纠正事实错误 |
 | v1.1.0 | 2026-11-07 | 4.2、5.2、5.6、5.7、11.1 | 名称长度改 2–10；线路内目录白名单增加 `config/`；新增 5.6 成人分类 JS 包装规则与 5.7 速度档位规则；11.1 增补「分类封闭只能靠 JS 包装」的事实与 R-GAT-06/07 | 实测证明 `categories` 白名单只隐藏入口、可被搜索与首页推荐绕过，无法满足「分类不可进入」；新增源需按实测速度分级 |
+| v1.1.1 | 2026-11-07 | 2、4.1、4.2、4.3 | 新增 R-CLI-17（本地文件服务不解码百分号）；R-NAM-13 改为「索引写中文原样、在线用绝对 URL、本地用 `clan://`」；新增 `api_index_local.json` 与 `api_all.json` 两个入口及 R-NAM-20/21 | 实机反馈「选线路后站点为空」；对照可用本地包 `本地仓.txt` 的写法（`clan://localhost/tvboxTW/本地【…】/api.json`，中文原样不编码），确认百分号编码的目录名在本地取不到文件 |
 
 ---
 
@@ -60,10 +61,12 @@
 | R-CLI-14 | 识别到索引后自动加载第一条，并写入线路列表；直接加载子配置会因 `clearApiLinesIfUnmatched` 清空线路列表 | `ApiConfig.java:650-669、728-739` |
 | R-CLI-15 | 客户端只有一份当前配置（`API_URL` 单键）；不同包不会同时并列显示，只能通过接口历史切换 | `HawkConfig.API_URL` |
 | R-CLI-16 | 配置每次启动都尝试拉取，只有拉取失败才回退本地缓存 | `HomeActivity` 调用 `loadConfig(useCache=false)` |
+| R-CLI-17 | 本地文件服务把请求路径**原样**拼到存储根，不做百分号解码；因此 `clan://localhost/<包>/SL 综合线路/api.json` 只能写中文原样，写成 `SL%20%E7%BB%BC...` 会 404，表现为「选了线路但站点为空」 | `RemoteServer.java:158-166`；可用本地包 `本地仓.txt` 全部写中文原样 |
 
-【待验证】以下两项需实机确认，验证方法写在括号内：
+【待验证】以下一项需实机确认，验证方法写在括号内：
 1. `UriUtil.resolve(<含中文空格的配置URL>, "../")` 的返回值是否等价于「上一级目录」（临时把一条 jar 站点指向 `../_common/jar/` 的空壳 jar，看是否 200）。
-2. NanoHTTPD 是否对请求路径做百分号解码（把一条线路目录临时改为 `SL 综合线路` 原名并访问，看本地文件服务是否 404）。
+
+（原第 2 项「NanoHTTPD 是否解码百分号」已由 R-CLI-17 定性为不解码，转为规则。）
 
 ---
 
@@ -143,7 +146,9 @@
 ```text
 apps/tvbox/packages/tvboxSL/
 ├── version.json                   ← 包 id、版本、状态、线路清单
-├── api_index.json                 ← 包入口：三条线路，相对路径
+├── api_index.json                 ← 在线入口：三条线路的绝对 URL
+├── api_index_local.json           ← 本地入口：三条线路的 clan:// 地址
+├── api_all.json                   ← 单文件全量（151 站），绝对 URL
 ├── 目录说明.txt                    ← 用户安装说明
 ├── _common/
 │   ├── jar/                       ← 公共 jar（ASCII 文件名）
@@ -159,7 +164,9 @@ apps/tvbox/packages/tvboxSL/
 | 路径 | 用途 | 进版本库 | 客户端是否加载 |
 |---|---|---|---|
 | `version.json` | 包版本与线路登记 | 是 | 否 |
-| `api_index.json` | 多线路入口 | 是 | 是（作为配置地址） |
+| `api_index.json` | 在线多线路入口（绝对 URL） | 是 | 是（作为配置地址） |
+| `api_index_local.json` | 本地多线路入口（`clan://`，中文原样） | 是 | 是（整包拷到手机后使用） |
+| `api_all.json` | 单文件全量配置（三线合一） | 是 | 是（不支持 `urls` 索引的客户端） |
 | `目录说明.txt` | 给人看的安装说明 | 是 | 否 |
 | `_common/jar/*.jar` | 跨线路共用的 jar | 是 | 是（被 `sites[].jar` 引用） |
 | `_common/md5.txt` | jar 校验清单 | 是 | 否 |
@@ -187,25 +194,27 @@ apps/tvbox/packages/tvboxSL/
 
 ### 4.3 中文含空格路径的引用写法
 
-磁盘目录名保持中文含空格（R-NAM-02），**所有被客户端引用的路径一律写 UTF-8 百分号编码**。
+磁盘目录名保持中文含空格（R-NAM-02）。**索引一律写中文原样，禁止百分号编码**（R-CLI-17）。
 
-| 磁盘名 | 引用写法 |
+| 场景 | 写法 |
 |---|---|
-| `SL 综合线路` | `SL%20%E7%BB%BC%E5%90%88%E7%BA%BF%E8%B7%AF` |
-| `SL 少儿线路` | `SL%20%E5%B0%91%E5%84%BF%E7%BA%BF%E8%B7%AF` |
-| `SL 长辈线路` | `SL%20%E9%95%BF%E8%BE%88%E7%BA%BF%E8%B7%AF` |
+| 在线索引 | `https://raw.githubusercontent.com/<owner>/SL-Sources/main/apps/tvbox/packages/tvboxSL/SL 综合线路/api.json` |
+| 本地索引 | `clan://localhost/tvboxSL/SL 综合线路/api.json` |
+| 线路内引用 | `./js/x.js`、`./py/x.py`、`../_common/jar/x.jar` |
 
 | 编号 | 规则 |
 |---|---|
-| R-NAM-13 | 索引里的线路地址写 `./SL%20.../api.json`；不得写未编码的中文或空格 |
+| R-NAM-13 | 索引里的线路地址：在线写绝对 raw URL、本地写 `clan://localhost/<包id>/<线路目录>/api.json`；两者都必须写中文原样，禁止 `%E7%BB%BC`、禁止 `./` 相对写法（相对写法依赖客户端解析，实测会失败） |
 | R-NAM-14 | 线路内脚本引用写 `./js/x.js`、`./py/x.py`；公共 jar 写 `../_common/jar/x.jar`；不得写 `file://` |
 | R-NAM-15 | 顶层 `spider` 写 `./spider_std.jar;md5;<32位小写>`；不得依赖 `clan://` |
 | R-NAM-16 | 站点 `name`、`flags` 中禁止出现 `"./` 与 `"../` 字符序列（会被 `fixContentPath` 当路径替换）；`api`、`ext`、`jar` 反而**必须**用相对路径，由 `fixContentPath` 正常改写（R-NAM-14） |
 | R-NAM-17 | 站点 `name` 清洗：去 emoji、去全角符号、去首尾空白；长度 2–10 字；清洗后撞名按第 13 章处理 |
 | R-NAM-18 | 新增 CMS 源的 `name` 末尾写速度档位后缀：`-快`（实测 ≤1.5 s）、`-中`（1.5–4 s）、`-慢`（≥4 s）；档位取值只用这三个汉字，禁止 emoji、禁止自造档位 |
 | R-NAM-19 | 速度档位以探活实测首字节/整包耗时为准，写入 `_分析/sources_builtIn.csv` 的「耗时ms」列；无实测数据的老站点不得凭印象标档位 |
+| R-NAM-20 | 本地入口固定文件名 `api_index_local.json`，内容为 `clan://` 三条线路；在线入口固定 `api_index.json`，内容为绝对 URL；两者除 url 写法外必须完全一致 |
+| R-NAM-21 | 单文件全量配置固定文件名 `api_all.json`，把三条线路 `sites` 合并；所有 `api`/`jar`/`ext` 一律写绝对 raw URL，`;md5;` 段不得编码；`key` 与线路内保持完全一致 |
 
-**不满足的处理**：出现未编码中文/空格、`file://`、`clan://`、`"./` 冲突序列中任一项，该文件判不合格，不进入验收。
+**不满足的处理**：出现百分号编码的中文目录、`file://`、`"./` 冲突序列中任一项，该文件判不合格，不进入验收。
 
 ---
 

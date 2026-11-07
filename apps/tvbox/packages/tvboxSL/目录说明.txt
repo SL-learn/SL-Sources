@@ -1,4 +1,4 @@
-tvboxSL 本地包 v1.0.0
+tvboxSL 包 v1.0.1
 =====================
 
 定位
@@ -6,24 +6,44 @@ tvboxSL 本地包 v1.0.0
 个人自用影视源包，三条线路：综合 / 少儿 / 长辈。
 包内不含直播源（lives 为空），不含付费与网盘站点。
 
-安装（本地）
-------------
+三个入口，别填错
+----------------
+文件名                适用场景                       填法
+api_index_local.json  整包拷到手机，本地离线用        clan://localhost/tvboxSL/api_index_local.json
+api_index.json        在线直拉（GitHub 可访问时）     https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_index.json
+api_all.json          客户端不支持多线路索引时        https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/packages/tvboxSL/api_all.json
+
+区别：
+- api_index_local.json 用 clan:// 指向本地三条线路，不联网；整包必须放在 /sdcard/TVBox/tvboxSL/，目录名不能改。
+- api_index.json 只含三条线路地址（绝对 URL），选线路后各自加载，站点分开管理。
+- api_all.json 把三条线路 151 个站点合成一份，只有一个站点列表；适合不认 urls 索引的客户端。
+
+安装（本地，推荐）
+------------------
 1. 把整个 tvboxSL 目录放到手机存储：/sdcard/TVBox/tvboxSL/
    目录名必须保持 tvboxSL，不能改名。
 2. 打开 TVBox → 设置 → 配置地址，填：
-   clan://localhost/tvboxSL/api_index.json
+   clan://localhost/tvboxSL/api_index_local.json
 3. 客户端识别出 3 条线路并自动加载第一条（综合线路）。
 4. 设置页出现「线路」一行，点开即可在 综合 / 少儿 / 长辈 之间切换。
 
 在线直链
 --------
-api_index.json 的 raw 地址即为配置地址；三条线路的单独地址见 api_index.json 内的 urls。
+把 api_index.json 的 raw 地址填入配置地址即可，无需下载整包。
+在线与本地内容一致，区别只在入口写法。
+
+重要：路径里不要用百分号编码
+----------------------------
+线路目录名含中文和空格（如 SL 综合线路）。索引里必须写原样的中文，
+不要写成 SL%20%E7%BB%BC...；本地文件服务不解码百分号，写编码会 404，
+表现为「选了线路但站点是空的」。
 
 线路与站点数
 ------------
 - SL 综合线路（std）：123 站
 - SL 少儿线路（kid）：17 站
 - SL 长辈线路（eld）：11 站
+- api_all.json 合计：151 站
 
 目录说明
 --------
@@ -43,7 +63,7 @@ js/ py/ open/ ext/ lib/ api/ config/   该线路脚本与规则
 
 版本与校验
 ----------
-版本：1.0.0（2026-11-07）
+版本：1.0.1（2026-11-07）
 所有 jar 引用均带 ;md5;，md5 见 _common/md5.txt 与各 api.json。
 
 免责声明
