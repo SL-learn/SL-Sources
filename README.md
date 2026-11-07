@@ -434,6 +434,28 @@ apps/tvbox/packages/tvboxSL/
 
 **不满足的处理**：R-VER-02/03 违反 → 阻断发布；R-VER-06 违规回滚 → 记入记录并在下一版纠正。
 
+### 10.1 版本与历史（如何回看旧版）
+
+版本号只存在于 `version.json` 与 Git tag，**不进任何对外路径**（R-NAM-22/23）。
+
+| 编号 | 规则 |
+|---|---|
+| R-VER-08 | tag 命名固定 `tvboxSL-v<主>.<次>.<修订>`，与 `version.json` 完全一致；tag 只增不移不覆盖 |
+| R-VER-09 | 每次发版后，在 `records/版本对照表.csv` **追加**一行：版本号、短 SHA、日期、三线路站点数；旧行不得改写 |
+| R-VER-10 | 回溯旧版用固定 commit 或 tag 的 raw 地址，不改入口路径 |
+
+三种回溯方式与真实示例：
+
+| 方式 | 用法 | 实例（实测 200） |
+|---|---|---|
+| ① 提交历史 | GitHub 网页 / 客户端查看 `apps/tvbox/packages/tvboxSL/` 历史 | `https://github.com/SL-learn/SL-Sources/commits/main/apps/tvbox/packages/tvboxSL` |
+| ② tag 列表 | 列出后点选版本 | `https://github.com/SL-learn/SL-Sources/tags` |
+| ③ 固定 SHA / tag 的 raw | 把 `main` 换成 tag 或短 SHA | `https://raw.githubusercontent.com/SL-learn/SL-Sources/tvboxSL-v1.0.2/apps/tvbox/packages/tvboxSL/version.json` |
+| ④ jsDelivr 固定 tag | 比 `@main` 更适合复现，且可长期缓存 | `https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@tvboxSL-v1.0.2/apps/tvbox/packages/tvboxSL/api_all.json` |
+
+**缓存提示（很重要）**：GitHub raw 对同一路径有 CDN 缓存（实测推完 `main` 后，同一路径仍返回上一版内容，而 tag 路径已是新版），jsDelivr `@main` 最长缓存 12 小时、`@<tag>` 永久。
+因此**刚推完立刻测到旧内容属正常延迟，不是发布失败**；确认新版的可靠做法是用 tag / 固定 SHA 地址比对，或等 5–10 分钟后重试 `main`。升级 jar 时因引用带 md5，客户端不会误用旧缓存（R-CLI-04）。
+
 ---
 
 ## 11. 内容门禁
