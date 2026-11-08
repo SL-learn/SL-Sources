@@ -4,9 +4,16 @@
 
 本仓为公开子集，只发布经过实测的公开源；完整清单与内部记录不随仓库发布。
 
-## 入口
+## 入口（可直接复制）
 
-仓库内路径固定为 `apps/catmovie/config.json`；绝对地址见仓库根 `地址.md`（按平台渲染，GitHub 与 Gitee 各一份）。
+仓库内路径固定为 `apps/catmovie/config.json`；地址由 `工具/发布/渲染.py` 从 `规则/平台地址.json` 生成：
+
+<!-- 地址块开始：由 工具/发布/渲染.py 生成，勿手改 -->
+| 平台 | 填到软件哪个入口 | 地址 |
+|---|---|---|
+| GitHub | 设置 → 订阅配置（单文件） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` |
+| Gitee | 设置 → 订阅配置（单文件） | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/catmovie/config.json` |
+<!-- 地址块结束 -->
 
 ## 当前内容（1.5.0）
 

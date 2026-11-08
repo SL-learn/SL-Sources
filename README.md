@@ -14,7 +14,25 @@
 | 阅读书源 | `书源.json`（111 条） | `apps/reading/书源.json` |
 | 阅读订阅源 | `订阅源.json`（26 条） | `apps/reading/订阅源.json` |
 
-**可直接填写的绝对地址见 [地址.md](./地址.md)**：该文件由 `工具/发布/渲染.py` 按平台渲染，GitHub 与 Gitee 各一份，内容互不混用。填法、安装步骤见 `使用/`；强制条款见 `规范/`。**地址里不带版本号与日期，永久固定。**
+## 可直接填写的地址（复制整行即可）
+
+下表由 `工具/发布/渲染.py` 从 `规则/平台地址.json` 生成，GitHub 与 Gitee 并列；用哪个平台就抄哪一列。完整地址（含百分号编码、回滚旧版、加速）见 [地址.md](./地址.md)。**地址里不带版本号与日期，永久固定。**
+
+<!-- 地址块开始：由 工具/发布/渲染.py 生成，勿手改 -->
+| 应用 | 填到软件哪个入口 | GitHub 地址 | Gitee 地址 |
+|---|---|---|---|
+| TVBox / 影视仓 | 设置 → 配置地址（多仓索引，推荐） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_index.json` |
+| TVBox / 影视仓 | 设置 → 配置地址（单文件全量 64 站） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json` |
+| TVBox / 影视仓 | 本地整包：整包放 `/sdcard/TVBox/tvbox/` 后填 | `clan://localhost/tvbox/api_index_local.json` | 同 GitHub |
+| 小猫影视 | 设置 → 订阅配置（单文件） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/catmovie/config.json` |
+| 阅读 | 书源管理 → 网络导入（书源 111 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/书源.json` | 451 拦截，暂不可用 |
+| 阅读 | 订阅 → 网络导入（订阅源 26 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/订阅源.json` | 451 拦截，暂不可用 |
+
+> 阅读的书源与订阅源是**两类分别导入**：先在「书源管理」填书源地址，再在「订阅」填订阅源地址。
+> Gitee 的 `apps/tvbox/std/api.json`、`apps/reading/书源.json`、`apps/reading/订阅源.json` 被 451 拦截，TVBox 用 `api_all.json`，阅读改用 GitHub 地址。完整表格与百分号编码写法见 [地址.md](./地址.md)。
+<!-- 地址块结束 -->
+
+填法、安装步骤见 `使用/`；强制条款见 `规范/`。
 
 ## 双远端（GitHub 主源 + Gitee 国内镜像）
 
@@ -22,9 +40,9 @@
 |---|---|---|
 | 远端名 | `origin` | `gitee` |
 | 角色 | 主源（支持 jsDelivr 加速） | 国内镜像，网络拉不动时改用 |
-| 地址文件 | 本仓 `地址.md`（GitHub 版） | 同路径 `地址.md`（Gitee 版） |
+| 地址文件 | 本仓 `地址.md`（两平台地址并列，两侧内容一致） | 同路径 `地址.md`（同上） |
 
-- 两平台地址**各自渲染**：raw 基址只在 `规则/平台地址.json` 定义，文档一律只写仓库内相对路径，禁止手写另一平台地址（`规范/仓库通用规范.md` 第 3.5 节）。
+- 两平台地址**同源生成**：raw 基址只在 `规则/平台地址.json` 定义，`地址.md` 与各 README 的地址块都由渲染脚本写入，其余文档只写仓库内相对路径，禁止手写任一平台地址（`规范/仓库通用规范.md` 第 3.5 节）。
 - 一条命令同步本地 `main` 与全部 tag 到两个远端：
 
   ```powershell

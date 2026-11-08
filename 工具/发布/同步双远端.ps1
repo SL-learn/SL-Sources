@@ -23,7 +23,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$RenderedPaths = @('地址.md', 'apps/tvbox/api_index.json', 'apps/tvbox/api_all.json')
+$RenderedPaths = @('地址.md', 'apps/tvbox/api_index.json', 'apps/tvbox/api_all.json', 'README.md', 'apps/tvbox/README.md', 'apps/catmovie/README.md', 'apps/reading/README.md')
 $RenderPrefix = 'chore(双平台地址)'
 $Repo = ((& git rev-parse --show-toplevel) -join '').Trim()
 if (-not $Repo) { throw '当前目录不在 git 仓库内' }

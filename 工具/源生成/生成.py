@@ -7,7 +7,7 @@
 
 输入：apps/tvbox/{std,kids,elders}/api.json（唯一事实来源，手改这里）
      规则/平台地址.json（raw 基址，禁止在脚本里写死某一平台）
-输出：apps/tvbox/api_index.json、api_index_local.json、api_all.json
+输出：apps/tvbox/api_index.json、api_index_local.json、api_index_rel.json、api_all.json
       （gitee 版 api_index.json 的三条线路统一指向 api_all.json，见 规范/仓库通用规范.md SYS-DIST-009）
 幂等：内容不变则不重写；先全部在内存算完再统一落盘，任何异常不产生半成品。
 """
@@ -56,7 +56,7 @@ def abs_ref(ref: str, line_dir: str, base: str) -> str:
 
 
 def build(base: str, platform: str = "github") -> dict:
-    merged, online, local = [], [], []
+    merged, online, local, rel = [], [], [], []
     spider = ""
     stamp = ""
     for code, line_dir, label in LINES:
@@ -78,6 +78,9 @@ def build(base: str, platform: str = "github") -> dict:
         else:
             online.append({"name": label, "url": base + "/apps/tvbox/" + line_dir + "/api.json"})
         local.append({"name": label, "url": f"clan://localhost/{LOCAL_ROOT}/{line_dir}/api.json"})
+        # 可搬迁版：线路地址写 ./ 相对路径，由客户端按索引自身 URL 解析（ApiConfig.fixContentPath）。
+        # 整包上传到自选云盘后，入口不必指回 GitHub/Gitee；线路目录已是 ASCII 短名，不涉及百分号编码。
+        rel.append({"name": label, "url": f"./{line_dir}/api.json"})
     if not stamp:
         from datetime import datetime
         stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -86,6 +89,7 @@ def build(base: str, platform: str = "github") -> dict:
                          "sites": merged, "lives": [], "parses": [], "flags": []},
         "api_index.json": {"updateTime": stamp, "urls": online},
         "api_index_local.json": {"updateTime": stamp, "urls": local},
+        "api_index_rel.json": {"updateTime": stamp, "urls": rel},
     }
 
 
@@ -196,7 +200,7 @@ def main() -> int:
     if ns.check:
         print("--check：未写文件")
         return 0
-    changed = [n for n in ("api_index.json", "api_index_local.json", "api_all.json")
+    changed = [n for n in ("api_index.json", "api_index_local.json", "api_index_rel.json", "api_all.json")
                if write_if_changed(n, out[n])]
     print("已更新:", changed or "无变化")
     return 0

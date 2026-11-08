@@ -14,8 +14,9 @@ api_index.json        在线直拉（raw，含 jar 引用）       <平台 raw �
 api_all.json          客户端不支持多线路索引时          <平台 raw 基址>/apps/tvbox/api_all.json
 
 关于平台与 jsDelivr：
-- 绝对地址见仓库根 地址.md：GitHub 版与 Gitee 版各一份，内容按平台渲染，取自己平台那份，别混用。
-- jsDelivr 只有 GitHub 侧提供，且只适合下发 JSON（见 地址.md 第四节）。
+- 绝对地址见仓库根 地址.md（两平台并列，内容一致），也可直接复制 README 里的地址块；填自己平台那一行，别混用。
+- jsDelivr 只有 GitHub 侧提供，且只适合下发 JSON（见 地址.md 第六节）。
+- Gitee 对 std/api.json 返回 451，Gitee 侧请用 api_all.json 或索引。
 - api_index.json 不要换 jsDelivr：线路配置用 ./spider.jar 这类相对引用，会跟着解析到 CDN，
   而 jsDelivr 对 .jar 一律返回 403（实测两次均 403），导致整条线路加载失败。
 

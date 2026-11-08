@@ -102,7 +102,7 @@ apps/tvbox/
 
 | 编号 | 规则 |
 |---|---|
-| TVB-NAM-013 | 索引里的线路地址：在线写绝对 raw URL、本地写 `clan://localhost/<本地根名>/<线路目录>/api.json`；一律写 ASCII 原样，禁止百分号编码、禁止 `./` 相对写法（相对写法依赖客户端解析，实测会失败） |
+| TVB-NAM-013 | 索引里的线路地址：`api_index.json` 写平台绝对 raw URL、`api_index_local.json` 写 `clan://localhost/<本地根名>/<线路目录>/api.json`、`api_index_rel.json` 写 `./<线路目录>/api.json` 相对地址；一律 ASCII 原样，禁止百分号编码 |
 | TVB-NAM-014 | 线路内脚本引用写 `./js/x.js`、`./py/x.py`；公共 jar 写 `../_common/jar/x.jar`；不得写 `file://` |
 | TVB-NAM-015 | 顶层 `spider` 写 `./spider.jar;md5;<32位小写>`；不得依赖 `clan://` |
 | TVB-NAM-016 | 站点 `name`、`flags` 中禁止出现 `"./` 与 `"../` 字符序列（会被 `fixContentPath` 当路径替换）；`api`、`ext`、`jar` 反而**必须**用相对路径，由 `fixContentPath` 正常改写（TVB-NAM-014） |
@@ -115,6 +115,7 @@ apps/tvbox/
 | TVB-NAM-023 | 速度符号固定枚举：`⚡` ≤1500 ms、`⏱` 1500–4000 ms、`🐢` ≥4000 ms；未实测或结论为「需复测」的站点不加速度符号 |
 | TVB-NAM-024 | 站点 `name` 格式固定为 `<内容符号><清洗名><速度符号>`；清洗名按 TVB-NAM-017 处理、去掉既有速度后缀；同线路内撞名追加 `·2`、`·3`（追加在清洗名之后、速度符号之前）。例外：仅搜索型（无分类页、只能搜索使用）在速度符号之后追加 `🔎`；间歇源（可能失败、需重试）在名称最前置 `♻️` |
 | TVB-NAM-025 | 线路内排序：先按内容符号固定次序（TVB-NAM-022 的枚举顺序），再按速度档 `⚡`→`⏱`→未实测→`🐢`，最后按原数组顺序稳定排序；重排只改 `name` 与顺序，`key` 一律不改。例外：仅搜索型整组排到线路后段；`♻️` 间歇源排在同组末尾 |
+| TVB-NAM-026 | 可搬迁入口固定文件名 `api_index_rel.json`，三条线路写 `./<线路目录>/api.json`；由 `工具/源生成/生成.py` 与另两个索引一同生成，三者除 url 写法外完全一致；用途是整包上传到自选云盘后入口不必指回 GitHub/Gitee |
 
 **不满足的处理**：出现百分号编码的中文目录、`file://`、`"./` 冲突序列中任一项，该文件判不合格，不进入验收。
 
@@ -221,12 +222,14 @@ apps/tvbox/
 ```json
 {
   "urls": [
-    { "name": "综合", "url": "./SL%20%E7%BB%BC%E5%90%88%E7%BA%BF%E8%B7%AF/api.json" },
-    { "name": "少儿", "url": "./SL%20%E5%B0%91%E5%84%BF%E7%BA%BF%E8%B7%AF/api.json" },
-    { "name": "长辈", "url": "./SL%20%E9%95%BF%E8%BE%88%E7%BA%BF%E8%B7%AF/api.json" }
+    { "name": "综合", "url": "./std/api.json" },
+    { "name": "少儿", "url": "./kids/api.json" },
+    { "name": "长辈", "url": "./elders/api.json" }
   ]
 }
 ```
+
+上例即可搬迁版 `api_index_rel.json`。相对写法能成立，依据是客户端 `fixContentPath()`：配置内容含 `"./` 或 `"../` 时，以**配置自身 URL** 为基准，用 `UriUtil.resolve(url, "./")` 展开（TVB-CFG-009）；线路目录已是 ASCII 短名，不涉及百分号编码（TVB-CFG-017）。
 
 | 编号 | 规则 |
 |---|---|
@@ -234,7 +237,7 @@ apps/tvbox/
 | TVB-STR-002 | 每条必须有 `name` 与 `url`；`name` 即「线路选择」里显示的名字 |
 | TVB-STR-003 | 第一条必须是该包最稳定线路（加载即进入它） |
 | TVB-STR-004 | 线路显示名与线路目录中文一致：综合 / 少儿 / 长辈；不得同名重复 |
-| TVB-STR-005 | 索引内线路地址必须相对（`./`），编码按 TVB-NAM-013；不得写域名 |
+| TVB-STR-005 | 索引内线路地址：常规 `api_index.json` 写平台绝对地址（由渲染生成）；相对写法（`./`）只允许出现在 `api_index_rel.json`（TVB-NAM-026），不得在常规索引里混用 |
 | TVB-STR-006 | 新增线路 = 新建线路目录 + 索引加一条 + `version.json` 加一条；不得改既有线路 |
 | TVB-STR-007 | 禁止让用户直接添加子线路 `api.json` 作为「多线路」用法：未先加载索引时会清空线路列表（TVB-CFG-014）；子配置仅作单线备用入口，需在说明中标明 |
 

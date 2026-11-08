@@ -1,5 +1,5 @@
 {
-  "说明": "双平台对外地址的唯一基准。渲染器（工具/发布/渲染.py）据此生成平台产物；文档里禁止手写另一平台地址（见 规范/仓库通用规范.md 第 3.5 节）。",
+  "说明": "双平台对外地址的唯一基准。渲染器（工具/发布/渲染.py）据此生成地址.md 与各 README 的地址块；文档里禁止手写任一平台地址（见 规范/仓库通用规范.md 第 3.5 节）。",
   "分支": "main",
   "当前默认": "github",
   "平台": {
@@ -11,7 +11,8 @@
       "raw": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main",
       "raw模板": "https://raw.githubusercontent.com/SL-learn/SL-Sources/{ref}",
       "jsDelivr": "https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@main",
-      "jsDelivr模板": "https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@{ref}"
+      "jsDelivr模板": "https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@{ref}",
+      "受限路径": {}
     },
     "gitee": {
       "名称": "Gitee",
@@ -21,7 +22,12 @@
       "raw": "https://gitee.com/{owner}/SL-Sources/raw/main",
       "raw模板": "https://gitee.com/{owner}/SL-Sources/raw/{ref}",
       "jsDelivr": "",
-      "jsDelivr模板": ""
+      "jsDelivr模板": "",
+      "受限路径": {
+        "apps/tvbox/std/api.json": "451 内容审核拦截，不列作可用地址",
+        "apps/reading/书源.json": "451 内容审核拦截，不列作可用地址",
+        "apps/reading/订阅源.json": "451 内容审核拦截，不列作可用地址"
+      }
     }
   }
 }
