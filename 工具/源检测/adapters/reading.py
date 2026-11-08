@@ -198,6 +198,13 @@ class ReadingAdapter:
         self.adult_domains |= {d.lower() for d in rules.get("adultDomainSupplement", [])}
         self.domain = domain or rules.get("域", {}).get("默认", "公开")
         self.adult_mode = rules.get("域", {}).get("取值", {}).get(self.domain, "阻断")
+        self.sev = rules.get("severity", {})
+        self.soft_sub = set(self.sev.get("softSubFields", []))
+        self.name_prefixes = sorted(rules.get("allowedNamePrefixes", []), key=len, reverse=True)
+        self.name_suffixes = sorted(rules.get("allowedNameSuffixes", []), key=len, reverse=True)
+
+    def _sev(self, key: str, default: str = "错误") -> str:
+        return self.sev.get(key, default)
 
     # ---------- 基础 ----------
     @staticmethod
@@ -229,9 +236,9 @@ class ReadingAdapter:
     def coverage(self) -> list[tuple[str, str, str]]:
         return [
             ("T-01", "JSON 可解析、顶层数组、无 BOM、无重复键（RBS-PRC-028）", "自动"),
-            ("T-02", "29 个顶层键齐全、无禁用键、无未知键（RBS-PRC-029、RBS-STR-001/RBS-STR-006/RBS-STR-007）", "自动"),
-            ("T-03", "bookSourceUrl 形态合规且全批唯一（RBS-PRC-030）", "自动"),
-            ("T-04", "bookSourceName 命名合规、同组唯一（跨组同名需备注区别）（RBS-PRC-031、RBS-CLS-035）", "自动"),
+            ("T-02", "必填键齐全（缺失为错误）；可选键缺失与基线外键按警告（RBS-PRC-029、RBS-STR-001/RBS-STR-006/RBS-STR-007）", "自动"),
+            ("T-03", "bookSourceUrl 形态合规且全批唯一；非 http 形态按警告（RBS-PRC-030）", "自动"),
+            ("T-04", "bookSourceName 主体合规、emoji 白名单前缀、同组唯一（RBS-PRC-031、RBS-CLS-035）", "自动"),
             ("T-05", "bookSourceGroup 在白名单、单一归属（RBS-PRC-032、RBS-CLS-002/RBS-CLS-003/RBS-CLS-004）", "自动"),
             ("T-06", "bookSourceType 合法且与分组类型一致（RBS-PRC-033、RBS-CLS-005）", "自动"),
             ("T-07", "搜索/发现入口与必要子字段齐全（RBS-PRC-034、RBS-STR-003/RBS-STR-016）", "自动"),
@@ -240,9 +247,9 @@ class ReadingAdapter:
             ("T-10", "无 searchKey/searchPage 等禁用变量（RBS-PRC-037、RBS-STR-027）", "自动"),
             ("T-11", "规则中无写死字面量凭证/手机号（RBS-PRC-038、RBS-STR-025）", "自动"),
             ("T-12", "bookSourceComment 来源登记四段完整（RBS-PRC-044）", "自动"),
-            ("T-13", "规则表达式结构可解析（RBS-PRC-037 表达式部分）", "自动"),
-            ("T-14", "字段类型严格（RBS-PRC-033、RBS-STR-008/RBS-STR-009/RBS-STR-029）", "自动"),
-            ("T-15", "exploreUrl 三形态与分类命名合规（RBS-PRC-043、RBS-CLS-007/RBS-CLS-008/RBS-CLS-009）", "自动"),
+            ("T-13", "规则表达式结构可解析（静态启发式，按警告不阻断）", "自动"),
+            ("T-14", "字段类型严格（lastUpdateTime 字符串按警告；对象字段为数组按错误）", "自动"),
+            ("T-15", "exploreUrl 三形态与分类命名合规（分类内容按警告；JSON 不可解析按错误）", "自动"),
             ("T-16", "customOrder 批内不重复（RBS-NAM-018）", "自动"),
             ("T-17", "单条体积与 jsLib 体积未超限（RBS-STR-028）", "自动"),
             ("T-18", "清单字段与 baseline/sha256 一致（RBS-PRC-039，需 --清单）", "自动"),
@@ -351,16 +358,21 @@ class ReadingAdapter:
 
     def _check_keys(self, r: EntryResult, src: dict) -> None:
         required = set(self.cfg["requiredTopKeys"])
+        optional = set(self.cfg.get("optionalTopKeys", []))
+        forbidden = set(self.cfg["forbiddenTopKeys"])
         keys = set(src.keys())
         missing = sorted(required - keys)
         if missing:
-            r.add("T-02", "错误", "缺少顶层键：" + "、".join(missing))
-        extra = sorted(keys - required - set(self.cfg["forbiddenTopKeys"]))
+            r.add("T-02", "错误", "缺少必填顶层键：" + "、".join(missing))
+        missing_opt = sorted(optional - keys)
+        if missing_opt:
+            r.add("T-02", self._sev("missingOptionalKey"), "缺少可选顶层键（客户端按默认值处理，不阻断）：" + "、".join(missing_opt))
+        extra = sorted(keys - required - optional - forbidden)
         if extra:
-            r.add("T-02", "错误", "存在规范清单外的顶层键：" + "、".join(extra))
-        for key in self.cfg["forbiddenTopKeys"]:
+            r.add("T-02", self._sev("unknownTopKey"), "存在基线外顶层键（第三方分支字段，Gson 静默丢弃，不阻断）：" + "、".join(extra))
+        for key in forbidden:
             if key in src:
-                r.add("T-02", "错误", f"禁用字段 {key}（本基线不持久化或不存在）")
+                r.add("T-02", self._sev("forbiddenTopKey"), f"禁用字段 {key}（导入后被基线丢弃，自建源禁止写）")
 
     def _check_types(self, r: EntryResult, src: dict) -> None:
         for key in ("bookSourceUrl", "bookSourceName", "bookSourceGroup", "bookUrlPattern",
@@ -377,7 +389,7 @@ class ReadingAdapter:
             elif key in src and not isinstance(src[key], int):
                 r.add("T-14", "错误", f"{key} 应为整数，实际 {type(src[key]).__name__}")
         if "lastUpdateTime" in src and not isinstance(src["lastUpdateTime"], int):
-            r.add("T-14", "错误", "lastUpdateTime 应为毫秒整数")
+            r.add("T-14", self._sev("lastUpdateType"), "lastUpdateTime 非毫秒整数（Gson 可强转字符串数字，不阻断）")
         for key in ("ruleExplore", "ruleSearch", "ruleBookInfo", "ruleToc", "ruleContent"):
             if key in src and not isinstance(src[key], dict):
                 r.add("T-14", "错误", f"{key} 应为对象，实际 {type(src[key]).__name__}")
@@ -395,14 +407,14 @@ class ReadingAdapter:
             r.add("T-03", "错误", "bookSourceUrl 为空")
             return
         if not self.url_re.fullmatch(url):
-            r.add("T-03", "错误", f"bookSourceUrl 不符合 ^https?://[a-z0-9.-]+$：{url}")
+            r.add("T-03", self._sev("urlShape"), f"bookSourceUrl 形态不符合 {self.cfg['urlRegex']}：{url}")
         lower = url.lower()
         if not lower.startswith(("http://", "https://")):
-            r.add("T-03", "错误", "bookSourceUrl 必须是 http/https 绝对地址")
+            r.add("T-03", self._sev("urlShape"), "bookSourceUrl 不是 http/https 地址（第三方以名称/图标作唯一键，绝对地址规则仍可用，不阻断）")
         host = lower.split("://", 1)[1] if "://" in lower else ""
         host = host.split("/", 1)[0].split(":", 1)[0]
         if not host:
-            r.add("T-03", "错误", "bookSourceUrl 缺少 host")
+            r.add("T-03", self._sev("urlShape"), "bookSourceUrl 缺少 host（第三方以名称/图标作唯一键，不阻断）")
             return
         if host_last2(host) in self.adult_domains or host in self.adult_domains:
             self._adult(r, f"命中内置 18+ 域名名单：{host}", "bookSourceUrl")
@@ -412,13 +424,27 @@ class ReadingAdapter:
         if not isinstance(name, str) or not name:
             r.add("T-04", "错误", "bookSourceName 为空")
             return
-        if not self.name_re.fullmatch(name):
-            r.add("T-04", "错误", f"bookSourceName 不符合命名正则（2–24 字、限中文/字母/数字/·-（））：{name}")
+        body = self._name_body(name)
+        if not self.name_re.fullmatch(body):
+            r.add("T-04", self._sev("nameCharset"),
+                  f"bookSourceName 主体含非常规符号（保留第三方原名，不阻断；主体限中文/字母/数字/·-（）[]【】.与圈号）：{name}")
         lmin, lmax = self.limits["nameMin"], self.limits["nameMax"]
-        if not (lmin <= len(name) <= lmax):
-            r.add("T-04", "错误", f"bookSourceName 长度 {len(name)} 不在 {lmin}–{lmax}")
+        if not (lmin <= len(body) <= lmax):
+            r.add("T-04", "错误", f"bookSourceName 主体长度 {len(body)} 不在 {lmin}–{lmax}：{name}")
         if self.adult_kw_re.search(name):
             self._adult(r, f"书源名命中成人关键词：{name}", "bookSourceName")
+
+    def _name_body(self, name: str) -> str:
+        text = name.replace("\ufe0f", "")
+        for p in self.name_prefixes:
+            if text.startswith(p):
+                text = text[len(p):]
+                break
+        for s in self.name_suffixes:
+            if text.endswith(s):
+                text = text[: -len(s)]
+                break
+        return text.strip()
 
     def _check_group(self, r: EntryResult, src: dict) -> None:
         group = src.get("bookSourceGroup")
@@ -468,8 +494,8 @@ class ReadingAdapter:
                     r.add("T-07", "错误", f"searchUrl 不允许该协议：{url_part}")
                 elif "://" in lp and not lp.startswith(("http://", "https://")):
                     r.add("T-07", "错误", f"searchUrl 只允许 http/https 或相对路径：{url_part}")
-                if "{{key}}" not in search_url and "@js:" not in search_url:
-                    r.add("T-07", "错误", "searchUrl 缺关键词变量 {{key}}（或 @js:）")
+                if "{{key}}" not in search_url and "@js:" not in search_url and "<js>" not in search_url:
+                    r.add("T-07", "错误", "searchUrl 缺关键词变量 {{key}}（或 @js:/<js>）")
         if search_rule or search_url:
             if not isinstance(search_rule, dict):
                 r.add("T-07", "错误", "searchUrl 存在但 ruleSearch 不是对象")
@@ -485,7 +511,7 @@ class ReadingAdapter:
         if has_explore and not isinstance(explore_url, str):
             r.add("T-07", "错误", "exploreUrl 应为字符串")
         if not has_explore and src.get("enabledExplore") is True:
-            r.add("T-07", "错误", "enabledExplore=true 但 exploreUrl 为空")
+            r.add("T-07", self._sev("exploreWithoutUrl"), "enabledExplore=true 但 exploreUrl 为空（发现页为空，搜索仍可用，不阻断）")
         if has_explore:
             explore_rule = src.get("ruleExplore")
             explore_rule = explore_rule if isinstance(explore_rule, dict) else {}
@@ -526,19 +552,19 @@ class ReadingAdapter:
 
     def _check_explore_array(self, r: EntryResult, kinds: list) -> None:
         if len(kinds) > self.limits["maxExploreKinds"]:
-            r.add("T-15", "错误", f"发现分类 {len(kinds)} 个，超过上限 {self.limits['maxExploreKinds']}")
+            r.add("T-15", self._sev("exploreContent"), f"发现分类 {len(kinds)} 个，超过建议上限 {self.limits['maxExploreKinds']}（第三方规则原文，不阻断）")
         titles: list[str] = []
         usable = 0
         for i, k in enumerate(kinds, start=1):
             if not isinstance(k, dict):
-                r.add("T-15", "错误", f"发现分类第 {i} 项不是对象")
+                r.add("T-15", self._sev("exploreContent"), f"发现分类第 {i} 项不是对象")
                 continue
             extra = set(k.keys()) - {"title", "url", "style"}
             if extra:
-                r.add("T-15", "错误", f"发现分类第 {i} 项含未知键：" + "、".join(sorted(extra)))
+                r.add("T-15", self._sev("exploreContent"), f"发现分类第 {i} 项含未知键：" + "、".join(sorted(extra)))
             title = k.get("title")
             if not isinstance(title, str) or not title.strip():
-                r.add("T-15", "错误", f"发现分类第 {i} 项 title 为空")
+                r.add("T-15", self._sev("exploreContent"), f"发现分类第 {i} 项 title 为空")
             else:
                 titles.append(title)
                 self._check_explore_title(r, title, i)
@@ -552,7 +578,7 @@ class ReadingAdapter:
     def _check_explore_legacy(self, r: EntryResult, text: str) -> None:
         lines = [s for s in re.split(r"(?:&&|\r?\n)+", text) if s.strip()]
         if len(lines) > self.limits["maxExploreKinds"]:
-            r.add("T-15", "错误", f"发现分类 {len(lines)} 个，超过上限 {self.limits['maxExploreKinds']}")
+            r.add("T-15", self._sev("exploreContent"), f"发现分类 {len(lines)} 个，超过建议上限 {self.limits['maxExploreKinds']}（第三方规则原文，不阻断）")
         titles: list[str] = []
         usable = 0
         for i, line in enumerate(lines, start=1):
@@ -560,7 +586,7 @@ class ReadingAdapter:
             title = title.strip()
             url = url.strip() if sep else ""
             if not title:
-                r.add("T-15", "错误", f"发现分类第 {i} 项 title 为空")
+                r.add("T-15", self._sev("exploreContent"), f"发现分类第 {i} 项 title 为空")
                 continue
             titles.append(title)
             self._check_explore_title(r, title, i)
@@ -573,23 +599,26 @@ class ReadingAdapter:
     def _check_explore_title(self, r: EntryResult, title: str, i: int) -> None:
         lo, hi = self.limits["exploreTitleMin"], self.limits["exploreTitleMax"]
         if not (lo <= len(title) <= hi):
-            r.add("T-15", "错误", f"发现分类 title 长度 {len(title)} 不在 {lo}–{hi}：{title}")
+            r.add("T-15", self._sev("exploreContent"), f"发现分类 title 长度 {len(title)} 不在 {lo}–{hi}：{title}")
         if self.adult_kw_re.search(title):
             self._adult(r, f"发现分类 title 命中成人关键词：{title}", f"exploreUrl[{i}].title")
 
     def _check_explore_tail(self, r: EntryResult, titles: list[str], usable: int) -> None:
         if len(titles) != len(set(titles)):
-            r.add("T-15", "错误", "发现分类 title 有重复")
+            r.add("T-15", self._sev("exploreContent"), "发现分类 title 有重复")
         if not titles:
-            r.add("T-15", "错误", "exploreUrl 没有可解析的分类")
+            r.add("T-15", self._sev("exploreContent"), "exploreUrl 没有可解析的分类")
         elif usable == 0:
-            r.add("T-15", "错误", "exploreUrl 没有任何可用分类（url 全空）")
+            r.add("T-15", self._sev("exploreContent"), "exploreUrl 没有任何可用分类（url 全空）")
 
     def _require_subfields(self, r: EntryResult, cid: str, obj: dict, required: list[str], label: str) -> None:
         for key in required:
             value = obj.get(key)
             if value is None or (isinstance(value, str) and not value.strip()) or value == {}:
-                r.add(cid, "错误", f"{label}.{key} 为空")
+                if key in self.soft_sub:
+                    r.add(cid, self._sev("softSubField", "警告"), f"{label}.{key} 为空（选填，缺失不阻断）")
+                else:
+                    r.add(cid, "错误", f"{label}.{key} 为空")
 
     def _check_required_rules(self, r: EntryResult, src: dict) -> None:
         t = src.get("bookSourceType")
@@ -608,7 +637,7 @@ class ReadingAdapter:
                                         self.cfg["requiredSubFields"]["content"], "ruleContent")
             info = src.get("ruleBookInfo")
             if not isinstance(info, dict) or not info:
-                r.add("T-08", "错误", "ruleBookInfo 缺失或为空")
+                r.add("T-08", self._sev("missingBookInfo"), "ruleBookInfo 缺失或为空（详情页字段可由搜索列表回填，不阻断）")
         elif t == 3:
             info = src.get("ruleBookInfo")
             if not isinstance(info, dict):
@@ -624,7 +653,7 @@ class ReadingAdapter:
                 continue
             for field, value in obj.items():
                 for level, msg in check_rule_syntax(value, field, field in list_fields):
-                    r.add("T-13", level, f"{obj_key}.{field}：{msg}")
+                    r.add("T-13", self._sev("ruleSyntax", level), f"{obj_key}.{field}：{msg}")
 
     def _check_forbidden(self, r: EntryResult, src: dict) -> None:
         text_parts: list[str] = []

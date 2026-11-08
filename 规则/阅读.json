@@ -11,8 +11,8 @@
     },
     "说明": "公开域命中成人内容判不通过；私有域只打标「成人域」，不阻断。由 --域 覆盖，不写死在代码里。"
   },
-  "requiredTopKeys": [
-    "bookSourceUrl", "bookSourceName", "bookSourceGroup", "bookSourceType",
+  "requiredTopKeys": ["bookSourceUrl", "bookSourceName", "bookSourceType", "bookSourceGroup"],
+  "optionalTopKeys": [
     "bookUrlPattern", "customOrder", "enabled", "enabledExplore", "jsLib",
     "enabledCookieJar", "concurrentRate", "header", "loginUrl", "loginUi",
     "loginCheckJs", "coverDecodeJs", "bookSourceComment", "variableComment",
@@ -28,10 +28,25 @@
     "🖼 漫画": 2,
     "🎧 有声": 1
   },
-  "nameRegex": "^(?:⑱ )?[\\u4e00-\\u9fa5A-Za-z0-9·\\-（）()\\[\\]\\s]{2,24}$",
+  "allowedNamePrefixes": ["🌐", "🔍", "🎉", "📚", "💠", "📖", "●", "🍒", "⭐", "🐾", "🌙", "🎧", "🖼", "♻"],
+  "allowedNameSuffixes": ["♻"],
+  "nameRegex": "^(?:⑱ )?[\\u4e00-\\u9fa5A-Za-z0-9·\\-（）()\\[\\]【】.\\u2460-\\u2473\\u3251-\\u325f\\s]{2,24}$",
   "uniqueNameScope": "group",
   "backupSuffixRegex": "·备(\\d+)?$",
-  "urlRegex": "^https?://[a-z0-9.-]+$",
+  "urlRegex": "^https?://[A-Za-z0-9.-]+(?::\\d+)?(?:[/?#][^\\s]*)?$",
+  "severity": {
+    "nameCharset": "警告",
+    "missingOptionalKey": "警告",
+    "unknownTopKey": "警告",
+    "forbiddenTopKey": "警告",
+    "urlShape": "警告",
+    "exploreContent": "警告",
+    "ruleSyntax": "警告",
+    "lastUpdateType": "警告",
+    "missingBookInfo": "警告",
+    "exploreWithoutUrl": "警告",
+    "softSubFields": ["author", "intro", "kind", "lastChapter"]
+  },
   "commentRegex": "来源[:：][^；]+；上游[:：][^；]+；作者[:：][^；]+",
   "credentialRegex": "Bearer\\s+[A-Za-z0-9\\-._~+/]{16,}|(?:Authorization|Cookie|Set-Cookie)\\s*[:=]\\s*[\"'][^\"']{16,}|token\\s*=\\s*[\"'][A-Za-z0-9\\-._~]{16,}|\\b1[3-9]\\d{9}\\b",
   "forbiddenVars": ["searchKey", "searchPage"],
