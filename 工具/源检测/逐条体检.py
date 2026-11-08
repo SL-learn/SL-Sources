@@ -371,7 +371,7 @@ def write_reports(rows: list[dict], out_dir: str) -> int:
     nc = Counter(x["无分类类型"] for x in rows)
     cc = Counter(x["内容归类"] for x in rows)
 
-    L = ["# 源体检表（TVBox 151 站）", "",
+    L = ["# 源体检表（TVBox）", "",
          f"- 生成时间：{time.strftime('%Y-%m-%d %H:%M:%S')}",
          f"- 总数：{len(rows)} 条；实测层（CMS 可探测）：{len(measured)} 条；静态层（爬虫不可探测）：{len(static)} 条",
          "- 明细：同目录 `源体检表.csv`",
