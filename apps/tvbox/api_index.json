@@ -3,15 +3,15 @@
   "urls": [
     {
       "name": "综合",
-      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/api.json"
+      "url": "https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json"
     },
     {
       "name": "少儿",
-      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/kids/api.json"
+      "url": "https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json"
     },
     {
       "name": "长辈",
-      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/elders/api.json"
+      "url": "https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json"
     }
   ]
 }
