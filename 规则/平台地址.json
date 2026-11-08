@@ -1,0 +1,27 @@
+{
+  "说明": "双平台对外地址的唯一基准。渲染器（工具/发布/渲染.py）据此生成平台产物；文档里禁止手写另一平台地址（见 规范/仓库通用规范.md 第 3.5 节）。",
+  "分支": "main",
+  "当前默认": "github",
+  "平台": {
+    "github": {
+      "名称": "GitHub",
+      "owner": "SL-learn",
+      "repo": "SL-Sources",
+      "网页": "https://github.com/SL-learn/SL-Sources",
+      "raw": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main",
+      "raw模板": "https://raw.githubusercontent.com/SL-learn/SL-Sources/{ref}",
+      "jsDelivr": "https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@main",
+      "jsDelivr模板": "https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@{ref}"
+    },
+    "gitee": {
+      "名称": "Gitee",
+      "owner": "",
+      "repo": "SL-Sources",
+      "网页": "https://gitee.com/{owner}/SL-Sources",
+      "raw": "https://gitee.com/{owner}/SL-Sources/raw/main",
+      "raw模板": "https://gitee.com/{owner}/SL-Sources/raw/{ref}",
+      "jsDelivr": "",
+      "jsDelivr模板": ""
+    }
+  }
+}

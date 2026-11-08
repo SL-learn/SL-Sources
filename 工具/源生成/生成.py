@@ -1,10 +1,12 @@
 """TVBox 源生成：一条命令重建全部发布物。
 
 用法（仓库根执行）：
-    python 工具/源生成/生成.py            # 生成并自检
-    python 工具/源生成/生成.py --check    # 只自检，不写文件
+    python 工具/源生成/生成.py                    # 生成并自检（默认 github 平台）
+    python 工具/源生成/生成.py --check            # 只自检，不写文件
+    python 工具/源生成/生成.py --platform gitee [--owner <Gitee 个性地址>]
 
 输入：apps/tvbox/{std,kids,elders}/api.json（唯一事实来源，手改这里）
+     规则/平台地址.json（raw 基址，禁止在脚本里写死某一平台）
 输出：apps/tvbox/api_index.json、api_index_local.json、api_all.json
 幂等：内容不变则不重写；先全部在内存算完再统一落盘，任何异常不产生半成品。
 """
@@ -19,25 +21,40 @@ from urllib.parse import urlparse
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 APP_DIR = os.path.join(REPO, "apps", "tvbox")
-RAW = "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/"
+PLATFORM_FILE = os.path.join(REPO, "规则", "平台地址.json")
 LOCAL_ROOT = "tvbox"
 LINES = [("std", "std", "综合"), ("kid", "kids", "少儿"), ("eld", "elders", "长辈")]
 
 
-def abs_ref(ref: str, line_dir: str) -> str:
+def raw_base(platform: str | None = None, owner: str | None = None) -> str:
+    """按平台取 raw 基址（不含 /apps/tvbox/）。基址只从 规则/平台地址.json 读。"""
+    platform = platform or os.environ.get("RAW_PLATFORM") or "github"
+    with open(PLATFORM_FILE, encoding="utf-8") as f:
+        cfg = json.load(f)
+    try:
+        p = cfg["平台"][platform]
+    except KeyError:
+        raise SystemExit(f"未知平台：{platform}（可选 {sorted(cfg['平台'])}）")
+    owner = owner or p.get("owner") or os.environ.get("GITEE_OWNER", "")
+    if not owner:
+        raise SystemExit(f"{p['名称']} 的 owner 未配置：渲染/推送前先设环境变量 GITEE_OWNER 或用 --owner 传入")
+    return p["raw"].replace("{owner}", owner)
+
+
+def abs_ref(ref: str, line_dir: str, base: str) -> str:
     if not isinstance(ref, str):
         return ref
     path, sep, tail = ref.partition(";md5;")
     if path.startswith("../"):
-        full = RAW + path[3:]
+        full = base + "/apps/tvbox/" + path[3:]
     elif path.startswith("./"):
-        full = RAW + line_dir + "/" + path[2:]
+        full = base + "/apps/tvbox/" + line_dir + "/" + path[2:]
     else:
         return ref
     return full + sep + tail
 
 
-def build() -> dict:
+def build(base: str) -> dict:
     merged, online, local = [], [], []
     spider = ""
     stamp = ""
@@ -48,12 +65,12 @@ def build() -> dict:
             s = dict(site)
             for k in ("api", "jar", "ext"):
                 if k in s:
-                    s[k] = abs_ref(s[k], line_dir)
+                    s[k] = abs_ref(s[k], line_dir, base)
             merged.append(s)
         if code == "std":
-            spider = abs_ref(cfg.get("spider", ""), line_dir)
+            spider = abs_ref(cfg.get("spider", ""), line_dir, base)
             stamp = str(cfg.get("updateTime", "") or "")
-        online.append({"name": label, "url": RAW + line_dir + "/api.json"})
+        online.append({"name": label, "url": base + "/apps/tvbox/" + line_dir + "/api.json"})
         local.append({"name": label, "url": f"clan://localhost/{LOCAL_ROOT}/{line_dir}/api.json"})
     if not stamp:
         from datetime import datetime
@@ -143,12 +160,16 @@ def write_if_changed(name: str, data: dict) -> bool:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="只自检，不写文件")
+    ap.add_argument("--platform", default=None, help="github | gitee（默认读 RAW_PLATFORM 或 github）")
+    ap.add_argument("--owner", default=None, help="覆盖 规则/平台地址.json 里的 owner")
     ns = ap.parse_args()
 
+    base = raw_base(ns.platform, ns.owner)
     problems = self_check()
-    out = build()
+    out = build(base)
     counts = {line: len(json.load(open(os.path.join(APP_DIR, line, "api.json"), encoding="utf-8"))["sites"])
               for _c, line, _l in LINES}
+    print("raw 基址:", base)
     print("站点数:", counts, "合计:", sum(counts.values()))
     print("合并后 key 唯一:", len({s['key'] for s in out['api_all.json']['sites']}) == sum(counts.values()))
 

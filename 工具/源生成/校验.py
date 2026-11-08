@@ -1,11 +1,13 @@
-"""线上入口校验：逐条实测 GitHub raw 是否与本地一致。
+"""线上入口校验：逐条实测 raw 是否与本地一致。
 
 用法（仓库根执行）：
-    python 工具/源生成/校验.py                 # 校验 main
-    python 工具/源生成/校验.py --ref tvbox-v2.0.0
-    python 工具/源生成/校验.py --base https://raw.githubusercontent.com/<owner>/<repo>/<ref>/apps/tvbox/
+    python 工具/源生成/校验.py                       # 校验 github 的 main
+    python 工具/源生成/校验.py --platform gitee --owner <Gitee 个性地址>
+    python 工具/源生成/校验.py --ref tvbox-v2.3.0
+    python 工具/源生成/校验.py --base https://<平台 raw 基址>/apps/tvbox/
 
 校验项：索引 200 / 三条线路 200 且站点数一致 / api_all 200 且站数一致 / spider.jar 200 且 md5 一致 / cms.js 200。
+平台基址只从 规则/平台地址.json 读，不在本脚本写死任一平台。
 """
 from __future__ import annotations
 
@@ -19,11 +21,21 @@ import urllib.request
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 APP_DIR = os.path.join(REPO, "apps", "tvbox")
-OWNER_REPO = "SL-learn/SL-Sources"
+PLATFORM_FILE = os.path.join(REPO, "规则", "平台地址.json")
 UA = {"User-Agent": "okhttp/3.15"}
 CTX = ssl.create_default_context()
 CTX.check_hostname = False
 CTX.verify_mode = ssl.CERT_NONE
+
+
+def raw_ref_base(platform: str, ref: str, owner: str = "") -> str:
+    with open(PLATFORM_FILE, encoding="utf-8") as f:
+        cfg = json.load(f)
+    p = cfg["平台"][platform]
+    owner = owner or p.get("owner") or os.environ.get("GITEE_OWNER", "")
+    if not owner:
+        raise SystemExit(f"{p['名称']} 的 owner 未配置：用 --owner 或环境变量 GITEE_OWNER 传入")
+    return p["raw模板"].replace("{owner}", owner).replace("{ref}", ref)
 
 
 def fetch(url: str, timeout: int = 20):
@@ -38,9 +50,11 @@ def fetch(url: str, timeout: int = 20):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--ref", default="main")
+    ap.add_argument("--platform", default="github")
+    ap.add_argument("--owner", default="")
     ap.add_argument("--base", default="")
     ns = ap.parse_args()
-    base = ns.base or f"https://raw.githubusercontent.com/{OWNER_REPO}/{ns.ref}/apps/tvbox/"
+    base = ns.base or (raw_ref_base(ns.platform, ns.ref, ns.owner) + "/apps/tvbox/")
     if not base.endswith("/"):
         base += "/"
 

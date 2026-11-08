@@ -5,16 +5,33 @@
 
 ## 有哪些应用
 
-| 应用 | 入口 | 在线地址 |
+| 应用 | 入口 | 仓库内路径 |
 |---|---|---|
-| TVBox | `api_index.json`（多线路） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` |
-| TVBox | `api_index_local.json`（本地） | `clan://localhost/tvbox/api_index_local.json` |
-| TVBox | `api_all.json`（单文件全量 65 站） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` |
-| 小猫影视 | `config.json` | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` |
-| 阅读书源 | `书源.json`（111 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E4%B9%A6%E6%BA%90.json` |
-| 阅读订阅源 | `订阅源.json`（26 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E8%AE%A2%E9%98%85%E6%BA%90.json` |
+| TVBox | `api_index.json`（多线路） | `apps/tvbox/api_index.json` |
+| TVBox | `api_index_local.json`（本地整包） | `apps/tvbox/api_index_local.json`（填 `clan://localhost/tvbox/api_index_local.json`） |
+| TVBox | `api_all.json`（单文件全量 64 站） | `apps/tvbox/api_all.json` |
+| 小猫影视 | `config.json` | `apps/catmovie/config.json` |
+| 阅读书源 | `书源.json`（111 条） | `apps/reading/书源.json` |
+| 阅读订阅源 | `订阅源.json`（26 条） | `apps/reading/订阅源.json` |
 
-填法、安装步骤见 `使用/`；强制条款见 `规范/`。**地址里不带版本号与日期，永久固定。**
+**可直接填写的绝对地址见 [地址.md](./地址.md)**：该文件由 `工具/发布/渲染.py` 按平台渲染，GitHub 与 Gitee 各一份，内容互不混用。填法、安装步骤见 `使用/`；强制条款见 `规范/`。**地址里不带版本号与日期，永久固定。**
+
+## 双远端（GitHub 主源 + Gitee 国内镜像）
+
+| 项 | GitHub | Gitee |
+|---|---|---|
+| 远端名 | `origin` | `gitee` |
+| 角色 | 主源（支持 jsDelivr 加速） | 国内镜像，网络拉不动时改用 |
+| 地址文件 | 本仓 `地址.md`（GitHub 版） | 同路径 `地址.md`（Gitee 版） |
+
+- 两平台地址**各自渲染**：raw 基址只在 `规则/平台地址.json` 定义，文档一律只写仓库内相对路径，禁止手写另一平台地址（`规范/仓库通用规范.md` 第 3.5 节）。
+- 一条命令同步本地 `main` 与全部 tag 到两个远端：
+
+  ```powershell
+  powershell -ExecutionPolicy Bypass -File 工具\发布\同步双远端.ps1
+  ```
+
+  只推一个平台加 `-Only gitee`，演练加 `-DryRun`。详见 `工具/发布/说明.md`。
 
 ## 动手前必读顺序（任何新增源、改包都必须走这条链）
 

@@ -10,12 +10,12 @@ tvbox 包 v2.3.1
 ----------------
 文件名                适用场景                         填法
 api_index_local.json  整包拷到手机，本地离线用          clan://localhost/tvbox/api_index_local.json
-api_index.json        在线直拉（raw，含 jar 引用）       https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json
-api_all.json          客户端不支持多线路索引时          https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json
+api_index.json        在线直拉（raw，含 jar 引用）       <平台 raw 基址>/apps/tvbox/api_index.json
+api_all.json          客户端不支持多线路索引时          <平台 raw 基址>/apps/tvbox/api_all.json
 
-关于 jsDelivr：
-- api_all.json 可换用 https://cdn.jsdelivr.net/gh/SL-learn/SL-Sources@main/apps/tvbox/api_all.json
-  （它内部全部是绝对 raw 地址，CDN 只负责下发这一份 JSON）。
+关于平台与 jsDelivr：
+- 绝对地址见仓库根 地址.md：GitHub 版与 Gitee 版各一份，内容按平台渲染，取自己平台那份，别混用。
+- jsDelivr 只有 GitHub 侧提供，且只适合下发 JSON（见 地址.md 第四节）。
 - api_index.json 不要换 jsDelivr：线路配置用 ./spider.jar 这类相对引用，会跟着解析到 CDN，
   而 jsDelivr 对 .jar 一律返回 403（实测两次均 403），导致整条线路加载失败。
 

@@ -6,7 +6,7 @@
 
 ## 入口
 
-`https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json`
+仓库内路径固定为 `apps/catmovie/config.json`；绝对地址见仓库根 `地址.md`（按平台渲染，GitHub 与 Gitee 各一份）。
 
 ## 当前内容（1.5.0）
 

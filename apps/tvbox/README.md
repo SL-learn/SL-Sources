@@ -4,11 +4,13 @@ TVBoxOSC 系客户端的三线路影视源：综合 52 站、少儿 4 站、长�
 
 ## 入口
 
-| 场景 | 地址 |
+绝对地址见仓库根 `地址.md`（按平台渲染，GitHub 与 Gitee 各一份），下表的路径在两平台一致：
+
+| 场景 | 仓库内路径 / 填法 |
 |---|---|
-| 在线多线路 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` |
+| 在线多线路 | `apps/tvbox/api_index.json` |
 | 本地安装 | 整包放 `/sdcard/TVBox/tvbox/`，填 `clan://localhost/tvbox/api_index_local.json` |
-| 单文件全量 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` |
+| 单文件全量 | `apps/tvbox/api_all.json` |
 
 填法与安装步骤见 `使用/TVBox 使用说明.md`；字段、命名、门禁、探活与验收条款见 `规范/TVBox 源规范.md`。
 
