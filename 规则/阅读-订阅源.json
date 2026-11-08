@@ -107,5 +107,8 @@
     "请求头UA": "Mozilla/5.0 (Linux; Android 8.1.0) AppleWebKit/537.36 Chrome/78.0 Mobile Safari/537.36",
     "feed识别": ["<rss", "<feed", "<rdf", "<?xml"],
     "说明": "端点=sortUrl 首条 URL（相对地址按 sourceUrl 绝对化；sortUrl 为空回退 sourceUrl）；只做网络可达 + XML 信号嗅探，不执行 AnalyzeRule。区分：网络失败/4xx/5xx=站点侧；200 但既非 XML 又无 ruleArticles=疑似规则写错。"
+  },
+  "外部词表": {
+    "门禁词表": "配置/词表/门禁词表.txt"
   }
 }
