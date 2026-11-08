@@ -1,6 +1,6 @@
 # SL 自建源仓库
 
-个人自用的多应用源仓库：TVBox（三条线路）、小猫影视（单文件全量）、阅读（规则与模板）。
+个人自用的多应用源仓库：TVBox（三条线路）、小猫影视（单文件全量）、阅读（书源与订阅源成品）。
 仓库只收录可公开的配置、规则、模板、规范与工具。
 
 ## 有哪些应用
@@ -11,7 +11,8 @@
 | TVBox | `api_index_local.json`（本地） | `clan://localhost/tvbox/api_index_local.json` |
 | TVBox | `api_all.json`（单文件全量 65 站） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` |
 | 小猫影视 | `config.json` | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` |
-| 阅读 | 规则与模板（个人源不入库） | 见 `apps/reading/README.md` |
+| 阅读书源 | `书源.json`（115 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E4%B9%A6%E6%BA%90.json` |
+| 阅读订阅源 | `订阅源.json`（27 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E8%AE%A2%E9%98%85%E6%BA%90.json` |
 
 填法、安装步骤见 `使用/`；强制条款见 `规范/`。**地址里不带版本号与日期，永久固定。**
 
