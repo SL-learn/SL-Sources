@@ -23,7 +23,6 @@ import os
 import re
 import subprocess
 import sys
-from datetime import datetime
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PLATFORM_FILE = os.path.join(REPO, "规则", "平台地址.json")
@@ -79,7 +78,6 @@ def render_address(p: dict) -> str:
         "{{网页地址}}": p["网页"],
         "{{REF_RAW_BASE}}": p["raw模板"].replace("{ref}", "tvbox-v2.4.0"),
         "{{JSDELIVR_LINE}}": jsd_line,
-        "{{渲染时间}}": datetime.now().strftime("%Y-%m-%d %H:%M"),
     }
     text = tpl
     for k, v in subs.items():
