@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-11-08 19:05",
+  "updateTime": "2026-11-08 21:30",
   "sites": [
     {
       "id": "caiji_dyttzyapi_com",
@@ -138,23 +138,23 @@
   "data": [],
   "lives": [
     {
-      "name": "综合｜VBSKY综合",
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
-      "type": 0
-    },
-    {
-      "name": "综合｜APTV综合",
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "type": 0
-    },
-    {
       "name": "卫视｜央视卫视",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
       "type": 0
     },
     {
+      "name": "综合｜VBSKY综合",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "type": 0
+    },
+    {
       "name": "地方｜央卫港澳",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "type": 0
+    },
+    {
+      "name": "综合｜APTV综合",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "type": 0
     }
   ]
