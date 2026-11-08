@@ -8,6 +8,7 @@
 输入：apps/tvbox/{std,kids,elders}/api.json（唯一事实来源，手改这里）
      规则/平台地址.json（raw 基址，禁止在脚本里写死某一平台）
 输出：apps/tvbox/api_index.json、api_index_local.json、api_all.json
+      （gitee 版 api_index.json 的三条线路统一指向 api_all.json，见 规范/仓库通用规范.md SYS-DIST-009）
 幂等：内容不变则不重写；先全部在内存算完再统一落盘，任何异常不产生半成品。
 """
 from __future__ import annotations
@@ -54,7 +55,7 @@ def abs_ref(ref: str, line_dir: str, base: str) -> str:
     return full + sep + tail
 
 
-def build(base: str) -> dict:
+def build(base: str, platform: str = "github") -> dict:
     merged, online, local = [], [], []
     spider = ""
     stamp = ""
@@ -70,7 +71,12 @@ def build(base: str) -> dict:
         if code == "std":
             spider = abs_ref(cfg.get("spider", ""), line_dir, base)
             stamp = str(cfg.get("updateTime", "") or "")
-        online.append({"name": label, "url": base + "/apps/tvbox/" + line_dir + "/api.json"})
+        # Gitee 对 apps/tvbox/std/api.json 返回 451（内容审核），其索引三条线路统一指向全量单文件；
+        # GitHub 版保持三线路各自地址不变（见 规范/仓库通用规范.md SYS-DIST-009）。
+        if platform == "gitee":
+            online.append({"name": label, "url": base + "/apps/tvbox/api_all.json"})
+        else:
+            online.append({"name": label, "url": base + "/apps/tvbox/" + line_dir + "/api.json"})
         local.append({"name": label, "url": f"clan://localhost/{LOCAL_ROOT}/{line_dir}/api.json"})
     if not stamp:
         from datetime import datetime
@@ -164,9 +170,10 @@ def main() -> int:
     ap.add_argument("--owner", default=None, help="覆盖 规则/平台地址.json 里的 owner")
     ns = ap.parse_args()
 
-    base = raw_base(ns.platform, ns.owner)
+    platform = ns.platform or os.environ.get("RAW_PLATFORM") or "github"
+    base = raw_base(platform, ns.owner)
     problems = self_check()
-    out = build(base)
+    out = build(base, platform)
     counts = {line: len(json.load(open(os.path.join(APP_DIR, line, "api.json"), encoding="utf-8"))["sites"])
               for _c, line, _l in LINES}
     print("raw 基址:", base)
