@@ -1,8 +1,9 @@
 {
   "id": "reading",
   "name": "阅读/Legado",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "updated": "2026-11-08",
+  "updatedAt": "2026-11-08 17:09",
   "status": "beta",
   "files": {
     "bookSources": "书源.json",
@@ -20,5 +21,6 @@
   "verify": ["规范/阅读书源校验规则.md", "规范/阅读订阅源校验规则.md"],
   "templates": ["工具/阅读模板/书源模板.json", "工具/阅读模板/订阅源模板.json"],
   "sourceBaseline": "参考资料/阅读3.0-hectorqin@da17bb2",
-  "privateSources": "私有域/apps/reading/书源-成人.json、订阅源-成人.json（不入库）"
+  "privateSources": "私有域/apps/reading/书源-成人.json、订阅源-成人.json（不入库）",
+  "updateNote": "书源与订阅源为 JSON 数组，不支持文件头字段；更新时间见每条源备注末尾与 updatedAt"
 }
