@@ -19,6 +19,9 @@ import os
 import re
 import shutil
 import sys
+import time
+import urllib.parse
+import urllib.request
 import zipfile
 from datetime import datetime
 
@@ -44,10 +47,54 @@ SELF_PATTERNS = [
 ]
 
 THIRD_PARTY_RE = re.compile(
-    r'https?://[^\s"\',;]*(?:raw\.githubusercontent\.com|gitee\.com|github\.com)[^\s"\',;]*'
+    r'https?://[^\s"\',;`\\]*(?:raw\.githubusercontent\.com|gitee\.com|github\.com)[^\s"\',;`\\]*'
 )
 
 TEXT_EXT = {'.json', '.js', '.txt', '.md', '.csv', '.py', '.yaml', '.yml', '.ini', '.conf'}
+
+# 内容快照：运行时加载的上游数据，导出时抓成本地文件并改写为相对引用
+LIVE_SNAPSHOTS = [
+    ('https://gh-proxy.com/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u', 'vbskycn_iptv4.m3u'),
+    ('https://gh-proxy.com/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u', 'aptv_iptv.m3u'),
+    ('https://gh-proxy.com/https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u', 'wwb521_tv.m3u'),
+    ('https://gh-proxy.com/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u', 'suxuang_ipv4.m3u'),
+]
+
+BILI_SNAPSHOTS = [
+    ('哔哩哔哩小品', 'bili_xiaopin.json'),
+    ('哔哩哔哩相声', 'bili_xiansheng.json'),
+    ('哔哩哔哩戏曲', 'bili_xiqu.json'),
+]
+BILI_BASE = 'https://raw.githubusercontent.com/tushen6/Tomorrow/master/json/'
+
+DRPY_PLACEHOLDER = 'https://ghproxy.net/https://raw.githubusercontent.com/hjdhnx/dr_py/main/404.jpg'
+BILI_COOKIE_REMOTE = 'https://ghproxy.net/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/txt/cookie.txt'
+
+# 注释/版权声明里的地址：保留原样，不属运行时依赖
+COMMENT_URLS = {
+    'https://github.com/nodeca/pako',
+    'https://github.com/zloirock/core-js/issues/86#issuecomment-115759028',
+    'https://github.com/sstur/jinja-js',
+    'https://github.com/FongMi/Release/tree/main/apk',
+    'https://ghproxy.net/https://raw.githubusercontent.com/UndCover/PyramidStore/main/list.md',
+    'https://github.com/ch6vip/fqapp',
+    'https://gitee.com/visita/yd/raw/master/06red/0purple.jpg',
+    'https://gitee.com/visita/yd/raw/master/06red/004.png',
+}
+
+# 运行时仍保留、但已确认无法以相对路径本地化的地址（仅图标，不影响内容抓取）
+ICON_EXCEPTIONS = {
+    'https://gitee.com/visita/yd/raw/master/00rose/${src}',
+    'https://gitee.com/visita/yd/raw/master/01pink/${src}',
+    'https://gitee.com/visita/yd/raw/master/02blue/${src}',
+    'https://gitee.com/visita/yd/raw/master/03green/${src}',
+    'https://gitee.com/visita/yd/raw/master/04gear/${src}',
+    'https://gitee.com/visita/yd/raw/master/05green/${src}',
+    'https://gitee.com/visita/yd/raw/master/06red/${src}',
+    'https://gitee.com/visita/yd/raw/master/07blackred/${src}',
+    'https://gitee.com/visita/yd/raw/master/08black/${src}',
+    'https://gitee.com/visita/yd/raw/master/09note/${src}',
+}
 
 
 def log(msg):
@@ -113,6 +160,147 @@ def copy_minimal(out_root):
                 shutil.copy2(s, os.path.join(dst_dir, name))
 
 
+def real_url(url):
+    for proxy in ('https://gh-proxy.com/', 'https://g.blfrp.cn/'):
+        if url.startswith(proxy):
+            return url[len(proxy):]
+    return url
+
+
+def url_candidates(url):
+    direct = real_url(url)
+    cands = [url, direct]
+    for proxy in ('https://gh-proxy.com/', 'https://g.blfrp.cn/'):
+        cands.append(proxy + direct)
+    return list(dict.fromkeys(cands))
+
+
+def fetch_file(url, dst, cache_dir):
+    key = hashlib.sha1(url.encode('utf-8')).hexdigest()
+    cached = os.path.join(cache_dir, key)
+    if not os.path.exists(cached):
+        last = None
+        for cand in url_candidates(url):
+            for _ in range(2):
+                try:
+                    req = urllib.request.Request(
+                        urllib.parse.quote(cand, safe=':/?&=@'),
+                        headers={'User-Agent': 'Mozilla/5.0'},
+                    )
+                    tmp = cached + '.tmp'
+                    with urllib.request.urlopen(req, timeout=60) as r, open(tmp, 'wb') as f:
+                        f.write(r.read())
+                    os.replace(tmp, cached)
+                    last = None
+                    break
+                except Exception as e:
+                    last = e
+                    time.sleep(2)
+            if last is None:
+                break
+        if last is not None:
+            raise RuntimeError(f'抓取失败：{url}（{last}）')
+    shutil.copyfile(cached, dst)
+    return os.path.getsize(dst)
+
+
+def localize(out_root, cache_dir):
+    """抓取运行时上游依赖到包内，并改写为相对引用；返回替换清单。"""
+    rows = []
+    os.makedirs(cache_dir, exist_ok=True)
+
+    # 1) 小猫影视直播源 m3u -> catmovie/live/
+    cfg_path = os.path.join(out_root, 'catmovie', 'config.json')
+    if os.path.exists(cfg_path):
+        cfg = read_json(cfg_path)
+        live_dir = os.path.join(out_root, 'catmovie', 'live')
+        os.makedirs(live_dir, exist_ok=True)
+        for item in cfg.get('lives', []):
+            url = str(item.get('url', ''))
+            for src, name in LIVE_SNAPSHOTS:
+                if url == src:
+                    size = fetch_file(src, os.path.join(live_dir, name), cache_dir)
+                    item['url'] = f'./live/{name}'
+                    rows.append(('内容快照', src, f'catmovie/live/{name}', size))
+                    break
+            else:
+                if url.startswith('http'):
+                    raise RuntimeError(f'未登记的上游直播源，拒绝未本地化：{url}')
+        write_json(cfg_path, cfg)
+
+    # 2) 哔哩 ext json -> tvbox/_common/content/bili/
+    bili_dir = os.path.join(out_root, 'tvbox', '_common', 'content', 'bili')
+    os.makedirs(bili_dir, exist_ok=True)
+    names = {}
+    for zh, name in BILI_SNAPSHOTS:
+        src = BILI_BASE + zh + '.json'
+        size = fetch_file(src, os.path.join(bili_dir, name), cache_dir)
+        rows.append(('内容快照', src, f'tvbox/_common/content/bili/{name}', size))
+        names[zh] = name
+
+    def bili_name(url):
+        text = urllib.parse.unquote(url)
+        for zh, name in names.items():
+            if text.endswith(zh + '.json'):
+                return name
+        return None
+
+    for rel, prefix in [
+        ('tvbox/elders/api.json', '../_common/content/bili/'),
+        ('tvbox/api_all.json', './_common/content/bili/'),
+    ]:
+        path = os.path.join(out_root, rel)
+        if not os.path.exists(path):
+            continue
+        data = read_json(path)
+        for site in data.get('sites', []):
+            ext = site.get('ext')
+            if isinstance(ext, dict) and str(ext.get('json', '')).startswith('http'):
+                name = bili_name(str(ext['json']))
+                if not name:
+                    raise RuntimeError(f'{rel}: 未登记的上游 ext json，拒绝未本地化：{ext["json"]}')
+                rows.append(('本地化改写', str(ext['json']), f'tvbox/_common/content/bili/{name}', 0))
+                ext['json'] = prefix + name
+        write_json(path, data)
+
+    # 3) drpy 引擎内置远程占位图改空值（客户端图片加载器不接受相对路径）
+    placeholder = f'"{DRPY_PLACEHOLDER}"'
+    removed = 0
+    for rel in [
+        'tvbox/std/js/drpy2.min.js',
+        'tvbox/std/ext/drpy2.min.js',
+        'tvbox/std/lib/drpy2.min.js',
+        'tvbox/kids/api/drpy2.min.js',
+        'tvbox/elders/api/huban_drpy2.min.js',
+        'tvbox/elders/api/jiduo_drpy2.min.js',
+        'tvbox/std/lib/哔哩直播.js',
+    ]:
+        path = os.path.join(out_root, rel)
+        if not os.path.exists(path):
+            continue
+        with open(path, 'r', encoding='utf-8') as f:
+            text = f.read()
+        n = text.count(placeholder)
+        if n:
+            removed += n
+            with open(path, 'w', encoding='utf-8', newline='') as f:
+                f.write(text.replace(placeholder, '""'))
+    if removed:
+        rows.append(('运行时移除', DRPY_PLACEHOLDER, '（无数据占位图改为空值）', 0))
+
+    # 4) 哔哩直播 Cookie：远程 txt 改环境变量
+    js = os.path.join(out_root, 'tvbox/std/lib/哔哩直播.js')
+    if os.path.exists(js):
+        with open(js, 'r', encoding='utf-8') as f:
+            text = f.read()
+        if BILI_COOKIE_REMOTE in text:
+            with open(js, 'w', encoding='utf-8', newline='') as f:
+                f.write(text.replace(f'"Cookie":"{BILI_COOKIE_REMOTE}"', '"Cookie":"$bili_cookie"'))
+            rows.append(('运行时移除', BILI_COOKIE_REMOTE, '（改为 $bili_cookie 环境变量）', 0))
+
+    return rows
+
+
 def collect_text_files(root):
     for dirpath, _, filenames in os.walk(root):
         for fn in filenames:
@@ -121,10 +309,13 @@ def collect_text_files(root):
 
 
 def scan(out_root):
+    """扫描分四类：自指/绝对字段失败、运行时未本地化失败、注释声明、运行时例外。"""
     failures = []
-    third_party = []
+    comments = []
+    exceptions = []
+    runtime = []
     for path in collect_text_files(out_root):
-        rel = os.path.relpath(path, out_root)
+        rel = os.path.relpath(path, out_root).replace(os.sep, '/')
         try:
             with open(path, 'r', encoding='utf-8', errors='ignore') as f:
                 text = f.read()
@@ -135,7 +326,28 @@ def scan(out_root):
             if pat in text:
                 failures.append(f'{rel}: 命中自指平台地址 {pat}')
         for m in THIRD_PARTY_RE.findall(text):
-            third_party.append((rel, m[:160]))
+            if m in COMMENT_URLS:
+                comments.append((rel, m))
+            elif m in ICON_EXCEPTIONS:
+                exceptions.append((rel, m))
+            else:
+                runtime.append((rel, m))
+
+    # 运行时字段：直播源与 ext json 必须是包内相对引用
+    cfg = os.path.join(out_root, 'catmovie', 'config.json')
+    if os.path.exists(cfg):
+        for item in read_json(cfg).get('lives', []):
+            u = str(item.get('url', ''))
+            if u.startswith('http'):
+                failures.append(f'catmovie/config.json: 直播源仍为远程地址 {u[:120]}')
+    for name in ['tvbox/api_all.json', 'tvbox/elders/api.json']:
+        path = os.path.join(out_root, name)
+        if not os.path.exists(path):
+            continue
+        for site in read_json(path).get('sites', []):
+            ext = site.get('ext')
+            if isinstance(ext, dict) and str(ext.get('json', '')).startswith('http'):
+                failures.append(f'{name}: ext json 仍为远程地址 {ext["json"][:120]}')
 
     for name in ['tvbox/api_all.json', 'tvbox/api_index_rel.json'] + [
         f'tvbox/{d}/api.json' for d in ('std', 'kids', 'elders')
@@ -152,7 +364,7 @@ def scan(out_root):
             for v in vals:
                 if v.startswith('http'):
                     failures.append(f'{name}: {field} 仍为绝对地址 {v[:120]}')
-    return failures, third_party
+    return failures, comments, exceptions, runtime
 
 
 def write_fingerprint(out_root, version):
@@ -177,7 +389,17 @@ def write_fingerprint(out_root, version):
     return len(rows), total
 
 
-def write_readme(out_root, version, total, count):
+def write_readme(out_root, version, total, count, rows):
+    items = []
+    seen = set()
+    for kind, src, dst, size in rows:
+        key = (src, dst)
+        if key in seen:
+            continue
+        seen.add(key)
+        size_text = f'{size} 字节' if size else '—'
+        items.append(f'      {kind}：{src} → {dst}（{size_text}）')
+    items_text = '\n'.join(items) if items else '      （本次无需本地化）'
     body = f"""TVBox 便携版（{version}）
 
 一、入口文件（唯一）
@@ -205,7 +427,8 @@ def write_readme(out_root, version, total, count):
       version.json、目录说明.txt、更新时间.txt
       std/ kids/ elders/    三条线路：api.json + spider.jar + api/ js/ lib/ ext/ open/
       _common/jar/          公共 jar，被线路用 ../_common/jar/ 引用
-    catmovie/  config.json、version.json、更新时间.txt
+      _common/content/bili/ 哔哩 ext json 内容快照（3 个）
+    catmovie/  config.json、version.json、更新时间.txt、live/（4 个直播源 m3u 快照）
     reading/   书源.json、订阅源.json、version.json、更新时间.txt
 
 四、不能改名或移动位置（改了必然加载失败）
@@ -222,9 +445,27 @@ def write_readme(out_root, version, total, count):
     入口填：clan://localhost/tvbox/api_index_rel.json
     本包不含 451 受限文件，本地入口不依赖任何平台地址。
 
+    相对路径支持：索引、线路 api、spider.jar、ext json 的 ./ 与 ../ 由客户端按配置地址
+    解析（已按客户端源码核对，未在真机实测）。实机一眼判断：能加载出三条线路即索引生效；
+    打开任一线路能看到站点列表即相对线路与 JS 生效；日志出现 spider 或 ext 路径不存在，
+    说明存放位置没有保持本包目录结构。
+
 六、校验
     文件指纹.txt 是 sha256 清单（文件数 {count}，总字节 {total}），解压后可逐行重算比对。
     存放位置必须能直接取回文件本体（不是 HTML 分享页），并保持本包目录结构。
+
+七、本地化与内容快照（本包不依赖任何远程仓库）
+    已本地化 / 快照项（原地址 → 包内路径 → 大小）：
+{items_text}
+    快照抓取时间：{datetime.now():%Y-%m-%d %H:%M}
+    刷新方式：重跑 `python 工具/发布/导出云端.py`，脚本会重新抓取并重写相对引用；
+    索引只含相对路径，刷新快照后不需要重新生成索引。
+    运行时移除（不产生文件）：
+      - drpy 无数据占位图 404.jpg：改为空值（客户端图片加载器不接受相对路径，该图仅缺省展示）。
+      - 哔哩直播 Cookie：改为 $bili_cookie 环境变量（需要登录态时请在客户端环境变量配置）。
+    未本地化例外（仅图标，不影响内容抓取）：
+      阅读订阅源第 25 项的封面图标由 @js 按文件名动态拼接 gitee 目录（00rose~09note 共 10 个基址），
+      图标集合不可穷举，且阅读端图片加载器要求绝对地址，改相对路径无法解析，故保留原样。
 
 生成时间：{datetime.now():%Y-%m-%d %H:%M}
 """
@@ -259,32 +500,48 @@ def main():
     log(f'输出：{out_root}')
 
     copy_minimal(out_root)
-    failures, third_party = scan(out_root)
+
+    cache_dir = os.path.join(args.out, '.cache', '本地化')
+    try:
+        rows = localize(out_root, cache_dir)
+    except Exception as e:
+        log('')
+        log(f'本地化失败：{e}')
+        return 1
+
+    log('')
+    log('==== 本地化与内容快照 ====')
+    seen = set()
+    for kind, src, dst, size in rows:
+        key = (src, dst)
+        if key in seen:
+            continue
+        seen.add(key)
+        size_text = f'{size} 字节' if size else '—'
+        log(f'  {kind}：{src} → {dst}（{size_text}）')
+
+    failures, comments, exceptions, runtime = scan(out_root)
+    if runtime:
+        failures += [f'{rel}: 运行时引用未本地化 {url}' for rel, url in runtime]
 
     log('')
     log('==== 扫描结果 ====')
+    log(f'自指平台地址：{"0 命中" if not any("自指" in f for f in failures) else "命中"}')
+    log(f'jar/spider 绝对地址：{"0 命中" if not any("绝对地址" in f for f in failures) else "命中"}')
+    log(f'运行时引用未本地化：{len(runtime)} 处')
+    log(f'注释/声明（保留原样）：{len(comments)} 处')
+    log(f'运行时例外（仅图标，单列说明）：{len(exceptions)} 处')
     if failures:
         for f in failures:
             log('失败：' + f)
-    else:
-        log('自指平台地址：0 命中；jar/spider 绝对地址：0 命中')
-    if third_party:
-        log(f'第三方上游内容地址（不计失败）：{len(third_party)} 处')
-        seen = set()
-        for rel, url in third_party:
-            key = (rel, url)
-            if key in seen:
-                continue
-            seen.add(key)
-            log(f'  {rel}: {url}')
 
     if failures:
         log('')
-        log('导出失败：存在自指平台地址或 jar 绝对地址，未生成指纹与 zip。')
+        log('导出失败：存在未本地化的运行时引用或绝对地址，未生成指纹与 zip。')
         return 1
 
     count, total = write_fingerprint(out_root, version)
-    write_readme(out_root, version, total, count)
+    write_readme(out_root, version, total, count, rows)
 
     zip_path = ''
     if not args.no_zip:
