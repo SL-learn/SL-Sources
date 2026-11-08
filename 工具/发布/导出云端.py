@@ -180,23 +180,51 @@ def write_fingerprint(out_root, version):
 def write_readme(out_root, version, total, count):
     body = f"""TVBox 便携版（{version}）
 
-一、在线入口（上传到自选静态存放位置后）
-    <存放位置>/tvbox/api_index_rel.json
-    - 该索引内全部为 ./ 相对地址，换存放位置不需要重新生成。
-    - 存放位置必须保持包内目录结构，且 api_index_rel.json 与 std/api.json 等文件可直接取回（不是 HTML 分享页）。
+一、入口文件（唯一）
+    tvbox/api_index_rel.json
+    - 索引里的三条线路都是 ./ 相对地址，整包换存放位置不用重新生成。
+    - 上传后直接把这个文件的直链填进软件；不要只传索引、不传线路目录。
 
-二、本地入口（兜底）
-    解压后把 tvbox/ 整个目录放到客户端根目录下（多数客户端根为 /sdcard，即 /sdcard/tvbox/），
+二、上传后填到哪个软件的哪个入口
+    TVBox / 影视仓   设置 → 配置地址                        <存放位置>/tvbox/api_index_rel.json
+    TVBox / 影视仓   设置 → 配置地址（64 站单文件，可选）    <存放位置>/tvbox/api_all.json
+    小猫影视         设置 → 订阅配置                        <存放位置>/catmovie/config.json
+    阅读             书源管理 → 网络导入（书源 111 条）      <存放位置>/reading/书源.json
+    阅读             订阅 → 网络导入（订阅源 26 条）         <存放位置>/reading/订阅源.json
+
+    阅读的书源与订阅源是两类分别导入，不能合并成一个包。
+    若平台不接受中文文件名，把 reading 的两个地址改成百分号编码（与上面等价）：
+      书源：<存放位置>/reading/%E4%B9%A6%E6%BA%90.json
+      订阅源：<存放位置>/reading/%E8%AE%A2%E9%98%85%E6%BA%90.json
+
+三、包内目录对应关系
+    tvbox/
+      api_index_rel.json    入口（相对索引）
+      api_index_local.json  本地兜底索引
+      api_all.json          64 站单文件（绝对引用已重写为 ./）
+      version.json、目录说明.txt、更新时间.txt
+      std/ kids/ elders/    三条线路：api.json + spider.jar + api/ js/ lib/ ext/ open/
+      _common/jar/          公共 jar，被线路用 ../_common/jar/ 引用
+    catmovie/  config.json、version.json、更新时间.txt
+    reading/   书源.json、订阅源.json、version.json、更新时间.txt
+
+四、不能改名或移动位置（改了必然加载失败）
+    - tvbox/api_index_rel.json：文件名和所在目录都不能改，三条线路地址按它的位置解析。
+    - tvbox/std、tvbox/kids、tvbox/elders：目录名与其中的 api.json 文件名不能改；
+      api.json 里的 ./spider.jar 与 ../_common/jar/ 都是相对写法。
+    - tvbox/_common 必须与三条线路同级（即 tvbox/_common），不能挪进 std/ 里。
+    - 线路内的 api/、js/、lib/、ext/、open/、spider.jar 必须整体保留，不能只挑单个文件上传。
+    - catmovie/config.json、reading/书源.json、reading/订阅源.json 的文件名不要改，
+      改名后在线地址要跟着换。
+
+五、本地兜底入口（不上传时）
+    把 tvbox/ 整个目录放到客户端根目录下（多数客户端根为 /sdcard，即 /sdcard/tvbox/），
     入口填：clan://localhost/tvbox/api_index_rel.json
-    Gitee 451 相关文件不在此包内，本地入口不依赖任何平台地址。
+    本包不含 451 受限文件，本地入口不依赖任何平台地址。
 
-三、包内容
-    tvbox/      api_index_rel.json、api_index_local.json、api_all.json（已重写为相对引用）、std/kids/elders、_common
-    catmovie/   config.json
-    reading/    书源.json、订阅源.json
-
-四、校验
-    文件指纹.txt 为 sha256 清单（文件数 {count}，总字节 {total}），解压后可逐行重算比对。
+六、校验
+    文件指纹.txt 是 sha256 清单（文件数 {count}，总字节 {total}），解压后可逐行重算比对。
+    存放位置必须能直接取回文件本体（不是 HTML 分享页），并保持本包目录结构。
 
 生成时间：{datetime.now():%Y-%m-%d %H:%M}
 """
