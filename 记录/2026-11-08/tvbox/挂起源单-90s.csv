@@ -1,0 +1,7 @@
+﻿key,name,pkg,形态,超时线s,实际耗时s,终止方式,退出判定,原因摘要,stderr摘要
+std_js_vod_piaoling,🎬飘零,std,js,90,90.29,看门狗90s,,,
+std_js_vod_huya,🎬虎牙,std,js,90,90.27,看门狗90s,,,
+std_js_vod_suoni,🎬索尼🐢,std,js,90,90.27,看门狗90s,,,
+std_js_vod_jisu,🎬极速🐢,std,js,90,90.3,看门狗90s,,,
+std_js_vod_zuida,🎬最大🐢,std,js,90,90.3,看门狗90s,,,
+std_js_vod_modu,🎬魔都🐢,std,js,90,90.28,看门狗90s,,,
