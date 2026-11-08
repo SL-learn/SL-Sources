@@ -576,6 +576,11 @@ export function __jsEvalReturn() {
         category,
         detail,
         play,
-        search
+        search,
+        homeContent: home,
+        categoryContent: category,
+        detailContent: function (ids) { return detail(Array.isArray(ids) ? ids[0] : ids); },
+        searchContent: search,
+        playerContent: play
     };
 }

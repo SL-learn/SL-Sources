@@ -611,5 +611,11 @@ async function search(keyword, quick, pg) { return category(keyword, pg || '1', 
 async function searchContent(keyword, quick, page) { return search(keyword, quick, page); }
 
 export function __jsEvalReturn() {
-    return { init, home, homeVod, category, detail, play, search, searchContent };
+    return {
+        init, home, homeVod, category, detail, play, search, searchContent,
+        homeContent: home,
+        categoryContent: category,
+        detailContent: function (ids) { return detail(Array.isArray(ids) ? ids[0] : ids); },
+        playerContent: play
+    };
 }

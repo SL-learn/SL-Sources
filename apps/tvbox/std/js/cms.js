@@ -196,5 +196,12 @@ async function play(flag, id, flags) {
 }
 
 export function __jsEvalReturn() {
-    return { init, home, homeVod, category, detail, search, play };
+    return {
+        init, home, homeVod, category, detail, search, play,
+        homeContent: home,
+        categoryContent: category,
+        detailContent: function (ids) { return detail(Array.isArray(ids) ? ids[0] : ids); },
+        searchContent: search,
+        playerContent: play
+    };
 }

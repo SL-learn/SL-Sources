@@ -830,6 +830,11 @@ export function __jsEvalReturn() {
         category: i,
         search: s,
         detail: c,
-        play: u
+        play: u,
+        homeContent: l,
+        categoryContent: i,
+        detailContent: function (ids) { return c(Array.isArray(ids) ? ids[0] : ids); },
+        searchContent: s,
+        playerContent: u
     }
 }

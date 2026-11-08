@@ -545,5 +545,12 @@ async function proxy(params) {
 
 // ==================== 导出 ====================
 export function __jsEvalReturn() {
-    return { init, home, homeVod, category, detail, play, search, proxy };
+    return {
+        init, home, homeVod, category, detail, play, search, proxy,
+        homeContent: home,
+        categoryContent: category,
+        detailContent: function (ids) { return detail(Array.isArray(ids) ? ids[0] : ids); },
+        searchContent: search,
+        playerContent: play
+    };
 }

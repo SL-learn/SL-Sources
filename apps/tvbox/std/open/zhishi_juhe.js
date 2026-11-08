@@ -283,5 +283,12 @@ async function search(wd, quick, pg) {
 }
 
 export function __jsEvalReturn() {
-  return { init, home, homeVod, category, detail, play, search };
+  return {
+    init, home, homeVod, category, detail, play, search,
+    homeContent: home,
+    categoryContent: category,
+    detailContent: function (ids) { return detail(Array.isArray(ids) ? ids[0] : ids); },
+    searchContent: search,
+    playerContent: play
+  };
 }

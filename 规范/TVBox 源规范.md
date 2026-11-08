@@ -28,6 +28,7 @@
 | TVB-CFG-016 | 配置每次启动都尝试拉取，只有拉取失败才回退本地缓存 | `HomeActivity` 调用 `loadConfig(useCache=false)` |
 | TVB-CFG-017 | 本地文件服务把请求路径**原样**拼到存储根，不做百分号解码；路径里带 `%E7%BB%BC` 这类编码会 404，表现为「选了线路但站点为空」。因此 v2.0.0 起线路目录改用 ASCII 短名 `std`/`kids`/`elders`，从根上不再依赖中文路径 | `RemoteServer.java:158-166`；历史故障见 `记录/2026-11-07/tvbox/探活报告.md` |
 | TVB-CFG-018 | jsDelivr 对 `.jar` 一律返回 403（连续两次实测），只适合下发 JSON；因此在线索引必须走 raw，不能换 CDN | 实测 `cdn.jsdelivr.net/gh/.../xingwei_df5bf731.jar` → 403；同路径 JSON → 200 |
+| TVB-CFG-019 | **主客户端 = 影视仓**（包名 `com.huawei.himovceie`，v6.2.9，CatVod 派生）。其 Java 侧调用 js 源的 `homeContent`/`categoryContent`/`detailContent`/`searchContent`/`playerContent`，且 `detailContent` 入参为数组；不调用 TVBox 的 `home`/`homeVod`。脚本必须同时导出两套命名 | 影视仓 6.2.9 dex 字符串 + 其 `assets/js/lib/spider.js` 加载包装实测 |
 
 【待验证】以下一项需实机确认，验证方法写在括号内：
 1. `UriUtil.resolve(<含中文空格的配置URL>, "../")` 的返回值是否等价于「上一级目录」（临时把一条 jar 站点指向 `../_common/jar/` 的空壳 jar，看是否 200）。
@@ -401,6 +402,16 @@ apps/tvbox/
 |---|---|
 | TVB-PRC-005 | 同一规则冲突时优先级：同名同源 > 探活结论 > 站点数量 > 名称规范度 |
 | TVB-PRC-006 | 每次处置必须在 `records/<日期>/<应用id>/冲突处置-<包id>.md` 留痕，并在 `冲突处置索引.csv` 追加一行 |
+
+### 13.3 主客户端与兼容冲突处置
+
+| 编号 | 规则 |
+|---|---|
+| TVB-PRC-007 | 主客户端为影视仓，TVBox 为兼容客户端。验收底线是「同一份配置在影视仓显示分类、能进片」；TVBox 不得因适配而回退 |
+| TVB-PRC-008 | 「TVBox 正常、影视仓无分类」判为**格式不兼容**，必须改源适配；不得记为「无分类」或「不可用」 |
+| TVB-PRC-009 | js 源必须同时导出 `init/home/homeVod/category/detail/play/search` 与 `homeContent/categoryContent/detailContent/searchContent/playerContent`；`detailContent` 需兼容数组入参 |
+| TVB-PRC-010 | 修复后须在影视仓与 TVBox 各实测一次（分类数、首片）。无法实测的必须写明原因与替代验证方式，不得默认通过 |
+| TVB-PRC-011 | 兼顾两客户端优先改源；确实不可行才为影视仓单独出配置，并在 README 写清地址差异与维护方式 |
 
 ---
 

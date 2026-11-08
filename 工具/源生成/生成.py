@@ -40,6 +40,7 @@ def abs_ref(ref: str, line_dir: str) -> str:
 def build() -> dict:
     merged, online, local = [], [], []
     spider = ""
+    stamp = ""
     for code, line_dir, label in LINES:
         cfg_path = os.path.join(APP_DIR, line_dir, "api.json")
         cfg = json.load(open(cfg_path, encoding="utf-8"))
@@ -51,13 +52,17 @@ def build() -> dict:
             merged.append(s)
         if code == "std":
             spider = abs_ref(cfg.get("spider", ""), line_dir)
+            stamp = str(cfg.get("updateTime", "") or "")
         online.append({"name": label, "url": RAW + line_dir + "/api.json"})
         local.append({"name": label, "url": f"clan://localhost/{LOCAL_ROOT}/{line_dir}/api.json"})
+    if not stamp:
+        from datetime import datetime
+        stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     return {
-        "api_all.json": {"spider": spider, "wallpaper": "", "sites": merged,
-                         "lives": [], "parses": [], "flags": []},
-        "api_index.json": {"urls": online},
-        "api_index_local.json": {"urls": local},
+        "api_all.json": {"updateTime": stamp, "spider": spider, "wallpaper": "",
+                         "sites": merged, "lives": [], "parses": [], "flags": []},
+        "api_index.json": {"updateTime": stamp, "urls": online},
+        "api_index_local.json": {"updateTime": stamp, "urls": local},
     }
 
 

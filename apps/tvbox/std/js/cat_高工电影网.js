@@ -166,5 +166,12 @@ async function request(u,opt={}){
 }
 
 export function __jsEvalReturn() {
-    return {init,home,homeVod,category,search,detail,play,proxy:null};
+    return {
+        init, home, homeVod, category, search, detail, play, proxy: null,
+        homeContent: home,
+        categoryContent: category,
+        detailContent: function (ids) { return detail(Array.isArray(ids) ? ids[0] : ids); },
+        searchContent: search,
+        playerContent: play
+    };
 }
