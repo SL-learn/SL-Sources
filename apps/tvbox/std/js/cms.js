@@ -1,4 +1,9 @@
-import { req } from 'assets://js/lib/cat.js';
+// req 由客户端注入：net.js 在上下文全局作用域定义 http/req（http 是函数声明，挂在 globalThis）
+function req(url, options) {
+    const opts = Object.assign({ async: false }, options || {});
+    if (typeof globalThis.http === 'function') return globalThis.http(url, opts);
+    return http(url, opts);
+}
 
 let siteKey = '';
 let HOST = '';
@@ -45,11 +50,24 @@ function apiUrl(query) {
 }
 
 async function getJson(query) {
-    const res = await req(apiUrl(query), {
-        method: 'get',
-        headers: { 'User-Agent': UA }
-    });
-    return JSON.parse(res.content);
+    let res;
+    try {
+        res = await req(apiUrl(query), {
+            method: 'get',
+            headers: { 'User-Agent': UA }
+        });
+    } catch (e) {
+        console.log('CMSDBG req-error ' + apiUrl(query) + ' | ' + (e && e.message ? e.message : e));
+        throw e;
+    }
+    try {
+        const txt = res && res.content ? res.content : '';
+        if (!txt) console.log('CMSDBG empty ' + apiUrl(query) + ' | status=' + (res && res.status) + ' | keys=' + (res ? Object.keys(res).join(',') : 'null'));
+        return JSON.parse(txt);
+    } catch (e) {
+        console.log('CMSDBG json-error ' + apiUrl(query) + ' | ' + (e && e.message ? e.message : e) + ' | head=' + String(res && res.content).slice(0, 80));
+        throw e;
+    }
 }
 
 async function classes() {
@@ -177,4 +195,6 @@ async function play(flag, id, flags) {
     return JSON.stringify({ parse: 0, url: id, header: {} });
 }
 
-export { init, home, homeVod, category, detail, search, play };
+export function __jsEvalReturn() {
+    return { init, home, homeVod, category, detail, search, play };
+}

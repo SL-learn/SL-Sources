@@ -1,8 +1,8 @@
 {
   "id": "tvbox",
   "name": "TVBox",
-  "version": "2.1.0",
-  "updated": "2026-11-07",
+  "version": "2.2.0",
+  "updated": "2026-11-08",
   "status": "beta",
   "index": "api_index.json",
   "index_local": "api_index_local.json",
@@ -15,7 +15,7 @@
       "dir": "std",
       "api": "api.json",
       "spider": "spider.jar",
-      "sites": 123
+      "sites": 53
     },
     {
       "code": "kid",
@@ -23,7 +23,7 @@
       "dir": "kids",
       "api": "api.json",
       "spider": "spider.jar",
-      "sites": 17
+      "sites": 4
     },
     {
       "code": "eld",
@@ -31,7 +31,7 @@
       "dir": "elders",
       "api": "api.json",
       "spider": "spider.jar",
-      "sites": 11
+      "sites": 8
     }
   ]
 }

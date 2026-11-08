@@ -9,7 +9,7 @@
 |---|---|---|
 | TVBox | `api_index.json`（多线路） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` |
 | TVBox | `api_index_local.json`（本地） | `clan://localhost/tvbox/api_index_local.json` |
-| TVBox | `api_all.json`（单文件全量 151 站） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` |
+| TVBox | `api_all.json`（单文件全量 65 站） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` |
 | 小猫影视 | `config.json` | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` |
 | 阅读 | 规则与模板（个人源不入库） | 见 `apps/reading/README.md` |
 
