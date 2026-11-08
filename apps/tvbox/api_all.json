@@ -594,7 +594,7 @@
       "filterable": 0,
       "ext": {
         "json": "https://g.blfrp.cn/https://raw.githubusercontent.com/tushen6/Tomorrow/master/json/哔哩哔哩小品.json",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
+        "cookie": "./elders/ext/bili_cookie.txt"
       },
       "style": {
         "type": "rect",
@@ -612,7 +612,7 @@
       "filterable": 0,
       "ext": {
         "json": "https://g.blfrp.cn/https://raw.githubusercontent.com/tushen6/Tomorrow/master/json/哔哩哔哩相声.json",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
+        "cookie": "./elders/ext/bili_cookie.txt"
       },
       "style": {
         "type": "rect",
@@ -670,7 +670,7 @@
       "filterable": 0,
       "ext": {
         "json": "https://g.blfrp.cn/https://raw.githubusercontent.com/tushen6/Tomorrow/master/json/哔哩哔哩戏曲.json",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
+        "cookie": "./elders/ext/bili_cookie.txt"
       },
       "style": {
         "type": "rect",

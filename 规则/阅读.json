@@ -9,7 +9,7 @@
       "公开": "阻断",
       "私有": "打标"
     },
-    "说明": "公开域命中成人内容判不通过；私有域只打标「成人域」，不阻断。由 --域 覆盖，不写死在代码里。"
+    "说明": "公开域命中成人内容判不通过；非公开域只打标「成人域」，不阻断。由 --域 覆盖，不写死在代码里。"
   },
   "requiredTopKeys": ["bookSourceUrl", "bookSourceName", "bookSourceType", "bookSourceGroup"],
   "optionalTopKeys": [
