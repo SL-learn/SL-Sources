@@ -46,7 +46,7 @@ apps/tvbox/
 ├── version.json                   ← 包 id、版本、状态、线路清单
 ├── api_index.json                 ← 在线入口：三条线路的绝对 URL
 ├── api_index_local.json           ← 本地入口：三条线路的 clan:// 地址
-├── api_all.json                   ← 单文件全量（151 站），绝对 URL
+├── api_all.json                   ← 单文件全量（65 站），绝对 URL
 ├── 目录说明.txt                    ← 用户安装说明
 ├── _common/
 │   ├── jar/                       ← 公共 jar（ASCII 文件名）
