@@ -1,0 +1,18 @@
+﻿源标识key,源名称,首次发现日期,首次测试时段,最近测试时段,最近3轮结果,累计轮次,失败位置,失败证据摘要,下次复测日期,当前状态,用户裁决,备份文件名
+xiguazy_tv,极速｜西瓜资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/通/挂,2,第4段,首地址拉不到视频数据,2026-11-09,观察中,,公开-xiguazy_tv.json
+hhzyapi_com,快速｜火狐资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/挂/通,2,第1段,"ReadTimeout: HTTPSConnectionPool(host='hhzyapi.com', port=443): Read timed out. (read timeout=20)",2026-11-09,观察中,,公开-hhzyapi_com.json
+iqiyizyapi_com,快速｜爱奇艺资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/挂/挂,0,第4段,首地址拉不到视频数据,2026-11-09,建议永久删除,,公开-iqiyizyapi_com.json
+subocaiji_com,慢速｜速播资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/挂/通,2,第1段,"ReadTimeout: HTTPSConnectionPool(host='subocaiji.com', port=443): Read timed out. (read timeout=8)",2026-11-09,观察中,,公开-subocaiji_com.json
+jyzyapi_com,慢速｜金鹰资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/通/挂,1,第1段,"ReadTimeout: HTTPSConnectionPool(host='jyzyapi.com', port=443): Read timed out. (read timeout=8)",2026-11-09,观察中,,公开-jyzyapi_com.json
+api_guangsuapi_com,间歇｜光速资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/通/通,2,第1段,"ConnectionError: HTTPSConnectionPool(host='api.guangsuapi.com', port=443): Read timed out.",2026-11-09,观察中,,公开-api_guangsuapi_com.json
+caiji_kuaichezy_org,间歇｜快车资源(快),2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/通/挂,1,第1段,"ConnectionError: HTTPSConnectionPool(host='caiji.kuaichezy.org', port=443): Read timed out.",2026-11-09,观察中,,公开-caiji_kuaichezy_org.json
+api_xinlangapi_com,间歇｜新浪资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/通/通,2,第1段,"ConnectionError: HTTPSConnectionPool(host='api.xinlangapi.com', port=443): Read timed out.",2026-11-09,观察中,,公开-api_xinlangapi_com.json
+api_wujinapi_com,间歇｜无尽资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/挂/通,2,第1段,"ReadTimeout: HTTPSConnectionPool(host='api.wujinapi.com', port=443): Read timed out. (read timeout=8)",2026-11-09,观察中,,公开-api_wujinapi_com.json
+api_wsyzy_net,间歇｜无水印资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/通/挂,2,第1段,"ReadTimeout: HTTPSConnectionPool(host='api.wsyzy.net', port=443): Read timed out. (read timeout=20)",2026-11-09,观察中,,公开-api_wsyzy_net.json
+api_zuidapi_com,间歇｜最大资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/挂/通,2,第1段,"ReadTimeout: HTTPSConnectionPool(host='api.zuidapi.com', port=443): Read timed out. (read timeout=8)",2026-11-09,观察中,,公开-api_zuidapi_com.json
+m3u8_apiyhzy_com,间歇｜樱花资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/挂/挂,0,第1段,HTTP 403,2026-11-09,建议永久删除,,公开-m3u8_apiyhzy_com.json
+api_apibdzy_com,间歇｜百度资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/通/挂,1,第1段,"ReadTimeout: HTTPSConnectionPool(host='api.apibdzy.com', port=443): Read timed out. (read timeout=8)",2026-11-09,观察中,,公开-api_apibdzy_com.json
+www_lovedan_net,间歇｜艾旦影视,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/挂/挂,0,第1段,"ReadTimeout: HTTPSConnectionPool(host='www.lovedan.net', port=443): Read timed out. (read timeout=20)",2026-11-09,建议永久删除,,公开-www_lovedan_net.json
+www_huyaapi_com,间歇｜虎牙资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/通/挂,2,第1段,"ReadTimeout: HTTPSConnectionPool(host='www.huyaapi.com', port=443): Read timed out. (read timeout=8)",2026-11-09,观察中,,公开-www_huyaapi_com.json
+www_mdzyapi_com,间歇｜魔都资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,挂/通/挂,1,第1段,"ReadTimeout: HTTPSConnectionPool(host='www.mdzyapi.com', port=443): Read timed out. (read timeout=8)",2026-11-09,观察中,,公开-www_mdzyapi_com.json
+cj_yayazy_net,间歇｜鸭鸭资源,2026-11-08,2026-11-08 第1-3轮,2026-11-08 第1-3轮,通/挂/通,2,第4段,首地址拉不到视频数据,2026-11-09,观察中,,公开-cj_yayazy_net.json
