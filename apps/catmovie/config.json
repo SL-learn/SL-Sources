@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-11-08 18:20",
+  "updateTime": "2026-11-08 19:05",
   "sites": [
     {
       "id": "caiji_dyttzyapi_com",
@@ -138,28 +138,18 @@
   "data": [],
   "lives": [
     {
-      "name": "央视｜咪视界",
-      "url": "http://193.123.86.190:14888/TV/iptv.php",
-      "type": 0
-    },
-    {
-      "name": "卫视｜央视卫视",
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
-      "type": 0
-    },
-    {
       "name": "综合｜VBSKY综合",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
       "type": 0
     },
     {
-      "name": "综合｜咪咕聚合",
-      "url": "http://mg.cttv.vip/migu.php",
+      "name": "综合｜APTV综合",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "type": 0
     },
     {
-      "name": "体育｜咪咕睛彩赛事",
-      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u",
+      "name": "卫视｜央视卫视",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
       "type": 0
     },
     {
