@@ -10,6 +10,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -101,6 +102,30 @@ def scan_dangling(root: str) -> list[str]:
     return bad
 
 
+CAT_TIERS = ("极速", "快速", "标准", "慢速")
+
+
+def scan_catmovie_names(root: str) -> list[str]:
+    """小猫配置命名档位：只允许极速/快速/标准/慢速，或暂不写档位。"""
+    p = os.path.join(root, "apps", "catmovie", "config.json")
+    if not os.path.exists(p):
+        return []
+    try:
+        data = json.load(open(p, encoding="utf-8-sig"))
+    except Exception as e:
+        return [f"apps/catmovie/config.json: 无法解析 → {e}"]
+    bad = []
+    for i, s in enumerate(data.get("sites", []), 1):
+        name = str(s.get("name", ""))
+        if "｜" not in name:
+            continue
+        tier = name.split("｜", 1)[0]
+        if tier not in CAT_TIERS:
+            bad.append(f"apps/catmovie/config.json: 第{i}条 {s.get('id', '')} "
+                       f"名称档位「{tier or '空'}」非法，只允许 极速/快速/标准/慢速 或留空")
+    return bad
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--词表", required=False, default=os.environ.get("SL_GATE_WORDS", ""))
@@ -113,6 +138,7 @@ def main() -> int:
     words = load_words(ns.词表)
     hits = scan_words(ns.根, words)
     bad = scan_dangling(ns.根)
+    names = scan_catmovie_names(ns.根)
     print(f"私有词表：{len(words)} 条；扫描根：{ns.根}")
     print(f"私有痕迹命中：{len(hits)}")
     for h in hits[:30]:
@@ -120,10 +146,13 @@ def main() -> int:
     print(f"悬空引用：{len(bad)}")
     for b in bad[:30]:
         print("  ✗", b)
-    if hits or bad:
-        print("\n结论：阻断。公开仓不得出现私有内容痕迹或悬空引用。")
+    print(f"命名档位非法：{len(names)}")
+    for n in names[:30]:
+        print("  ✗", n)
+    if hits or bad or names:
+        print("\n结论：阻断。公开仓不得出现私有内容痕迹、悬空引用或非法命名档位。")
         return 1
-    print("\n结论：通过（私有痕迹 0，悬空引用 0）")
+    print("\n结论：通过（私有痕迹 0，悬空引用 0，命名档位 0 非法）")
     return 0
 
 

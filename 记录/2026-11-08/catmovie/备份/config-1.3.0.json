@@ -1,0 +1,170 @@
+{
+  "sites": [
+    {
+      "id": "cj_lziapi_com",
+      "name": "极速｜量子资源",
+      "api": "http://cj.lziapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "caiji_dyttzyapi_com",
+      "name": "快速｜天堂资源",
+      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "bfzyapi_com",
+      "name": "快速｜暴风资源",
+      "api": "https://bfzyapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "jhysj_jiaheyy_top",
+      "name": "快速｜龙马资源",
+      "api": "http://jhysj.jiaheyy.top/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "www_ryzyw_com",
+      "name": "慢速｜如意资源",
+      "api": "https://www.ryzyw.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "lbapi9_com",
+      "name": "间歇｜乐播资源",
+      "api": "https://lbapi9.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "jszyapi_com",
+      "name": "间歇｜极速资源",
+      "api": "https://jszyapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "tyyszy_com",
+      "name": "间歇｜天涯影视",
+      "api": "https://tyyszy.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "www_hongniuzy2_com",
+      "name": "间歇｜红牛资源",
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "xsd_sdzyapi_com",
+      "name": "间歇｜闪电资源(xsd)",
+      "api": "https://xsd.sdzyapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "ikunzy_cc",
+      "name": "极速｜ikun资源",
+      "api": "https://ikunzy.cc/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "360zyzz_com",
+      "name": "极速｜360资源（360zyzz）",
+      "api": "https://360zyzz.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "360zy_com",
+      "name": "极速｜360资源（360zy）",
+      "api": "https://360zy.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "api_maoyanapi_top",
+      "name": "极速｜猫眼影视",
+      "api": "https://api.maoyanapi.top/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "api_ffzyapi_com",
+      "name": "快速｜非凡资源",
+      "api": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "cdn_dzzyapi_com",
+      "name": "间歇｜大众影视",
+      "api": "https://cdn.dzzyapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "p2100_net",
+      "name": "间歇｜飘零影视",
+      "api": "https://p2100.net/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "api_ukuapi88_com",
+      "name": "间歇｜U酷资源",
+      "api": "https://api.ukuapi88.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "jinyingzy_com",
+      "name": "间歇｜金鹰点播",
+      "api": "https://jinyingzy.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    }
+  ],
+  "data": [],
+  "lives": [
+    {
+      "name": "央视｜咪视界",
+      "url": "http://193.123.86.190:14888/TV/iptv.php",
+      "type": 0
+    },
+    {
+      "name": "卫视｜央视卫视",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
+      "type": 0
+    },
+    {
+      "name": "综合｜VBSKY综合",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u",
+      "type": 0
+    },
+    {
+      "name": "综合｜咪咕聚合",
+      "url": "http://mg.cttv.vip/migu.php",
+      "type": 0
+    },
+    {
+      "name": "体育｜咪咕睛彩赛事",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u",
+      "type": 0
+    },
+    {
+      "name": "地方｜央卫港澳",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "type": 0
+    }
+  ]
+}

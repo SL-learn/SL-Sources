@@ -37,98 +37,98 @@
     },
     {
       "id": "lbapi9_com",
-      "name": "间歇｜乐播资源",
+      "name": "乐播资源",
       "api": "https://lbapi9.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "jszyapi_com",
-      "name": "间歇｜极速资源",
+      "name": "极速资源",
       "api": "https://jszyapi.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "tyyszy_com",
-      "name": "间歇｜天涯影视",
+      "name": "天涯影视",
       "api": "https://tyyszy.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "www_hongniuzy2_com",
-      "name": "间歇｜红牛资源",
+      "name": "红牛资源",
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "xsd_sdzyapi_com",
-      "name": "间歇｜闪电资源(xsd)",
+      "name": "闪电资源(xsd)",
       "api": "https://xsd.sdzyapi.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "ikunzy_cc",
-      "name": "极速｜ikun资源",
+      "name": "慢速｜ikun资源",
       "api": "https://ikunzy.cc/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "360zyzz_com",
-      "name": "极速｜360资源（360zyzz）",
+      "name": "慢速｜360资源（360zyzz）",
       "api": "https://360zyzz.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "360zy_com",
-      "name": "极速｜360资源（360zy）",
+      "name": "慢速｜360资源（360zy）",
       "api": "https://360zy.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "api_maoyanapi_top",
-      "name": "极速｜猫眼影视",
+      "name": "慢速｜猫眼影视",
       "api": "https://api.maoyanapi.top/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "api_ffzyapi_com",
-      "name": "快速｜非凡资源",
+      "name": "慢速｜非凡资源",
       "api": "https://api.ffzyapi.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "cdn_dzzyapi_com",
-      "name": "间歇｜大众影视",
+      "name": "慢速｜大众影视",
       "api": "https://cdn.dzzyapi.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "p2100_net",
-      "name": "间歇｜飘零影视",
+      "name": "慢速｜飘零影视",
       "api": "https://p2100.net/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "api_ukuapi88_com",
-      "name": "间歇｜U酷资源",
+      "name": "慢速｜U酷资源",
       "api": "https://api.ukuapi88.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
     {
       "id": "jinyingzy_com",
-      "name": "间歇｜金鹰点播",
+      "name": "慢速｜金鹰点播",
       "api": "https://jinyingzy.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
