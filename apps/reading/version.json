@@ -1,9 +1,9 @@
 {
   "id": "reading",
   "name": "阅读/Legado",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "updated": "2026-11-08",
-  "updatedAt": "2026-11-08 17:46",
+  "updatedAt": "2026-11-08 18:15",
   "status": "beta",
   "files": {
     "bookSources": "书源.json",

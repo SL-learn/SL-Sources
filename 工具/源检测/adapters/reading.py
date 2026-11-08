@@ -478,7 +478,11 @@ class ReadingAdapter:
         has_search = bool(search_url) or bool(search_rule)
         has_explore = bool(explore_url)
         if not has_search and not has_explore:
-            r.add("T-07", "错误", "既无 searchUrl/ruleSearch，也无 exploreUrl，书源不可用")
+            marker = self.cfg.get("noSearchMarker", "无搜索能力")
+            if marker and isinstance(src.get("bookSourceComment"), str) and marker in src["bookSourceComment"]:
+                r.add("T-07", "警告", "已声明无搜索能力（站点确无搜索入口），仅保留目录/正文规则，不阻断")
+            else:
+                r.add("T-07", "错误", "既无 searchUrl/ruleSearch，也无 exploreUrl，书源不可用")
             return
 
         if search_url:

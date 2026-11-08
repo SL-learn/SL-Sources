@@ -11,8 +11,8 @@
 | TVBox | `api_index_local.json`（本地） | `clan://localhost/tvbox/api_index_local.json` |
 | TVBox | `api_all.json`（单文件全量 65 站） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` |
 | 小猫影视 | `config.json` | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` |
-| 阅读书源 | `书源.json`（115 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E4%B9%A6%E6%BA%90.json` |
-| 阅读订阅源 | `订阅源.json`（27 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E8%AE%A2%E9%98%85%E6%BA%90.json` |
+| 阅读书源 | `书源.json`（111 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E4%B9%A6%E6%BA%90.json` |
+| 阅读订阅源 | `订阅源.json`（26 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/%E8%AE%A2%E9%98%85%E6%BA%90.json` |
 
 填法、安装步骤见 `使用/`；强制条款见 `规范/`。**地址里不带版本号与日期，永久固定。**
 
