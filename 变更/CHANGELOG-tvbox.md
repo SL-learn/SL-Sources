@@ -22,4 +22,5 @@
 | 2.2.0 | 2026-11-08 | 151 站真机四段全量重测；按可用性收敛为 65 站（综合 53 / 少儿 4 / 长辈 8）；新增「能力类型」四型判定与 `🔎`/`♻️` 标记；js 依赖库随包下发并修正 cms.js 契约；新增 TVB-NAM-024/025 的 `🔎`/`♻️` 例外 | 旧口径把「仅可搜索」「环境受限」误判为不可用；js 源因依赖 404 与契约不匹配整批失效 | 否，文件路径与 key 不变 |
 | 2.3.0 | 2026-11-08 | 13 个 js 源补 CatVod 五方法别名（`homeContent`/`categoryContent`/`detailContent`/`searchContent`/`playerContent`，`detailContent` 兼容数组入参），修复影视仓无分类；三个入口与索引新增顶层 `updateTime`，各应用目录新增 `更新时间.txt`；线上校验脚本增强为随包 63 个 js 与 34 个线路内相对引用（含 `ext`/`lib`/`_common` jar）逐个 200 并校验 md5；站点保持 65（53/4/8） | 主客户端改为影视仓，只认 CatVod 契约导致大部分源无分类；用户要求源头部可读更新时间；旧校验只查被引用的 19 个 js，覆盖不全 | 否，文件路径与 key 不变 |
 | 2.3.1 | 2026-11-08 | 65 站全量双契约复测；补 `cat_123TV.js` 与两份 drpy 引擎（`drpy2.min.js`、`huban_drpy2.min.js`）的 CatVod 别名；新增《影视仓分类对照.csv》逐站记录 TVBox 与 CatVod 分类数 | 2.3.0 只修了 13 个 js，壹影网与 drpy 引擎仍无 `homeContent`，影视仓下分类为空 | 否，文件路径与 key 不变 |
+| 2.4.0 | 2026-11-08 | 下架 `std_jar_vod_dmmiku`（♻️🎌异世界动漫），原文备份到 `记录/观察池/tvbox/备份/`；综合 53→52、合计 65→64；`api_all.json` 同步删条目并更新 `updateTime` | 该站分类正常但详情抛 `IndexOutOfBoundsException` 并挂起 122s；字节码证实 `li.data` 空集合取下标 0，根因为上游超时/空页面且 jar 无空判，无法修 | 否，文件路径与 key 不变 |
 

@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-11-08 18:04",
+  "updateTime": "2026-11-08 18:25",
   "spider": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323",
   "wallpaper": "",
   "sites": [
@@ -341,13 +341,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/_common/jar/xiangyaqing_b768cf93.jar;md5;b768cf93202d16ac6e451d42250d8b48"
-    },
-    {
-      "key": "std_jar_vod_dmmiku",
-      "name": "♻️🎌异世界动漫",
-      "type": 3,
-      "api": "csp_Ysj",
-      "jar": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/std/spider.jar;md5;ab2642130ba40cf51c3b48e3bbdca323"
     },
     {
       "key": "std_jar_vod_aid",

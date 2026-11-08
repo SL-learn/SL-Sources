@@ -34,7 +34,7 @@ std_js_vod_s056,♻️🎬哔哩-合集,std,js,42,42,支持（CatVod 下有分�
 std_jar_vod_blsgod,♻️🎬80S影视,std,jar,5,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
 std_js_vod_modu,♻️🎬魔都,std,js,36,36,支持（CatVod 下有分类）,是（2.3.0 补别名）
 std_jar_vod_dygod,♻️🎞电影天堂,std,jar,10,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
-std_jar_vod_dmmiku,♻️🎌异世界动漫,std,jar,2,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_dmmiku,♻️🎌异世界动漫,std,jar,2,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,已摘除（2.4.0，详情异常·挂起 122s）
 std_jar_vod_aid,🩺急救知识⚡,std,jar,8,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
 std_jar_vod_1905,🎬1905影视⏱,std,jar,8,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
 std_jar_live_live,🎬游戏-在线直播⏱,std,jar,2,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修

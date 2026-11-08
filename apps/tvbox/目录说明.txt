@@ -22,7 +22,7 @@ api_all.json          客户端不支持多线路索引时          https://raw.
 三种入口的区别：
 - api_index_local.json 用 clan:// 指向本地三条线路，不联网；整包必须放在 /sdcard/TVBox/tvbox/。
 - api_index.json 只含三条线路地址（绝对 URL），选线路后各自加载，站点分开管理。
-- api_all.json 把三条线路 65 个站点合成一份，只有一个站点列表；适合不认 urls 索引的客户端。
+- api_all.json 把三条线路 64 个站点合成一份，只有一个站点列表；适合不认 urls 索引的客户端。
 
 安装（本地，推荐）
 ------------------
@@ -45,10 +45,10 @@ api_all.json          客户端不支持多线路索引时          https://raw.
 
 线路与站点数
 ------------
-- std（综合）：53 站
+- std（综合）：52 站
 - kids（少儿）：4 站
 - elders（长辈）：8 站
-- api_all.json 合计：65 站
+- api_all.json 合计：64 站
 
 名称标记怎么看
 --------------
