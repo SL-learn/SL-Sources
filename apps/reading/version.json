@@ -1,26 +1,30 @@
 {
   "id": "reading",
   "name": "阅读/Legado",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "updated": "2026-11-08",
-  "updatedAt": "2026-11-08 17:09",
+  "updatedAt": "2026-11-08 17:30",
   "status": "beta",
   "files": {
     "bookSources": "书源.json",
     "rssSources": "订阅源.json"
   },
   "counts": {
-    "bookSources": 115,
+    "bookSources": 113,
     "rssSources": 27
   },
-  "countsLocal": {
-    "bookSources": 117,
-    "rssSources": 28,
-    "note": "本地验证版含 2 条成人域书源、1 条成人域订阅，公开仓不收录；成人条目归置在 私有域/apps/reading/"
+  "groupDistribution": {
+    "📚 小说": 82,
+    "🔍 综合": 6,
+    "🖼 漫画": 5,
+    "🎧 有声": 1,
+    "📖 出版": 17,
+    "♻️ 间歇": 2
   },
+  "groupRule": "7 组固定：📚 小说 / 🔍 综合 / 🖼 漫画 / 🎧 有声 / 📖 出版 / ♻️ 间歇 / ⑱ 成人；每条源只归一个组；⑱ 成人只存在私有台账",
+  "orderRule": "组内按客户端搜索命中条数降序、再按 respondTime 升序；customOrder 从 1 连续递增",
   "verify": ["规范/阅读书源校验规则.md", "规范/阅读订阅源校验规则.md"],
   "templates": ["工具/阅读模板/书源模板.json", "工具/阅读模板/订阅源模板.json"],
   "sourceBaseline": "参考资料/阅读3.0-hectorqin@da17bb2",
-  "privateSources": "私有域/apps/reading/书源-成人.json、订阅源-成人.json（不入库）",
-  "updateNote": "书源与订阅源为 JSON 数组，不支持文件头字段；更新时间见每条源备注末尾与 updatedAt"
+  "updateNote": "书源与订阅源为 JSON 数组，不支持文件头字段；更新时间见每条源备注末尾与 updatedAt；来源/上游/作者写在备注"
 }
