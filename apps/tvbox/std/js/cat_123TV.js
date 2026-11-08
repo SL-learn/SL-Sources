@@ -146,4 +146,11 @@ async function play(flag, id, flags) {
     return JSON.stringify({ parse: 1, url: url, header: headers });
 }
 
-export default { init, home, homeVod, category, detail, search, play };
+export default {
+    init, home, homeVod, category, detail, search, play,
+    homeContent: home,
+    categoryContent: category,
+    detailContent: function (ids) { return detail(Array.isArray(ids) ? ids[0] : ids); },
+    searchContent: search,
+    playerContent: play
+};

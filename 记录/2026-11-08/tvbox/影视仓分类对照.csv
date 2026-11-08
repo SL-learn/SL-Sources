@@ -1,0 +1,66 @@
+﻿站点key,名称,线路,形态,TVBox分类数,CatVod分类数,结论,是否已修
+std_js_vod_s057,🎬西瓜网-APP⚡,std,js,6,6,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_jarcai,🎬文才弹幕⚡,std,jar,4,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_vod_ruyi,🎬如意⏱,std,js,34,34,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_live_douyu,🎬手游-直播⏱,std,jar,12,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_vod_baofeng,🎬暴风🐢,std,js,41,41,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_234xbpq,🎬234弹幕🐢,std,jar,5,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_live_s033,🎬B站直播🐢,std,jar,12,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_appte,🎬天鹅-高清影视🐢,std,jar,5,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_gz360,🎬瓜子-高清影视🐢,std,jar,10,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_feiyuvideo,🎬飞娱-高清影视🐢,std,jar,6,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_vod_zuida,🎬最大🐢,std,js,51,51,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_xigua,🎬西瓜,std,js,36,36,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_tiantang,🎬天堂,std,js,27,27,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_iqiyi,🎬爱奇艺,std,js,36,36,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_liangzi,🎬量子,std,js,34,34,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_feifan,🎬非凡,std,js,26,26,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_360spider,🎬三六视频,std,jar,4,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_saohuo,🎬火火-高清影视,std,jar,4,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_vod_hongniu,🎬红牛,std,js,42,42,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_huya,🎬虎牙,std,js,36,36,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_jisu,🎬极速,std,js,40,40,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_age,🎌AGE-动漫,std,js,1,1,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_s038,🩺聚合·知识,std,js,3,3,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_360zy,♻️🎬三六秒播,std,js,44,44,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_maoyan,♻️🎬猫眼,std,js,45,45,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_ikun,♻️🎬ikun,std,js,46,46,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_3602,♻️🎬360弹幕,std,jar,50,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_3qqq,♻️🎬大鹅-高清影视,std,jar,4,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_live_91,♻️🎬91电视·直播,std,js,16,16,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_s036,♻️🎬哔哩网-APP,std,js,6,6,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_hbguazi,♻️🎬瓜子弹幕,std,jar,10,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_vod_s056,♻️🎬哔哩-合集,std,js,42,42,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_blsgod,♻️🎬80S影视,std,jar,5,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_vod_modu,♻️🎬魔都,std,js,36,36,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_dygod,♻️🎞电影天堂,std,jar,10,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_dmmiku,♻️🎌异世界动漫,std,jar,2,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_aid,🩺急救知识⚡,std,jar,8,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_1905,🎬1905影视⏱,std,jar,8,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_live_live,🎬游戏-在线直播⏱,std,jar,2,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_jpys,🎬金牌-高清影视⏱,std,jar,4,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_vod_niuniu,🎬牛牛⏱,std,js,51,51,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_s059,🎞电影网-APP⏱,std,js,15,15,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_jar_vod_s023,🩺星星-急救教学⏱,std,jar,8,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_live_s037,🎬聚合·央视🐢,std,js,3,3,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_123tv,🎬壹影网-APP🐢,std,js,5,5,支持（CatVod 下有分类）,是（2.3.1 补别名）
+std_jar_vod_s104,🎬农民-影视,std,jar,4,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_new6v,♻️🎬新6V,std,jar,15,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_jar_vod_wwys,♻️🎬农民-高清影视,std,jar,7,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+std_js_live_360,♻️⚽星星-360看球,std,js,0,0,上游无分类（两端均空）,是（已补别名，当前上游无分类）
+std_js_vod_piaoling,🎬飘零🔎,std,js,20,20,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_wujin,🎬无尽🔎,std,js,0,0,上游无分类（两端均空）,是（已补别名，当前上游无分类）
+std_js_vod_jinying,♻️🎬金鹰🔎,std,js,36,36,支持（CatVod 下有分类）,是（2.3.0 补别名）
+std_js_vod_huohu,♻️🎬火狐🔎,std,js,0,0,上游无分类（两端均空）,是（已补别名，当前上游无分类）
+kid_jar_vod_bili,♻️🎠哔哩少儿,kids,jar,9,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+kid_jar_vod_xyqhiker,🎬兔小贝XYQH⏱,kids,jar,4,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+kid_js_vod_s002,🎠聚合·儿童⏱,kids,js,2,2,支持（CatVod 下有分类）,是（2.3.0 补别名）
+kid_js_vod_s008,🎠儿童-启蒙⏱,kids,js,0,0,上游无分类（两端均空）,是（已补别名，当前上游无分类）
+eld_jar_vod_xyqhiker,📚戏曲多多⏱,elders,jar,59,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+eld_jar_vod_s005,♻️📚哔哩小品,elders,jar,12,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+eld_jar_vod_s007,♻️📚哔哩相声,elders,jar,7,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+eld_js_vod_s001,📚梨园·戏曲⏱,elders,js,68,68,支持（CatVod 下有分类）,是（2.3.0 补别名）
+eld_jar_vod_s008,📚星星-戏曲多多⏱,elders,jar,78,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+eld_jar_vod_s004,🩺养生-知识⏱,elders,jar,8,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
+eld_js_vod_s010,🩺养生京城⏱,elders,js,0,0,上游无分类（两端均空）,是（已补别名，当前上游无分类）
+eld_jar_vod_s006,📚哔哩戏曲🔎,elders,jar,49,不适用（jar 类即 CatVod 接口）,支持（契约等价，影视仓未实机）,无需修
