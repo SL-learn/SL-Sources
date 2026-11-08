@@ -1,0 +1,7 @@
+﻿序号,源标识,源名称,类型,首行#EXTM3U,码率kbps,实测速率kbps,首字节ms,结论,样本轮次,实测取流地址,备注
+20,live_央视_咪视界,央视｜咪视界,直播,Y,0,None,None,直播取流失败,3,http://173.208.212.130:8181/720p/cctv1md/yss/102/14552.ts,
+21,live_卫视_央视卫视,卫视｜央视卫视,直播,Y,0,None,None,直播取流失败,3,http://tvbox6.icu/tv/migu.php?id=cctv1$LR•IPV4『线路156』,分享页未找到播放地址，需 WebView 嗅探
+22,live_综合_VBSKY综合,综合｜VBSKY综合,直播,Y,0,None,None,直播通过,3,https://english-livetx.cgtn.com/hls/yypdyyctzbhd-1793043642.ts,
+23,live_综合_咪咕聚合,综合｜咪咕聚合,直播,Y,0,None,None,直播取流失败,3,http://mg.cttv.vip/01.m3u8?msisdn=e646e8bee450cf1bafaab20f1be69c7e&mdspid=&spid=699004&netType=0&sid=2201057821&pid=2028597139&timestamp=20261108174247&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=608807420&ParentNodeID=-99&assertID=2201057821&client_ip=123.90.0.117&SecurityKey=20261108174247&promotionId=&mvid=2201057821&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h265&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&mtv_session=fc389712fe3c94e2ddf5ecc31107e109&sv=10004&ct=android&HlsSubType=1&HlsProfileId=1&nphaid=0&encrypt=45396f56ccafe821e6faf1e4bc78d845,
+24,live_体育_咪咕睛彩赛事,体育｜咪咕睛彩赛事,直播,Y,0,None,None,直播取流失败,3,http://gslbserv.itv.cmvideo.cn/index.m3u8?channel-id=FifastbLive&Contentid=3000000020000011523&livemode=1&stbId=YanG-1989,
+25,live_地方_央卫港澳,地方｜央卫港澳,直播,Y,0,None,None,直播取流失败,3,http://8.138.7.223/tv/btime.php?id=bjws4k,分享页未找到播放地址，需 WebView 嗅探

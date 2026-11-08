@@ -1,13 +1,6 @@
 {
-  "updateTime": "2026-11-08 17:09",
+  "updateTime": "2026-11-08 18:20",
   "sites": [
-    {
-      "id": "cj_lziapi_com",
-      "name": "极速｜量子资源",
-      "api": "http://cj.lziapi.com/api.php/provide/vod/",
-      "logo": "",
-      "type": 0
-    },
     {
       "id": "caiji_dyttzyapi_com",
       "name": "快速｜天堂资源",
@@ -19,13 +12,6 @@
       "id": "bfzyapi_com",
       "name": "快速｜暴风资源",
       "api": "https://bfzyapi.com/api.php/provide/vod/",
-      "logo": "",
-      "type": 0
-    },
-    {
-      "id": "jhysj_jiaheyy_top",
-      "name": "快速｜龙马资源",
-      "api": "http://jhysj.jiaheyy.top/api.php/provide/vod/",
       "logo": "",
       "type": 0
     },
@@ -72,13 +58,6 @@
       "type": 0
     },
     {
-      "id": "ikunzy_cc",
-      "name": "慢速｜ikun资源",
-      "api": "https://ikunzy.cc/api.php/provide/vod/",
-      "logo": "",
-      "type": 0
-    },
-    {
       "id": "360zyzz_com",
       "name": "慢速｜360资源（360zyzz）",
       "api": "https://360zyzz.com/api.php/provide/vod/",
@@ -107,13 +86,6 @@
       "type": 0
     },
     {
-      "id": "cdn_dzzyapi_com",
-      "name": "慢速｜大众影视",
-      "api": "https://cdn.dzzyapi.com/api.php/provide/vod/",
-      "logo": "",
-      "type": 0
-    },
-    {
       "id": "p2100_net",
       "name": "慢速｜飘零影视",
       "api": "https://p2100.net/api.php/provide/vod/",
@@ -131,6 +103,34 @@
       "id": "jinyingzy_com",
       "name": "慢速｜金鹰点播",
       "api": "https://jinyingzy.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "cj_lziapi_com",
+      "name": "极速｜量子资源",
+      "api": "http://cj.lziapi.com/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "jhysj_jiaheyy_top",
+      "name": "快速｜龙马资源",
+      "api": "http://jhysj.jiaheyy.top/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "ikunzy_cc",
+      "name": "慢速｜ikun资源",
+      "api": "https://ikunzy.cc/api.php/provide/vod/",
+      "logo": "",
+      "type": 0
+    },
+    {
+      "id": "cdn_dzzyapi_com",
+      "name": "慢速｜大众影视",
+      "api": "https://cdn.dzzyapi.com/api.php/provide/vod/",
       "logo": "",
       "type": 0
     }
