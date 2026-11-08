@@ -231,8 +231,8 @@ class ReadingAdapter:
             ("T-01", "JSON 可解析、顶层数组、无 BOM、无重复键（RBS-PRC-028）", "自动"),
             ("T-02", "29 个顶层键齐全、无禁用键、无未知键（RBS-PRC-029、RBS-STR-001/RBS-STR-006/RBS-STR-007）", "自动"),
             ("T-03", "bookSourceUrl 形态合规且全批唯一（RBS-PRC-030）", "自动"),
-            ("T-04", "bookSourceName 命名合规且全批唯一（RBS-PRC-031）", "自动"),
-            ("T-05", "bookSourceGroup 在白名单、≤3 组（RBS-PRC-032、RBS-CLS-002/RBS-CLS-003）", "自动"),
+            ("T-04", "bookSourceName 命名合规、同组唯一（跨组同名需备注区别）（RBS-PRC-031、RBS-CLS-035）", "自动"),
+            ("T-05", "bookSourceGroup 在白名单、单一归属（RBS-PRC-032、RBS-CLS-002/RBS-CLS-003/RBS-CLS-004）", "自动"),
             ("T-06", "bookSourceType 合法且与分组类型一致（RBS-PRC-033、RBS-CLS-005）", "自动"),
             ("T-07", "搜索/发现入口与必要子字段齐全（RBS-PRC-034、RBS-STR-003/RBS-STR-016）", "自动"),
             ("T-08", "目录/正文/下载规则必需子字段齐全（RBS-PRC-035、RBS-STR-005/RBS-STR-018/RBS-STR-019）", "自动"),
@@ -264,6 +264,7 @@ class ReadingAdapter:
         global_errors: list[dict] = []
         seen_urls: dict[str, list[EntryResult]] = {}
         seen_names: dict[str, list[EntryResult]] = {}
+        names_by_plain: dict[str, list[tuple[str, EntryResult]]] = {}
         seen_orders: dict[int, list[EntryResult]] = {}
 
         for lj in loaded:
@@ -283,10 +284,14 @@ class ReadingAdapter:
                 if isinstance(src, dict):
                     url = src.get("bookSourceUrl")
                     name = src.get("bookSourceName")
+                    grp = src.get("bookSourceGroup")
                     if isinstance(url, str) and url:
                         seen_urls.setdefault(url, []).append(r)
                     if isinstance(name, str) and name:
-                        seen_names.setdefault(name, []).append(r)
+                        grp_key = grp if isinstance(grp, str) else ""
+                        key = "%s\t%s" % (grp_key, name)
+                        seen_names.setdefault(key, []).append(r)
+                        names_by_plain.setdefault(name, []).append((grp_key, r))
                     order = src.get("customOrder")
                     if isinstance(order, int) and not isinstance(order, bool):
                         seen_orders.setdefault(order, []).append(r)
@@ -295,10 +300,19 @@ class ReadingAdapter:
             if len(group) > 1:
                 for r in group:
                     r.add("T-03", "错误", f"bookSourceUrl 在批内重复 {len(group)} 次：{url}")
-        for name, group in seen_names.items():
+        for key, group in seen_names.items():
             if len(group) > 1:
+                grp, name = key.split("\t", 1)
                 for r in group:
-                    r.add("T-04", "错误", f"bookSourceName 在批内重复 {len(group)} 次：{name}")
+                    r.add("T-04", "错误",
+                          f"同组（{grp}）内 bookSourceName 重复 {len(group)} 次：{name}；"
+                          f"第 2 条起应加「·备」，或同一后端重复应合并")
+        for name, items in names_by_plain.items():
+            grps = {g for g, _ in items}
+            if len(grps) > 1:
+                for _, r in items:
+                    r.add("T-04", "警告",
+                          f"跨组同名：{name} 出现在 {len(grps)} 个分组，需在 bookSourceComment 写清区别")
         for order, group in seen_orders.items():
             if len(group) > 1:
                 for r in group:

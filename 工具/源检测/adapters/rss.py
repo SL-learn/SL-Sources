@@ -72,8 +72,8 @@ class RssAdapter:
             ("T-01", "JSON 可解析、顶层数组、无 BOM、无重复键", "自动"),
             ("T-02", "字段集合：sourceUrl/sourceName 必填、未知键、实体字段类型", "自动"),
             ("T-03", "sourceUrl 形态合规且批内唯一（主键约束）", "自动"),
-            ("T-04", "sourceName 非空、无控制字符、批内重名", "自动"),
-            ("T-05", "sourceGroup 拆分与分组数；空组名", "自动"),
+            ("T-04", "sourceName 非空、无控制字符、同组重名为 0（跨组同名需备注区别）", "自动"),
+            ("T-05", "sourceGroup 拆分、分组数、白名单与空组名", "自动"),
             ("T-06", "articleStyle 0–2、customOrder、lastUpdateTime、concurrentRate", "自动"),
             ("T-07", "sortUrl 行语法（名称::链接）、JS 形态、singleUrl 组合", "自动"),
             ("T-08", "规则完整性：列表/标题/链接/翻页依赖", "自动"),
@@ -100,6 +100,7 @@ class RssAdapter:
         global_errors: list[dict] = []
         seen_urls: dict[str, list[EntryResult]] = {}
         seen_names: dict[str, list[EntryResult]] = {}
+        names_by_plain: dict[str, list[tuple[str, EntryResult]]] = {}
         seen_orders: dict[int, list[EntryResult]] = {}
 
         for lj in loaded:
@@ -122,7 +123,11 @@ class RssAdapter:
                     if isinstance(url, str) and url.strip():
                         seen_urls.setdefault(url.strip(), []).append(r)
                     if isinstance(name, str) and name.strip():
-                        seen_names.setdefault(name.strip(), []).append(r)
+                        grp = src.get("sourceGroup")
+                        grp_key = grp.strip() if isinstance(grp, str) else ""
+                        key = "%s\t%s" % (grp_key, name.strip())
+                        seen_names.setdefault(key, []).append(r)
+                        names_by_plain.setdefault(name.strip(), []).append((grp_key, r))
                     order = src.get("customOrder")
                     if isinstance(order, int) and not isinstance(order, bool):
                         seen_orders.setdefault(order, []).append(r)
@@ -131,10 +136,19 @@ class RssAdapter:
             if len(group) > 1:
                 for r in group:
                     r.add("T-03", "错误", f"sourceUrl 在批内重复 {len(group)} 次（主键冲突）：{url}")
-        for name, group in seen_names.items():
+        for key, group in seen_names.items():
             if len(group) > 1:
+                grp, name = key.split("\t", 1)
                 for r in group:
-                    r.add("T-04", "警告", f"sourceName 在批内重名 {len(group)} 次：{name}")
+                    r.add("T-04", "错误",
+                          f"同组（{grp}）内 sourceName 重复 {len(group)} 次：{name}；"
+                          f"第 2 条起应加「·备」，或同一后端重复应合并")
+        for name, items in names_by_plain.items():
+            grps = {g for g, _ in items}
+            if len(grps) > 1:
+                for _, r in items:
+                    r.add("T-04", "警告",
+                          f"跨组同名：{name} 出现在 {len(grps)} 个分组，需在 sourceComment 写清区别")
         for order, group in seen_orders.items():
             if len(group) > 1:
                 for r in group:
@@ -280,6 +294,12 @@ class RssAdapter:
         dup = sorted({g for g in groups if groups.count(g) > 1})
         if dup:
             r.add("T-05", "警告", "分组内重复名称：" + "、".join(dup))
+        allowed = self.cfg.get("allowedGroups")
+        if allowed:
+            unknown = [g for g in groups if g not in allowed]
+            if unknown:
+                r.add("T-05", "错误",
+                      "分组不在白名单（白名单见规则 allowedGroups）：" + "、".join(unknown))
         if self.adult_group_re.search(group):
             self._adult(r, f"分组命中成人关键词：{group}", "sourceGroup")
 

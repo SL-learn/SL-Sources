@@ -1,27 +1,35 @@
 {
   "id": "reading",
   "name": "阅读/Legado",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "updated": "2026-11-08",
-  "updatedAt": "2026-11-08 17:30",
+  "updatedAt": "2026-11-08 17:46",
   "status": "beta",
   "files": {
     "bookSources": "书源.json",
     "rssSources": "订阅源.json"
   },
   "counts": {
-    "bookSources": 113,
-    "rssSources": 27
+    "bookSources": 111,
+    "rssSources": 26
   },
   "groupDistribution": {
-    "📚 小说": 82,
+    "📚 小说": 80,
     "🔍 综合": 6,
     "🖼 漫画": 5,
     "🎧 有声": 1,
     "📖 出版": 17,
     "♻️ 间歇": 2
   },
-  "groupRule": "7 组固定：📚 小说 / 🔍 综合 / 🖼 漫画 / 🎧 有声 / 📖 出版 / ♻️ 间歇 / ⑱ 成人；每条源只归一个组；⑱ 成人只存在私有台账",
+  "rssGroupDistribution": {
+    "📰 资讯": 16,
+    "🎬 影视": 1,
+    "🎵 音乐": 0,
+    "📚 阅读": 3,
+    "🌐 其他": 6
+  },
+  "groupRule": "书源 7 组固定：📚 小说 / 🔍 综合 / 🖼 漫画 / 🎧 有声 / 📖 出版 / ♻️ 间歇 / ⑱ 成人；订阅源 5 组固定：📰 资讯 / 🎬 影视 / 🎵 音乐 / 📚 阅读 / 🌐 其他；每条源只归一个组；⑱ 成人只存在私有台账",
+  "nameRule": "同组内名称唯一，重名第 2 条起加 ·备、·备2；同一 host 的重复后端合并为 1 条；域名写备注不写名称",
   "orderRule": "组内按客户端搜索命中条数降序、再按 respondTime 升序；customOrder 从 1 连续递增",
   "verify": ["规范/阅读书源校验规则.md", "规范/阅读订阅源校验规则.md"],
   "templates": ["工具/阅读模板/书源模板.json", "工具/阅读模板/订阅源模板.json"],

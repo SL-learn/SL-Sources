@@ -72,6 +72,9 @@
     "entryMax": 65536
   },
   "nameRegex": "^[^\\r\\n\\t\\u0000-\\u001f]+$",
+  "allowedGroups": ["📰 资讯", "🎬 影视", "🎵 音乐", "📚 阅读", "🌐 其他", "⑱ 成人"],
+  "uniqueNameScope": "group",
+  "backupSuffixRegex": "·备(\\d+)?$",
   "urlRegex": "^https?://[A-Za-z0-9.-]+(:\\d+)?(/[^\\s]*)?$",
   "credentialRegex": "Bearer\\s+[A-Za-z0-9\\-._~+/]{16,}|(?:Authorization|Cookie|Set-Cookie)\\s*[:=]\\s*[\"'][^\"']{16,}|token\\s*=\\s*[\"'][A-Za-z0-9\\-._~]{16,}|\\b1[3-9]\\d{9}\\b",
   "adultGroupRegex": "18\\+|18plus|成人|色情|情色|涩情|里番|H漫|无码|R18|午夜|激情|福利姬",
