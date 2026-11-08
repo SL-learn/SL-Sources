@@ -42,10 +42,10 @@ CROSS = {
     "gitee": [re.compile(r"raw\.githubusercontent\.com"), re.compile(r"cdn\.jsdelivr\.net")],
     "github": [re.compile(r"gitee\.com")],
 }
-DOC_GLOBS = [
-    "README.md", "发布说明.md", "声明.md", "文档索引.md",
-    "使用/*.md", "apps/*/README.md", "apps/tvbox/目录说明.txt", "规范/*.md",
-]
+# 平台互斥只对「给人看的用户文档」生效：这些文件不得出现另一平台域名
+# （规范/ 允许用 <owner>、<平台 raw 基址> 这类通用写法讨论两个平台）
+USER_GLOBS = ["README.md", "发布说明.md", "使用/*.md", "apps/*/README.md", "apps/tvbox/目录说明.txt"]
+DOC_GLOBS = USER_GLOBS + ["声明.md", "文档索引.md", "规范/*.md"]
 
 
 def load_platform(platform: str, owner: str = "") -> dict:
@@ -110,14 +110,18 @@ def check(p: dict) -> list[str]:
     files = []
     for pattern in DOC_GLOBS:
         files += sorted(glob.glob(os.path.join(REPO, pattern)))
+    user_files = set()
+    for pattern in USER_GLOBS:
+        user_files.update(os.path.normcase(p) for p in glob.glob(os.path.join(REPO, pattern)))
     for path in sorted(set(files)):
         if not os.path.isfile(path) or path == ADDRESS:
             continue
         rel = os.path.relpath(path, REPO).replace("\\", "/")
+        is_user_doc = os.path.normcase(path) in user_files
         for no, line in enumerate(open(path, encoding="utf-8"), 1):
             if any(rx.search(line) for rx in BANNED):
                 problems.append(f"{rel}:{no} 写死了仓库绝对地址，应改相对路径或指向 地址.md")
-            elif any(rx.search(line) for rx in CROSS.get(p["代号"], [])):
+            elif is_user_doc and any(rx.search(line) for rx in CROSS.get(p["代号"], [])):
                 problems.append(f"{rel}:{no} 出现另一平台域名")
 
     if not os.path.exists(ADDRESS):
