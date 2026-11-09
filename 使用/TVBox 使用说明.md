@@ -25,11 +25,11 @@
 | 渠道 | 角色 | 结论 |
 |---|---|---|
 | GitHub raw | 主源 | 采用；分支 `main`；支持 Range |
-| Gitee raw | 国内镜像 | 采用；分支 `main`，与 GitHub 独立维护提交；`api_index.json`、`api_all.json` 按平台各自渲染，`地址.md` 两平台并列、两侧内容一致 |
+| Gitee raw | 国内镜像 | 采用；分支 `main`，与 GitHub 独立维护提交；`api_index.json`、`api_all.json` 按平台各自渲染，`发布/地址.md` 两平台并列、两侧内容一致 |
 | jsDelivr | 加速备选 | 仅 GitHub 侧提供，可用但不作主源：`@main` 缓存不可控 |
 | 自选静态存放位置 | 仅便携版整包存放 | 不作仓库配置源；入口只写 `api_index_rel.json` 的直链 |
 
-两平台的绝对地址不在本文档写死：仓库根 `地址.md` 两平台并列，根 `README.md` 与 `apps/tvbox/README.md` 的地址块可直接复制。**在线直填只认 GitHub 与 Gitee 两条仓库地址**，不把任何存放位置当配置源。
+两平台的绝对地址不在本文档写死：`发布/地址.md` 两平台并列，根 `README.md` 与 `apps/tvbox/README.md` 的地址块可直接复制。**在线直填只认 GitHub 与 Gitee 两条仓库地址**，不把任何存放位置当配置源。
 
 ### 9.2 直链要求
 
@@ -40,7 +40,7 @@
 | TVB-DIST-008 | 链接必须长期有效；带时效签名、需登录换取的链接不得作配置源 |
 | TVB-DIST-009 | 在线入口指向 `api_index.json`；便携版入口指向 `api_index_rel.json`；包内引用保持相对路径，换存放位置不改包 |
 | TVB-DIST-010 | 在线与本地共用同一份文件；在线更新只允许覆盖同路径文件（见第 10 章） |
-| TVB-DIST-011 | GitHub 与 Gitee **分别发布、互不同步**：GitHub 推 `main` 与主 tag，Gitee 由本地 `gitee` 分支重建树后渲染并推 `gitee:main`；除按平台渲染的两个入口产物（`apps/tvbox/api_index.json`、`apps/tvbox/api_all.json`）外，其余文件（含 `地址.md` 与各 README 地址块）两平台必须字节一致（SYS-DIST-003） |
+| TVB-DIST-011 | GitHub 与 Gitee **分别发布、互不同步**：GitHub 推 `main` 与主 tag，Gitee 由本地 `gitee` 分支重建树后渲染并推 `gitee:main`；除按平台渲染的两个入口产物（`apps/tvbox/api_index.json`、`apps/tvbox/api_all.json`）外，其余文件（含 `发布/地址.md` 与各 README 地址块）两平台必须字节一致（SYS-DIST-003） |
 
 ### 9.3 自选静态存放位置直链判定（仅用于便携版，不作仓库配置源）
 
