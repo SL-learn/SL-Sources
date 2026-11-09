@@ -25,3 +25,7 @@ reading,1.5.2,f16fdff,2026-11-08,-,-,-,"客户端实测回修：书旗 exploreUr
 tvbox,2.4.0,048a473,2026-11-09,52,4,8,"Gitee 版多线路索引修复：综合→api_all.json、少儿→kids/api.json、长辈→elders/api.json，三条 url 互不相同；SYS-DIST-009 改写、新增 SYS-DIST-013；GitHub 版索引与站点不变"
 reading,1.5.4,ffa236d,2026-11-09,-,-,-,"书源 111→100（发现页四层复测修复 11 条、移出 10 条真废源；收尾再移出 `music.163.com#芜恙`——非书源、无目录正文项）；订阅源 26→22；移出项与网络不可达项进非公开域观察池复测"
 tvbox,2.4.1,0b444c0,2026-11-09,52,4,8,"正式版本号承载多线路修复：Gitee 三条线路 url 互不相同（综合 api_all.json / 少儿 kids/api.json / 长辈 elders/api.json）；Gitee 订阅源恢复可访问（302→200），受限路径收为 std/api.json 与书源.json；规则外部词表改工作区相对写法；GitHub 版索引与站点不变"
+catmovie,1.4.0,e18f348,2026-11-08,-,-,-,"点播 19 / 直播 6；config.json 新增顶层 updateTime，新增 apps/catmovie/更新时间.txt；无独立 tag（未记录），按 CHANGELOG 对应提交回填"
+catmovie,1.4.1,72dbbf5,2026-11-08,-,-,-,"点播 19 / 直播 6；三轮实测按中位数改档重排，README 判档表改用实测值；无独立 tag（未记录）"
+catmovie,1.5.0,8f3e8e9,2026-11-08,-,-,-,"点播 19 / 直播 4（直播 6→4，3 条上游已死移入观察池）；无独立 tag（未记录）"
+catmovie,1.6.0,ea9e99c,2026-11-08,-,-,-,"点播 19 / 直播 4；直播按客户端可播能力重排；tag catmovie-v1.6.0 指 e4ed786（发布后文档提交），产品提交为 ea9e99c"
