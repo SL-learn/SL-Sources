@@ -1,0 +1,14 @@
+{
+  "说明": "PKG-010 例外清单：TVBox 客户端内置代理（9978 / 2525 端口）只允许出现在本表登记的文件与行号；文件路径相对便携包根，未登记即判导出失败。",
+  "允许": [
+    { "文件": "tvbox/std/config/env.json", "行号": 15, "值": "http://127.0.0.1:2525/proxy?url=", "用途": "drpy 代理配置，客户端内置代理" },
+    { "文件": "tvbox/std/open/97_search.js", "行号": 33, "值": "http://127.0.0.1:2525/proxy?url=", "用途": "搜索代理，客户端内置代理" },
+    { "文件": "tvbox/std/lib/drpy2.min.js", "行号": 1, "值": "http://127.0.0.1:9978/proxy?do=js", "用途": "drpy 引擎 JS 代理回退，客户端内置代理" },
+    { "文件": "tvbox/std/js/drpy2.min.js", "行号": 797, "值": "http://127.0.0.1:9978/proxy?do=js", "用途": "drpy 引擎 JS 代理回退，客户端内置代理" },
+    { "文件": "tvbox/std/ext/drpy2.min.js", "行号": 783, "值": "http://127.0.0.1:9978/proxy?do=js", "用途": "drpy 引擎 JS 代理回退，客户端内置代理" },
+    { "文件": "tvbox/elders/api/jiduo_drpy2.min.js", "行号": 797, "值": "http://127.0.0.1:9978/proxy?do=js", "用途": "drpy 引擎 JS 代理回退，客户端内置代理" },
+    { "文件": "tvbox/elders/api/huban_drpy2.min.js", "行号": 73, "值": "http://127.0.0.1:9978/proxy?do=js", "用途": "drpy 引擎 JS 代理回退，客户端内置代理" },
+    { "文件": "tvbox/kids/api/drpy2.min.js", "行号": 73, "值": "http://127.0.0.1:9978/proxy?do=js", "用途": "drpy 引擎 JS 代理回退，客户端内置代理" },
+    { "文件": "tvbox/std/py/瓜娃子.py", "行号": 469, "值": "http://127.0.0.1:9978/proxy?do=diydanmu", "用途": "弹幕代理，客户端内置代理" }
+  ]
+}
