@@ -50,7 +50,7 @@
 "apps/tvbox/kids/lib/幼儿乐园.json","配置/数据","1503","c89916ac7bed8c9ad43007bba6e3b18c","否"
 "apps/tvbox/kids/open/erge_juhe.js","脚本","9852","b4a82659ef74a2d306723e952bc20c63","否"
 "apps/tvbox/kids/spider.jar","引擎/库","1466660","367b30616fb382b237c4b9105e41d5f2","是"
-"apps/tvbox/README.md","资源","3132","675b7e4ed146eebeb35ea8ce2629cfbb","否"
+"apps/tvbox/README.md","资源","3127","f1185c222a7283da912b23e669097d7d","否"
 "apps/tvbox/std/api.json","配置/数据","13821","3007c4a9911952d09792077594d18319","是"
 "apps/tvbox/std/config/env.json","配置/数据","1341","1b71be7f544c2adf084e617f5ba035e5","否"
 "apps/tvbox/std/ext/Anime1.js","脚本","4920","b9ad99e77d3aa659cab327d336807c16","否"

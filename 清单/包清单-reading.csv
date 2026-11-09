@@ -1,6 +1,6 @@
 ﻿"相对路径","类型","大小","md5","是否入口"
-"apps/reading/README.md","资源","7801","30c5de51276623d94a668b83d9893360","否"
-"apps/reading/version.json","配置/数据","2273","5c148e4c2c02a9917080ce69a80ec4bd","否"
+"apps/reading/README.md","资源","7819","b27f69ec95254aed522275d489ec19ed","否"
+"apps/reading/version.json","配置/数据","2303","0c02bdb31ead36abb93693ffe5af5753","否"
 "apps/reading/订阅源.json","配置/数据","34676","995aecc40120fabb4c2adba948e6f2ae","是"
 "apps/reading/更新时间.txt","说明","656","6a394de473dc358498d2646eb2a948ab","否"
 "apps/reading/书源.json","配置/数据","893368","8d880f2157bdc99aa8df11c0c380ffba","是"
