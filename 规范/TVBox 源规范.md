@@ -28,7 +28,7 @@
 | TVB-CFG-016 | 配置每次启动都尝试拉取，只有拉取失败才回退本地缓存 | `HomeActivity` 调用 `loadConfig(useCache=false)` |
 | TVB-CFG-017 | 本地文件服务把请求路径**原样**拼到存储根，不做百分号解码；路径里带 `%E7%BB%BC` 这类编码会 404，表现为「选了线路但站点为空」。因此 v2.0.0 起线路目录改用 ASCII 短名 `std`/`kids`/`elders`，从根上不再依赖中文路径 | `RemoteServer.java:158-166`；历史故障见 `非公开域/记录/2026-11-07/tvbox/探活报告.md` |
 | TVB-CFG-018 | jsDelivr 对 `.jar` 一律返回 403（连续两次实测），只适合下发 JSON；因此在线索引必须走 raw，不能换 CDN | 实测 `cdn.jsdelivr.net/gh/.../xingwei_df5bf731.jar` → 403；同路径 JSON → 200 |
-| TVB-CFG-019 | **主客户端 = 影视仓**（包名 `com.huawei.himovceie`，v6.2.9，CatVod 派生）。其 Java 侧调用 js 源的 `homeContent`/`categoryContent`/`detailContent`/`searchContent`/`playerContent`，且 `detailContent` 入参为数组；不调用 TVBox 的 `home`/`homeVod`。脚本必须同时导出两套命名 | 影视仓 6.2.9 dex 字符串 + 其 `assets/js/lib/spider.js` 加载包装实测 |
+| TVB-CFG-041 | **主客户端 = 影视仓**（包名 `com.huawei.himovceie`，v6.2.9，CatVod 派生）。其 Java 侧调用 js 源的 `homeContent`/`categoryContent`/`detailContent`/`searchContent`/`playerContent`，且 `detailContent` 入参为数组；不调用 TVBox 的 `home`/`homeVod`。脚本必须同时导出两套命名 | 影视仓 6.2.9 dex 字符串 + 其 `assets/js/lib/spider.js` 加载包装实测 |
 
 【待验证】以下一项需实机确认，验证方法写在括号内：
 1. `UriUtil.resolve(<含中文空格的配置URL>, "../")` 的返回值是否等价于「上一级目录」（临时把一条 jar 站点指向 `../_common/jar/` 的空壳 jar，看是否 200）。
