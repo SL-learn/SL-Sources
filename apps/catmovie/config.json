@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-11-08 21:30",
+  "updateTime": "2026-11-09 11:31",
   "sites": [
     {
       "id": "caiji_dyttzyapi_com",
@@ -140,6 +140,11 @@
     {
       "name": "卫视｜央视卫视",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
+      "type": 0
+    },
+    {
+      "name": "综合｜Guovin综合",
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/ipv4/result.m3u",
       "type": 0
     },
     {
