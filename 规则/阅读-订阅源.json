@@ -80,7 +80,7 @@
   "adultGroupRegex": "18\\+|18plus|成人|色情|情色|涩情|里番|H漫|无码|R18|午夜|激情|福利姬",
   "adultKeywordRegex": "成人|色情|情色|涩情|里番|H漫|无码|有码|R18|18\\+|AV女优|约炮|裸聊",
   "adultDomainSupplement": [],
-  "plus18ListPath": "D:\\Dev\\SL_Dev\\SL_TVBOX\\参考资料\\阅读3.0-hectorqin\\app\\src\\main\\assets\\18PlusList.txt",
+  "plus18ListPath": "参考资料\\阅读3.0-hectorqin\\app\\src\\main\\assets\\18PlusList.txt",
   "修复": {
     "启用动作": ["F-01", "F-02", "F-03", "F-04", "F-05", "F-06"],
     "articleStyle默认": 0,
