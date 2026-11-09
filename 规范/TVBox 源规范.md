@@ -26,7 +26,7 @@
 | TVB-CFG-014 | 识别到索引后自动加载第一条，并写入线路列表；直接加载子配置会因 `clearApiLinesIfUnmatched` 清空线路列表 | `ApiConfig.java:650-669、728-739` |
 | TVB-CFG-015 | 客户端只有一份当前配置（`API_URL` 单键）；不同包不会同时并列显示，只能通过接口历史切换 | `HawkConfig.API_URL` |
 | TVB-CFG-016 | 配置每次启动都尝试拉取，只有拉取失败才回退本地缓存 | `HomeActivity` 调用 `loadConfig(useCache=false)` |
-| TVB-CFG-017 | 本地文件服务把请求路径**原样**拼到存储根，不做百分号解码；路径里带 `%E7%BB%BC` 这类编码会 404，表现为「选了线路但站点为空」。因此 v2.0.0 起线路目录改用 ASCII 短名 `std`/`kids`/`elders`，从根上不再依赖中文路径 | `RemoteServer.java:158-166`；历史故障见 `记录/2026-11-07/tvbox/探活报告.md` |
+| TVB-CFG-017 | 本地文件服务把请求路径**原样**拼到存储根，不做百分号解码；路径里带 `%E7%BB%BC` 这类编码会 404，表现为「选了线路但站点为空」。因此 v2.0.0 起线路目录改用 ASCII 短名 `std`/`kids`/`elders`，从根上不再依赖中文路径 | `RemoteServer.java:158-166`；历史故障见 `非公开域/记录/2026-11-07/tvbox/探活报告.md` |
 | TVB-CFG-018 | jsDelivr 对 `.jar` 一律返回 403（连续两次实测），只适合下发 JSON；因此在线索引必须走 raw，不能换 CDN | 实测 `cdn.jsdelivr.net/gh/.../xingwei_df5bf731.jar` → 403；同路径 JSON → 200 |
 | TVB-CFG-019 | **主客户端 = 影视仓**（包名 `com.huawei.himovceie`，v6.2.9，CatVod 派生）。其 Java 侧调用 js 源的 `homeContent`/`categoryContent`/`detailContent`/`searchContent`/`playerContent`，且 `detailContent` 入参为数组；不调用 TVBox 的 `home`/`homeVod`。脚本必须同时导出两套命名 | 影视仓 6.2.9 dex 字符串 + 其 `assets/js/lib/spider.js` 加载包装实测 |
 
@@ -87,7 +87,7 @@ apps/tvbox/
 | TVB-NAM-008 | 线路内脚本 | 保留原包相对位置；跨线路同名时加来源前缀，不得直接覆盖 | `api/fantaijing_drpy2.min.js` |
 | TVB-NAM-009 | 图片 | 小写 ASCII + `.png`/`.jpg`；单文件 ≤200 KB；仅放该线路 `img/` | `logo_xingwei.png` |
 | TVB-NAM-010 | 允许的线路内目录 | `js/ py/ open/ ext/ lib/ api/ img/ live/ config/`，只允许一层；禁止新增语义不明目录 | — |
-| TVB-NAM-011 | 记录文件 | `记录/<YYYY-MM-DD>/<应用id>/` 下放探活报告、冲突处置、体检表；只增不改 | — |
+| TVB-NAM-011 | 记录文件 | `非公开域/记录/<YYYY-MM-DD>/<应用id>/` 下放探活报告、冲突处置、体检表；只增不改 | — |
 | TVB-NAM-012 | 版本目录 | 需要留存旧版时用 `v<主>.<次>.<修订>`，只出现于发布侧，不进包目录 | `v1.2.0` |
 
 ### 4.3 路径引用写法
@@ -108,7 +108,7 @@ apps/tvbox/
 | TVB-NAM-016 | 站点 `name`、`flags` 中禁止出现 `"./` 与 `"../` 字符序列（会被 `fixContentPath` 当路径替换）；`api`、`ext`、`jar` 反而**必须**用相对路径，由 `fixContentPath` 正常改写（TVB-NAM-014） |
 | TVB-NAM-017 | 站点 `name` 清洗：去 emoji、去全角符号、去首尾空白；长度 2–10 字；清洗后撞名按第 13 章处理。内容符号与速度符号是 TVB-NAM-022/023 规定的例外，不受本条「去 emoji」约束 |
 | TVB-NAM-018 | 站点 `name` 的速度档位只由速度符号表达（TVB-NAM-023）；不再写 `-快`/`-中`/`-慢` 汉字后缀 |
-| TVB-NAM-019 | 速度档位以实测耗时为唯一依据，取值来自体检表 `记录/<日期>/tvbox/源体检表.csv` 的「三次均值ms」列；无实测数据的站点不得标档位，也不得凭印象标档位 |
+| TVB-NAM-019 | 速度档位以实测耗时为唯一依据，取值来自体检表 `非公开域/记录/<日期>/tvbox/源体检表.csv` 的「三次均值ms」列；无实测数据的站点不得标档位，也不得凭印象标档位 |
 | TVB-NAM-020 | 本地入口固定文件名 `api_index_local.json`，内容为 `clan://` 三条线路；在线入口固定 `api_index.json`，内容为绝对 URL；两者除 url 写法外必须完全一致 |
 | TVB-NAM-021 | 单文件全量配置固定文件名 `api_all.json`，把三条线路 `sites` 合并；所有 `api`/`jar`/`ext` 一律写绝对 raw URL，`;md5;` 段不得编码；`key` 与线路内保持完全一致 |
 | TVB-NAM-022 | 内容符号固定枚举，一个站点只取一个：`🎬` 综合影视、`🎞` 电影、`📺` 剧集、`🎤` 综艺、`🎌` 动漫、`🎭` 短剧、`🎠` 少儿、`⚽` 体育、`📚` 听书/曲艺、`🩺` 养生/生活；不得自造符号 |
