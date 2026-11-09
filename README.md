@@ -21,15 +21,15 @@
 <!-- 地址块开始：由 工具/发布/渲染.py 生成，勿手改 -->
 | 应用 | 填到软件哪个入口 | GitHub 地址 | Gitee 地址 |
 |---|---|---|---|
-| TVBox / 影视仓 | 设置 → 配置地址（多仓索引，推荐） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_index.json` |
-| TVBox / 影视仓 | 设置 → 配置地址（单文件全量 64 站） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json` |
+| TVBox / 影视仓 | 设置 → 配置地址（多仓索引，推荐，含线路切换） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_index.json` |
+| TVBox / 影视仓 | 设置 → 配置地址（单文件全量 64 站，无线路切换） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json` |
 | TVBox / 影视仓 | 本地整包：整包放 `/sdcard/TVBox/tvbox/` 后填 | `clan://localhost/tvbox/api_index_local.json` | 同 GitHub |
 | 小猫影视 | 设置 → 订阅配置（单文件） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/catmovie/config.json` |
 | 阅读 | 书源管理 → 网络导入（书源 111 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/书源.json` | 451 拦截，暂不可用 |
 | 阅读 | 订阅 → 网络导入（订阅源 26 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/订阅源.json` | 451 拦截，暂不可用 |
 
 > 阅读的书源与订阅源是**两类分别导入**：先在「书源管理」填书源地址，再在「订阅」填订阅源地址。
-> Gitee 的 `apps/tvbox/std/api.json`、`apps/reading/书源.json`、`apps/reading/订阅源.json` 被 451 拦截，TVBox 用 `api_all.json`，阅读改用 GitHub 地址。完整表格与百分号编码写法见 [地址.md](./地址.md)。
+> Gitee 的 `apps/tvbox/std/api.json`、`apps/reading/书源.json`、`apps/reading/订阅源.json` 被 451 拦截：TVBox 索引的综合线路改用 `api_all.json`（64 站），阅读改用 GitHub 地址。单文件 `api_all.json` 是 64 站全量、没有线路切换，需要综合/少儿/长辈切换请填 `api_index.json`。完整表格与百分号编码写法见 [地址.md](./地址.md)。
 <!-- 地址块结束 -->
 
 填法、安装步骤见 `使用/`；强制条款见 `规范/`。

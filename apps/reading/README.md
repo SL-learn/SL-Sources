@@ -74,8 +74,8 @@
 <!-- 地址块开始：由 工具/发布/渲染.py 生成，勿手改 -->
 | 类别 | 填到软件哪个入口 | GitHub 地址 | Gitee 地址 |
 |---|---|---|---|
-| 书源（101 条） | 书源管理 → 网络导入 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/书源.json` | 451 拦截，暂不可用 |
-| 订阅源（22 条） | 订阅 → 网络导入 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/订阅源.json` | 451 拦截，暂不可用 |
+| 书源（111 条） | 书源管理 → 网络导入 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/书源.json` | 451 拦截，暂不可用 |
+| 订阅源（26 条） | 订阅 → 网络导入 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/订阅源.json` | 451 拦截，暂不可用 |
 
 > 书源与订阅源**分两次导入**，两个地址各填一次，不能合并成一个包。Gitee 侧两个文件都被 451 拦截，暂只能用 GitHub 地址或下载文件后本地导入。
 <!-- 地址块结束 -->

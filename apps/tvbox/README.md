@@ -9,11 +9,11 @@ TVBoxOSC 系客户端的三线路影视源：综合 52 站、少儿 4 站、长�
 <!-- 地址块开始：由 工具/发布/渲染.py 生成，勿手改 -->
 | 场景 | 填到软件哪个入口 | GitHub 地址 | Gitee 地址 |
 |---|---|---|---|
-| 在线多线路 | 设置 → 配置地址 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_index.json` |
-| 单文件全量 | 设置 → 配置地址 | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json` |
+| 在线多线路 | 设置 → 配置地址（含线路切换） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_index.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_index.json` |
+| 单文件全量 | 设置 → 配置地址（无线路切换） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json` |
 | 本地整包 | 整包放 `/sdcard/TVBox/tvbox/` 后填 | `clan://localhost/tvbox/api_index_local.json` | 同 GitHub |
 
-> Gitee 版索引三条线路统一指向 `api_all.json`，因为 `apps/tvbox/std/api.json` 被 451 拦截。三条线路单独加载的地址见仓库根 [地址.md](../../地址.md)。
+> Gitee 版索引：综合 → `api_all.json`（64 站，含少儿/长辈 12 站重复）、少儿 → `kids/api.json`（4 站）、长辈 → `elders/api.json`（8 站），三条地址互不相同，客户端可切换。单文件 `api_all.json` 是 64 站全量、没有线路切换。三条线路单独加载的地址见仓库根 [地址.md](../../地址.md)。
 <!-- 地址块结束 -->
 
 下表的仓库内路径在两平台一致：
