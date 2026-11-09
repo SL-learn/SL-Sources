@@ -30,7 +30,7 @@
   },
   "allowedNamePrefixes": ["🌐", "🔍", "🎉", "📚", "💠", "📖", "●", "🍒", "⭐", "🐾", "🌙", "🎧", "🖼", "♻"],
   "allowedNameSuffixes": ["♻"],
-  "nameRegex": "^(?:⑱ )?[\\u4e00-\\u9fa5A-Za-z0-9·\\-（）()\\[\\]【】.\\u2460-\\u2473\\u3251-\\u325f\\s]{2,24}$",
+  "nameRegex": "^(?:⑱ )?(?:[🌐🔍🎉📚💠📖●🍒⭐🐾🌙🎧🖼♻] ?)?[\\u4e00-\\u9fa5A-Za-z0-9·\\-（）()\\[\\]【】.\\u2460-\\u2473\\u3251-\\u325f]{2,24}(?: ♻️)?$",
   "uniqueNameScope": "group",
   "noSearchMarker": "无搜索能力",
   "backupSuffixRegex": "·备(\\d+)?$",

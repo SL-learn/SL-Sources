@@ -22,7 +22,7 @@
 | D02 | `使用/` | 三个客户端怎么填地址、怎么导入 |
 | D03 | `规范/` | 强制条款正本（按应用分册） |
 | D04 | `变更/` | 各应用 CHANGELOG 与映射表 |
-| D05 | `记录/` | 按日期的运行结论与明细 |
+| D05 | `记录/README.md` | 只有版本事实指针：过程数据不进公开仓 |
 | D06 | `文档索引.md` | 文档地图，≤30 行 |
 | D07 | `清单/` | 应用清单、包清单、版本对照表（CSV） |
 | D08 | `决策记录.md` | 拍板记录（只追加） |
@@ -39,7 +39,7 @@
 | TVBox / 影视仓 | 设置 → 配置地址（单文件全量 64 站，无线路切换） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/api_all.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/tvbox/api_all.json` |
 | TVBox / 影视仓 | 本地整包：整包放 `/sdcard/TVBox/tvbox/` 后填 | `clan://localhost/tvbox/api_index_local.json` | 同 GitHub |
 | 小猫影视 | 设置 → 订阅配置（单文件） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/catmovie/config.json` | `https://gitee.com/gerenxiuxian/SL-Sources/raw/main/apps/catmovie/config.json` |
-| 阅读 | 书源管理 → 网络导入（书源 101 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/书源.json` | 451 拦截，暂不可用 |
+| 阅读 | 书源管理 → 网络导入（书源 100 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/书源.json` | 451 拦截，暂不可用 |
 | 阅读 | 订阅 → 网络导入（订阅源 22 条） | `https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/reading/订阅源.json` | 451 拦截，暂不可用 |
 
 > 阅读的书源与订阅源是**两类分别导入**：先在「书源管理」填书源地址，再在「订阅」填订阅源地址。
@@ -57,10 +57,12 @@
 
 README、发布说明、CHANGELOG、文档索引只引用上述位置，不再抄写具体数字。门禁与一致性校验按 `规范/仓库通用规范.md` 第 10 章（SYS-VER-002）执行；历次版本号与条数漂移的根因就是四处手抄，证据见 [决策记录.md](决策记录.md)。
 
+公开仓**只留成果与规则**。观察池、探活/体检报告、测试日志、截图、中间导出、草稿等过程数据一律不入库；原件在工作区 `SL_TVBOX/归档/公开仓过程数据/`，逐条登记与回滚方式见 [归档/索引.csv](归档/索引.csv)（SYS-DOC-004）。
+
 ## 5. 维护链
 
 ```text
-改 apps/<线路>/api.json（唯一事实来源）
+改 apps/tvbox/<线路>/api.json（唯一事实来源）
   → 生成.py --check → 生成.py（多线路索引 / 全量单文件）
   → 校验.py（本地视角）
   → 渲染.py --check --platform github|gitee（地址与多线路唯一性门禁）

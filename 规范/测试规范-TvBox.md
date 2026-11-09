@@ -167,7 +167,7 @@ node 工具\完整测试\js-runner.mjs --api <脚本路径> --skey <key> --timeo
 
 1. 每条源写「分类数 / 首分类条目数 / 首片地址」三项，影视仓与 TVBox 各一行。
 2. 无法实机的写「契约通过（未真机）：`--catvod 1` 分类 N 条」，并写明为什么无法实机；禁止只写「通过」。
-3. 兼容冲突按 `TVB-PRC-008` 记「格式不兼容」，并在 `记录/<日期>/tvbox/冲突处置-<包id>.md` 留痕；不得在观察池记成「不可用」。
+3. 兼容冲突按 `TVB-PRC-008` 记「格式不兼容」，并在 `非公开域/记录/<日期>/tvbox/冲突处置-<包id>.md` 留痕；不得在观察池记成「不可用」。
 
 
 ## 3. 执行步骤
@@ -181,14 +181,14 @@ node 工具\完整测试\js-runner.mjs --api <脚本路径> --skey <key> --timeo
 > 路径约定：完整测试工具在本地工作区 `工具\完整测试\`（`run.py`、`js-runner.mjs`、`py-runner.py`），不随公开仓发布；备份与记录写回**仓库根**。下文工具命令以工作区根为当前目录，或改用绝对路径。
 
 ```powershell
-New-Item -ItemType Directory -Force "记录\2026-11-08\tvbox\备份" | Out-Null
-Copy-Item "apps\tvbox\std\api.json" "记录\2026-11-08\tvbox\备份\std-api-上一版.json" -Force
+New-Item -ItemType Directory -Force "非公开域\记录\2026-11-08\tvbox\备份" | Out-Null
+Copy-Item "apps\tvbox\std\api.json" "非公开域\记录\2026-11-08\tvbox\备份\std-api-上一版.json" -Force
 ```
 
 ```python
 import os, shutil
-os.makedirs(r'记录/2026-11-08/tvbox/备份', exist_ok=True)
-shutil.copy(r'apps/tvbox/std/api.json', r'记录/2026-11-08/tvbox/备份/std-api-上一版.json')
+os.makedirs(r'非公开域/记录/2026-11-08/tvbox/备份', exist_ok=True)
+shutil.copy(r'apps/tvbox/std/api.json', r'非公开域/记录/2026-11-08/tvbox/备份/std-api-上一版.json')
 ```
 
 ### 3.2 单条
@@ -206,13 +206,13 @@ subprocess.run(['python', r'工具/完整测试/run.py', '--key', 'std_js_vod_ba
 
 ```powershell
 python 工具\完整测试\run.py --group js --workers 4 --delay 0.5
-python 工具\完整测试\run.py --all --workers 4 --delay 0.5 --outdir "tvboxSL\记录\2026-11-08\tvbox\原始"
+python 工具\完整测试\run.py --all --workers 4 --delay 0.5 --outdir "tvboxSL\非公开域\记录\2026-11-08\tvbox\原始"
 ```
 
 ```python
 import subprocess
 subprocess.run(['python', r'工具/完整测试/run.py', '--all', '--workers', '4',
-                '--delay', '0.5', '--outdir', r'tvboxSL/记录/2026-11-08/tvbox/原始'])
+                '--delay', '0.5', '--outdir', r'tvboxSL/非公开域/记录/2026-11-08/tvbox/原始'])
 ```
 
 ### 3.4 挂起隔离
@@ -236,7 +236,7 @@ except subprocess.TimeoutExpired:
 python 工具\完整测试\guard.py --workers 4
 ```
 
-它给每条源拉起独立 `run.py` 子进程，cms 30 秒、js 75 秒、py 45 秒、jar 60 秒硬超时，90 秒看门狗到点杀整棵进程树，产出 `记录/<日期>/tvbox/挂起源单.csv` 与 `.md`。被超时的源一律再跑一次 `--hard 90 --tag=-90s` 复核，区分「慢源」与「真挂」，避免把可用但慢的源误判为失效（见 2.6）。
+它给每条源拉起独立 `run.py` 子进程，cms 30 秒、js 75 秒、py 45 秒、jar 60 秒硬超时，90 秒看门狗到点杀整棵进程树，产出 `非公开域/记录/<日期>/tvbox/挂起源单.csv` 与 `.md`。被超时的源一律再跑一次 `--hard 90 --tag=-90s` 复核，区分「慢源」与「真挂」，避免把可用但慢的源误判为失效（见 2.6）。
 
 ### 3.5 出报告
 
@@ -267,12 +267,12 @@ python 工具\完整测试\guard.py --workers 4
 ## 5. 记录与产物
 
 ```
-记录\<日期>\tvbox\
+非公开域\记录\<日期>\tvbox\
 ├── 探活报告.md
 ├── 测试结果.csv
 ├── 原始\                  runner 原始输出
 └── 备份\                  上一版 api.json
-记录\观察池\tvbox\
+非公开域\记录\观察池\tvbox\
 ├── 观察池.csv            13 列，见总则 6.2
 ├── 观察池.md
 └── 备份\

@@ -2,7 +2,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐若雨中文",
+    "bookSourceName": "📚若雨中文",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.3yt.la",
     "customOrder": 1,
@@ -54,7 +54,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🔍零零小说",
+    "bookSourceName": "📚零零小说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.00shu.la",
     "bookUrlPattern": "",
@@ -112,8 +112,9 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "平板电子书网",
+    "bookSourceName": "📚平板电子书网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://wap.qiqixs.la/",
     "customOrder": 3,
@@ -151,13 +152,12 @@
       "nextTocUrl": "class.right.0@a@href"
     },
     "searchUrl": "search.php,{\n  \"body\": \"searchkey={{key}}\",\n  \"method\": \"POST\"\n}",
-    "weight": 0,
-    "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "2026-11-08 客户端复测：正文改 html，全过\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🔍女生文学",
+    "bookSourceName": "📚女生文学",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.wenxuem.com",
     "customOrder": 4,
@@ -198,7 +198,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐狗狗书籍",
+    "bookSourceName": "📚狗狗书籍",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.qiushu.info",
     "customOrder": 5,
@@ -251,7 +251,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐唐三中文",
+    "bookSourceName": "📚唐三中文",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.xtangsanshu.com",
     "customOrder": 6,
@@ -294,7 +294,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "💠 玄幻阁网",
+    "bookSourceName": "📚玄幻阁网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.xuanyge.com",
     "bookUrlPattern": "",
@@ -343,7 +343,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐必去书库",
+    "bookSourceName": "📚必去书库",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.biqusk.com/",
     "bookUrlPattern": "",
@@ -397,7 +397,7 @@
   {
     "bookSourceComment": "加载慢\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "望书阁网",
+    "bookSourceName": "📚望书阁网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://wap.wangshuge.la",
     "customOrder": 9,
@@ -450,7 +450,7 @@
   {
     "bookSourceComment": "加载慢\n来源：源仓库；上游：未标注；作者：未标注\n备用：主入口域名 wap.wangshuge.la，本入口域名 wap.wangshugu.info\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "望书阁网·备",
+    "bookSourceName": "📚望书阁网·备",
     "bookSourceType": 0,
     "bookSourceUrl": "http://wap.wangshugu.info",
     "customOrder": 10,
@@ -503,7 +503,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐笔趣网",
+    "bookSourceName": "📚笔趣网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.biquw.info/",
     "bookUrlPattern": "http://www.biquw.info/book/\\d+/",
@@ -559,7 +559,7 @@
   {
     "bookSourceComment": "2026-11-08 修：域名迁移 net→la，搜索列表跳过表头 li\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐思路客",
+    "bookSourceName": "📚思路客",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.isiluke.la",
     "bookUrlPattern": "http://www.siluke.cc/html/\\d+/",
@@ -568,6 +568,7 @@
     "enabledCookieJar": false,
     "enabledExplore": true,
     "exploreUrl": "[{\"title\":\"玄幻小说\",\"url\":\"/xuanhuanxiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"修真小说\",\"url\":\"/xiuzhenxiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"都市小说\",\"url\":\"/dushixiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"穿越小说\",\"url\":\"/chuanyuexiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"网游小说\",\"url\":\"/wangyouxiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"科幻小说\",\"url\":\"/kehuanxiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"其它小说\",\"url\":\"/qitaxiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0,\n\"layout_flexBasisPercent\":0.29}}]",
+    "header": "User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36\nReferer: http://www.isiluke.la/",
     "lastUpdateTime": 1687545066550,
     "loginUrl": "",
     "respondTime": 25604,
@@ -610,13 +611,12 @@
       "chapterUrl": "tag.a@href@js:result+',{\"webView\":true}'"
     },
     "searchUrl": "/search.html?name={{key}},{\n \"headers\": {\n  \"User-Agent\": \"Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36\",\n  \"Referer\": \"http://www.isiluke.la/\"\n },\n \"webView\": true\n}",
-    "weight": 0,
-    "header": "User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36\nReferer: http://www.isiluke.la/"
+    "weight": 0
   },
   {
     "bookSourceComment": "// Error: Failed to connect to www.ibiquw.org/[::]:80\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🎉 必去小说",
+    "bookSourceName": "📚必去小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.ibiquw.org",
     "bookUrlPattern": "",
@@ -671,7 +671,7 @@
   {
     "bookSourceComment": "// Error: 发现失效, 搜索失效\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🔍黄易小说",
+    "bookSourceName": "📚黄易小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://m.xhytd.com",
     "customOrder": 14,
@@ -719,7 +719,7 @@
   {
     "bookSourceComment": "// Error: 搜索失效\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "💠 亿软小说",
+    "bookSourceName": "📚亿软小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.iyruan.info",
     "customOrder": 15,
@@ -771,7 +771,7 @@
   {
     "bookSourceComment": "// Error: 搜索失效\n//原站：http://www.qiushu.info\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🎉 八零小说",
+    "bookSourceName": "📚八零小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.80ge.info",
     "customOrder": 16,
@@ -828,9 +828,9 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "天空书屋 m.tkshuw.com（移动版）书源\n【站点结构】\n· 搜索：GET /search.html?nf=关键词（页面表单虽写 method=post name=s，但 POST 返回 404；必须 GET nf）\n· 搜索无分页，单页最多 100 条；无结果输出「没有关于(xxx)的内容」\n· 详情：/nf_{id}/ 与 /nf_{id}.html 均可，内容一致\n· 目录：/nf_{id}/all.html 全量单页（实测 4058 章仍单页，无分页）\n· 正文：/nf_{id}/{章节序号}.html，章内分页为 {序号}_2.html、{序号}_3.html…\n· pb_next 在「章内最后一页」指向下一章、在「全书最后一章」指向详情页，\n  故 nextContentUrl 用 JS 只接受「数字_数字.html」形态，避免串章/把详情页当正文。\n· 目录里存在「无效章节,已被删除」的空章节，正文页为「章节内容加载失败」，属站点自身数据问题。\n【风控】\n· Cloudflare 前置（DYNAMIC，无 JS 挑战）；搜索为服务端检索，响应 1~3s。\n· concurrentRate=1/1500：全站每 1.5 秒最多 1 次请求，既压低搜索频率也保护正文抓取。\n  想更快阅读可改 1/800；想更保守可改 1/3000。切勿用脚本高频试探搜索接口。\n【登录】\n· 移动站无登录/注册入口（login.html、user/ 均 404），搜索/详情/目录/正文全部免登录。\n· 未写登录 UI，loginCheckJs 留空。\n【UA】\n· header 固定 Android Chrome 移动 UA + Referer；桌面 UA 也能取到同样结构，但本站为 m 站，移动 UA 更贴近真实访问。\n来源：自制（AI 辅助）；上游：未标注；作者：未标注\n更新：2026-11-08",
+    "bookSourceComment": "天空书屋 m.tkshuw.com（移动版）书源\n【站点结构】\n· 搜索：GET /search.html?nf=关键词（页面表单虽写 method=post name=s，但 POST 返回 404；必须 GET nf）\n· 搜索无分页，单页最多 100 条；无结果输出「没有关于(xxx)的内容」\n· 详情：/nf_{id}/ 与 /nf_{id}.html 均可，内容一致\n· 目录：/nf_{id}/all.html 全量单页（实测 4058 章仍单页，无分页）\n· 正文：/nf_{id}/{章节序号}.html，章内分页为 {序号}_2.html、{序号}_3.html…\n· pb_next 在「章内最后一页」指向下一章、在「全书最后一章」指向详情页，\n  故 nextContentUrl 用 JS 只接受「数字_数字.html」形态，避免串章/把详情页当正文。\n· 目录里存在「无效章节,已被删除」的空章节，正文页为「章节内容加载失败」，属站点自身数据问题。\n【风控】\n· Cloudflare 前置（DYNAMIC，无 JS 挑战）；搜索为服务端检索，响应 1~3s。\n· concurrentRate=1/1500：全站每 1.5 秒最多 1 次请求，既压低搜索频率也保护正文抓取。\n  想更快阅读可改 1/800；想更保守可改 1/3000。切勿用脚本高频试探搜索接口。\n【登录】\n· 移动站无登录/注册入口（login.html、user/ 均 404），搜索/详情/目录/正文全部免登录。\n· 未写登录 UI，loginCheckJs 留空。\n【UA】\n· header 固定 Android Chrome 移动 UA + Referer；桌面 UA 也能取到同样结构，但本站为 m 站，移动 UA 更贴近真实访问。\n来源：自制（AI 辅助）；上游：未标注；作者：未标注\n更新：2026-11-08\n更名说明：原名含域名 (m.tkshuw.com)，2026-11-09 命名统一改为「天空书屋」。",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "天空书屋(m.tkshuw.com)",
+    "bookSourceName": "📚天空书屋",
     "bookSourceType": 0,
     "bookSourceUrl": "https://m.tkshuw.com",
     "bookUrlPattern": "https?://(?:m|www)\\.tkshuw\\.com/nf_\\d+(?:/|\\.html)?$",
@@ -887,7 +887,7 @@
   {
     "bookSourceComment": "20240528By_zhbyjm7783\n目录正文by: youke游客2580\n来源：源仓库；上游：未标注；作者：zhbyjm7783、youke游客2580\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "凡人小说",
+    "bookSourceName": "📚凡人小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://wap.washuwx.org",
     "customOrder": 18,
@@ -931,7 +931,7 @@
   {
     "bookSourceComment": "2026-11-08 修：搜索列表改 table.pages_table 的 tr（与 .info 同站：.info 301→.net，按 host+path 去重规则不算重复，保留两条）；2026-11-08 客户端复测：搜索/详情/目录/正文全过\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🔍猪猪书网",
+    "bookSourceName": "📚猪猪书网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.zzs5.net",
     "customOrder": 19,
@@ -984,7 +984,7 @@
   {
     "bookSourceComment": "2026-11-08 修：搜索列表改 table.pages_table 的 tr；2026-11-08 客户端复测：搜索/详情/目录/正文全过\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🔍猪猪书网·info",
+    "bookSourceName": "📚猪猪书网·备",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.zzs5.info",
     "customOrder": 20,
@@ -1091,6 +1091,7 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
     "bookSourceName": "📚香书小说",
     "bookSourceType": 0,
@@ -1138,13 +1139,12 @@
       "chapterUrl": "href"
     },
     "searchUrl": "/modules/article/waps.php?searchkey={{key}}",
-    "weight": 0,
-    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🔍文桑小说",
+    "bookSourceName": "📚文桑小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.wensang.net",
     "customOrder": 23,
@@ -1194,7 +1194,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "年代小说",
+    "bookSourceName": "📚年代小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.8xiaoshuo.net",
     "bookUrlPattern": "",
@@ -1268,7 +1268,7 @@
   {
     "bookSourceComment": "2026-11-08 客户端复测：目录分页抓完，全过\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🔍乐库小说",
+    "bookSourceName": "📚乐库小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://m.6lk.la",
     "customOrder": 25,
@@ -1321,7 +1321,7 @@
   {
     "bookSourceComment": "// Error: Failed to connect to www.xqishuta.com/[::]:80\n\"error:Unabletoresolvehost\"www.xqishuta.com\":Noaddressassociatedwithhostname\n\"\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "奇书网网",
+    "bookSourceName": "📚奇书网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.xqishuta.com/",
     "bookUrlPattern": "",
@@ -1387,7 +1387,7 @@
   {
     "bookSourceComment": "// Error: Failed to connect to www.xqishuta.org/[::]:80\n\"error:Unabletoresolvehost\"www.xqishuta.org\":Noaddressassociatedwithhostname\n\"\n来源：源仓库；上游：未标注；作者：未标注\n备用：主入口域名 www.xqishuta.com，本入口域名 www.xqishuta.org\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "奇书网网·备",
+    "bookSourceName": "📚奇书网·备",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.xqishuta.org/",
     "bookUrlPattern": "",
@@ -1453,7 +1453,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐七七读书",
+    "bookSourceName": "📚七七读书",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.77shuku.net",
     "bookUrlPattern": "",
@@ -1500,7 +1500,7 @@
   {
     "bookSourceComment": "// Error: 搜索失效\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🎉 乐文阁网",
+    "bookSourceName": "📚乐文阁网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.lewendu8.net",
     "customOrder": 29,
@@ -1548,7 +1548,7 @@
   {
     "bookSourceComment": "// Error: 搜索失效\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "💠 达文小说",
+    "bookSourceName": "📚达文小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.dawenks.com",
     "customOrder": 30,
@@ -1604,7 +1604,7 @@
   {
     "bookSourceComment": "// Error: failed to connect to www.feishuwx.la/2a03:2880:f126:83:face:b00c:0:25de (port 80) from /2408:8427:5880:5c40:c445:90ff:fe22:1d45 (port 47596) after 15000ms\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "奇塔小说",
+    "bookSourceName": "📚奇塔小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.feishuwx.la",
     "bookUrlPattern": "",
@@ -1644,7 +1644,8 @@
   },
   {
     "bookSourceComment": "http://m.youdian5.com/\nhttps://m.bayizww.com/\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
-    "bookSourceName": "八一.mu",
+    "bookSourceGroup": "📚 小说",
+    "bookSourceName": "📚八一.mu",
     "bookSourceType": 0,
     "bookSourceUrl": "http://m.youdian5.com/",
     "customOrder": 32,
@@ -1683,12 +1684,12 @@
       "chapterUrl": "href"
     },
     "searchUrl": "/s.php,{\n\"method\":\"POST\",\n\"body\":\"t=1&keyword={{key}}&submit=搜索\"\n}",
-    "weight": 0,
-    "bookSourceGroup": "📚 小说"
+    "weight": 0
   },
   {
     "bookSourceComment": "http://www.bayiwxw.com/\nhttps://m.bayizww.com/\n来源：未标注；上游：未标注；作者：未标注\n备用：主入口域名 m.youdian5.com，本入口域名 www.bayiwxw.com\n更新：2026-11-08",
-    "bookSourceName": "八一.mu·备",
+    "bookSourceGroup": "📚 小说",
+    "bookSourceName": "📚八一.mu·备",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.bayiwxw.com/",
     "customOrder": 33,
@@ -1727,13 +1728,12 @@
       "chapterUrl": "href"
     },
     "searchUrl": "/s.php,{\n\"method\":\"POST\",\n\"body\":\"t=1&keyword={{key}}&submit=搜索\"\n}",
-    "weight": 0,
-    "bookSourceGroup": "📚 小说"
+    "weight": 0
   },
   {
     "bookSourceComment": "//搜索间隔30秒\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "全本小说",
+    "bookSourceName": "📚全本小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.iqtxt8.net",
     "bookUrlPattern": "http://www.iqb8.cc/[\\d_]+/",
@@ -1780,7 +1780,7 @@
   {
     "bookSourceComment": "// Error: 搜索失效\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🎉 小书本网",
+    "bookSourceName": "📚小书本网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.huaen.net",
     "bookUrlPattern": "http://www.huaen.net/txt/\\d+.html",
@@ -1830,7 +1830,7 @@
   {
     "bookSourceComment": "// Error: 搜索失效\n来源：未标注；上游：未标注；作者：未标注\n备用：主入口域名 www.huaen.net，本入口域名 www.ibookben.cc\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🎉 小书本网·备",
+    "bookSourceName": "📚小书本网·备",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.ibookben.cc",
     "bookUrlPattern": "http://www.ibookben.cc/txt/\\d+.html",
@@ -1878,8 +1878,9 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08\n更名说明：原名含（自制），2026-11-09 命名统一改为「同人小说」，自制属性见本条来源说明。",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "同人小说（自制）",
+    "bookSourceName": "📚同人小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://tongren.faloo.com",
     "customOrder": 37,
@@ -1917,13 +1918,12 @@
       "chapterUrl": "tag.a@href"
     },
     "searchUrl": "/r/0/1.html?t=1&k={{key}},{\"charset\": \"gb2312\"}",
-    "weight": 0,
-    "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "🐾顶点小说xsbook 修复版 v2.0 (2026-10-31)\n【核心修复】\n1. 站点反爬=403双击验证：新会话首击403+Set-Cookie，带Cookie二击200。旧版 enabledCookieJar=false 且搜索规则先 removeCookie 再裸请求→永远403。\n   修复：enabledCookieJar=true + 全站请求URL选项 retry:2（403→存Cookie→自动重发→200）。\n2. 搜索action路径轮换(search7b.html→search3d.html...)，searchUrl用@js动态从首页form提取当前action(旧版设计本意如此，但旧版因removeCookie+无retry而失效)。\n3. 简介三级兜底：og:description→id.intro→meta[name=description]。\n4. 目录：最新段9条(新→旧)+完整段(旧→新)→JS按href保后去重得完整正序1299章。\n5. 发现页补全 ruleExplore（旧版为空），全站列表页统一 class.item。\n6. 封面懒加载，真图在 data-original（旧版img@src全是占位图）。\n7. 全本分页 /quanben/xclass/{page}.html（旧版无页码）。\n【风控】①搜索限频是\"会话级\"：同会话搜索间隔30秒(触发返回200+59字节alert\"搜索间隔: 30 秒\"空页)，会话被刷爆后持续被限(等再久也没用)。解法=searchUrl每次搜索前 cookie.removeCookie 换新会话(旧版设计本意)，配合 enabledCookieJar+retry:2 完成 403双击拿新Cookie。②全站对快速连发敏感(触发IP级风控升级后连Cookie都不下发)，已设 concurrentRate 1/8000（实测甜点值：8秒间隔站点直接放行；间隔更短(1秒)会被站点挂起到30秒才响应，更长则拖慢校验/下载；搜索30秒会话限频靠每次换新会话规避，不受此影响）。\n【登录】站点无需登录。登录面板=发布页线路管理：发布页输入框/一键获取线路/测延时/点选切换。\n【v2.5】站点会话在请求间隔后可能对任意页面重新触发403二次验证，详情页/章节页/下一页URL统一追加 {\"retry\":2} 由Legado自动双击过验证。\n来源：自制；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🐾顶点小说xsbook",
+    "bookSourceName": "📚顶点小说xsbook",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.xsbook.org",
     "concurrentRate": "1/8000",
@@ -1979,8 +1979,9 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：醉予；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "顶点小说",
+    "bookSourceName": "📚顶点小说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.dingdian888.com/",
     "customOrder": 39,
@@ -2011,13 +2012,12 @@
       "chapterUrl": "tag.a@href"
     },
     "searchUrl": "https://www.dingdian888.com/s.php,{\n  \"body\": \"s={{key}}&submit=\",\n  \"method\": \"POST\"\n}",
-    "weight": 0,
-    "bookSourceComment": "来源：醉予；上游：未标注；作者：未标注\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "改自@m8458246@一程\n来源：源仓库；上游：未标注；作者：m8458246（一程）\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "南极小说",
+    "bookSourceName": "📚南极小说",
     "bookSourceType": 0,
     "bookSourceUrl": "🐧",
     "customOrder": 40,
@@ -2067,9 +2067,9 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "使用记得开魔法。目前只支持搜索书名，最好直接去搜全名。只搜部分的话会容易被海量无关结果淹没。。。\n还待添加的功能：支持卷名、支持简介分段、搜索结果二次筛选、搜索为空时给予反馈\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
+    "bookSourceComment": "使用记得开魔法。目前只支持搜索书名，最好直接去搜全名。只搜部分的话会容易被海量无关结果淹没。。。\n还待添加的功能：支持卷名、支持简介分段、搜索结果二次筛选、搜索为空时给予反馈\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08\n更名说明：原名含（日语），2026-11-09 命名统一改为「风扇枕说」，语种见本条来源说明。",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "风扇枕说（日语）",
+    "bookSourceName": "📚风扇枕说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://kakuyomu.jp/",
     "customOrder": 41,
@@ -2106,7 +2106,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "若夏网网",
+    "bookSourceName": "📚若夏网",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.ruoxia.com/",
     "customOrder": 42,
@@ -2149,7 +2149,7 @@
   {
     "bookSourceComment": "半废了。但还可用。\n大概最新的十章+不能看。\nby.Thomas哟\n小说交流群462030508。\nA群637775313不加人。若家炸了查看此群群资料找新家。\n✱✱资源取自网络，仅供学习参考，请同学们在24小时内删除✱✱\n🆙💯Dragon Quest QB\n{{book.origin}}/wenxue/buy/ad-chapter/v4?apn=1&resourceId={{baseUrl.match(/bookId=(\\d+)/)[1]}}&serialId={{$.serialID}}\n来源：源仓库；上游：未标注；作者：Thomas哟\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "●QB男生<qq♛",
+    "bookSourceName": "📚QB男生",
     "bookSourceType": 0,
     "bookSourceUrl": "DragonQuestQBall",
     "bookUrlPattern": "",
@@ -2220,7 +2220,7 @@
   {
     "bookSourceComment": "//2025.6.22 ◎夜泽川◎\n来源：源仓库；上游：未标注；作者：夜泽川\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "全本小说网⑤",
+    "bookSourceName": "📚全本小说网",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.quanben5.com",
     "customOrder": 44,
@@ -2265,7 +2265,7 @@
   {
     "bookSourceComment": "by幕惜&by天天的鸟蛋蛋\n来源：源仓库；上游：未标注；作者：幕惜、天天的鸟蛋蛋\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "无限小说网",
+    "bookSourceName": "📚无限小说网",
     "bookSourceType": 0,
     "bookSourceUrl": "https://wuxianbook.com",
     "customOrder": 45,
@@ -2308,7 +2308,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "⭐️ 企鹅阅读",
+    "bookSourceName": "📚企鹅阅读",
     "bookSourceType": 0,
     "bookSourceUrl": "https://bookshelf.html5.qq.com",
     "bookUrlPattern": "",
@@ -2373,7 +2373,7 @@
   {
     "bookSourceComment": "20231123 整体修复-尐哖\n旧域名：https://api.aixdzs.com\n来源：源仓库；上游：未标注；作者：尐哖\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "爱下小说（优）",
+    "bookSourceName": "📚爱下小说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://apiv2hans.aixdzs.com##@尐哖",
     "customOrder": 47,
@@ -2433,7 +2433,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "中文万维（优）",
+    "bookSourceName": "📚中文万维",
     "bookSourceType": 0,
     "bookSourceUrl": "http://cread.com#",
     "bookUrlPattern": "",
@@ -2543,7 +2543,7 @@
   {
     "bookSourceComment": "【手机小说 shoujixs.net】\n站点：笔趣阁家族多域名同库站（wap主站UTF-8 + open-ki双备用域 + www GBK PC站）。\n无登录、无验证码、无CF、正文无广告。\n⚠️搜索限频：站点写入 ss_search_delay=1 Cookie 后 120 秒内拒绝搜索（返回 alert 搜索间隔页）；搜索限频已破解：searchUrl 的 URL选项 js 在每次搜索发请求前自动 removeCookie 清掉 ss_search_delay 限频标记（服务端认不到会话Cookie即当新访客放行），concurrentRate=1次/3秒防轰炸；loginCheckJs 兜底把限频页改写为提示。\n线路说明：\n- 登录面板可切换 3 条同库线路（wap.shoujixs.net 主 / open-ki.jishouzj.cc / open-ki.jishouxs.cc），支持一键测速选最快、自定义网址。\n- www.shoujixs.net 是 GBK 编码的 PC 模板，页面结构与 WAP 系完全不同，请勿填入自定义网址。\n- 站点无发布页，故面板提供「预置线路+测速+自定义网址」组合替代发布页功能。\n结构要点（规则为何这样写）：\n- 详情页 og:novel:* 全字段，三模板统一提取。\n- 目录：wap 模板的 div.directoryArea 未闭合（最新5章与全部章节同容器），用「全部章节列表/正文」h2 锚点切割后再按章节URL正则过滤；open-ki 模板是规范双容器取第2个。目录分页「下一页」按钮与「上一页」同容器，用按钮文本「下一页」判据取 href，末页 javascript:void(0) 返回 null 干净终止。\n- 正文：#articlecon(嵌套p>p) / #chaptercontent(直属p) 统一取内层p；章内分页 a#pt_next 用文本「下一页」判据（末页文本是「下一章」，必须排除否则会串章）。\n- 发现页（固定走主站 wap.shoujixs.net）：分类11类+周榜/月榜/总榜/全本各12项，URL 已实测全部有效；备用线路（open-ki.*）是纯书库镜像无列表页（列表页全404），故发现页不跟随线路切换；分类页约30页之后存在站点自身的数据空洞页（返回空列表），属站点数据问题非书源问题。\n搜索提示：支持书名和作者搜索；⚠️站点限制关键词最少 4 个汉字（少于 4 字必失败，书源已做前置提示）；限频已破解（每次搜索前自动清除 ss_search_delay 标记，服务端视为新访客放行）。\n来源：自制（AI 辅助）；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "手机小说",
+    "bookSourceName": "📚手机小说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://wap.shoujixs.net",
     "bookUrlPattern": ".*(shoujixs\\.(?:net|com)|jishouzj\\.cc|jishouxs\\.cc)/shoujixs_\\d+.*",
@@ -2707,7 +2707,7 @@
   {
     "bookSourceComment": "半废了。但还可用。\n大概最新的十章+不能看。\nby.Thomas哟\n小说交流群462030508。\nA群637775313不加人。若家炸了查看此群群资料找新家。\n✱✱资源取自网络，仅供学习参考，请同学们在24小时内删除✱✱\n🆙💯Dragon Quest QB\n{{book.origin}}/wenxue/buy/ad-chapter/v4?apn=1&resourceId={{baseUrl.match(/bookId=(\\d+)/)[1]}}&serialId={{$.serialID}}\n来源：源仓库；上游：未标注；作者：Thomas哟\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "●QB女生<kd♛",
+    "bookSourceName": "📚QB女生",
     "bookSourceType": 0,
     "bookSourceUrl": "DragonQuestQBkd1",
     "bookUrlPattern": "",
@@ -2778,7 +2778,7 @@
   {
     "bookSourceComment": "//2025.7.22 ◎夜泽川◎\n来源：源仓库；上游：未标注；作者：夜泽川\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "完本小说网",
+    "bookSourceName": "📚完本小说网",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.finalbooks.work",
     "bookUrlPattern": "https?:\\/\\/www\\.finalbooks\\.work\\/book\\/\\d+\\/?",
@@ -2830,7 +2830,7 @@
   {
     "bookSourceComment": "//2025.7.22 ◎夜泽川◎\n来源：源仓库；上游：未标注；作者：夜泽川\n备用：主入口域名 www.finalbooks.work，本入口域名 www.wanbenshuwu.com\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "完本小说网·备",
+    "bookSourceName": "📚完本小说网·备",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.wanbenshuwu.com",
     "bookUrlPattern": "https?:\\/\\/www\\.finalbooks\\.work\\/book\\/\\d+\\/?",
@@ -2880,8 +2880,9 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "果文学网",
+    "bookSourceName": "📚果文学网",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.guowx.com",
     "bookUrlPattern": "http://\\w+.guowx.com/$",
@@ -2934,13 +2935,12 @@
       "chapterUrl": "href"
     },
     "searchUrl": "@js:\n\nvar url=source.getKey();\n\nvar html = java.ajax(url);\n\ntoken = org.jsoup.Jsoup.parse(html).select('input[name=_token]').attr('value');\n\nurl+\"/search,\"+JSON.stringify({\n  \"body\": `_token=${token}&keyword=${key}&searchtype=articlename`,\n  \"method\": \"post\"\n})",
-    "weight": 0,
-    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "西瓜免费",
+    "bookSourceName": "📚西瓜免费",
     "bookSourceType": 0,
     "bookSourceUrl": "🥝西瓜免费小说App🍒",
     "customOrder": 57,
@@ -2996,7 +2996,7 @@
   {
     "bookSourceComment": "站点：桔纸书屋（m.juzhishuwu.net；.com 会 301 到 .net）。全站 GBK，jieqiCMS 模板。\n【搜索】GET /modules/article/search.php?searchkey=<GBK>&searchtype=articlename。多结果为 <tr id=\"nr\"> 六列表格；单结果站点 302 直跳详情页，靠 bookUrlPattern 走详情兜底。结果链接是 .com 域，用 ##替换 归一成 .net，否则每次详情多等一次 301（实测 +7 秒）。\n★搜索页分页是假的：page=2/3 返回与第 1 页完全相同的内容，故 bookList 对 page>1 直接短路返回空，避免无限翻页。\n★站点限频不稳定：提示「两次搜索的间隔时间不得少于 30 秒」，清 cookie / 换 UA / 伪造时间戳均无效；实测静默 30~45 秒后可恢复，但连续搜索仍会随机报错，属站点侧问题。\n【目录】详情页即第 1 页（45 章/页），后续页 /xs/<id>/<page>/。分页条只显示当前页 ±10 页，故 nextTocUrl 只返回「下一页」1 个 URL（末页 return null）。\n★必须只返回 1 个 URL：源码 BookChapterList 的 when(nextUrlList.size) 中，1→走串行循环（每页再求值一次），其余→走 mapAsync 并发且按「完成顺序」emit（buffer(0)+信号量），章节顺序不可控。只返回 1 个 URL 可强制串行，顺序绝对可控。\n★若一次返回全部页 URL：①并发分支按完成顺序 addAll，长书目录会乱序；②2 页目录的书 page1 只返回 1 个 → 仍走串行 → page2 再求值又返回 page1 → 重复抓取，经 reverse→去重→reverse 后顺序被轮转成「第46章在前、第45章在后」（《我的师父是仙子》实测）。\n【正文】#content 内以 <br> 分行，章内分页由 a.btn-info 标记（href 形如 xxx_2.html，末页该元素消失）。两个坑：①站点按字数硬截断，跨页会切断句子甚至切断 &nbsp; 实体（页尾留 &n、下页开头 bsp;）；②部分书（如《完美世界》）站点把正文重复输出 5 份，每份前有「< \"https:\">提供的《书名》…(第N页)」标记。故正文用 @js 自行按页抓取：以段首 &nbsp; 判续行并无缝粘合、遇到第二个分页标记即截断、整页与已收内容重复则跳过、修复断裂实体、剥掉广告尾巴。\n【发现】7 个分类 /list/<1-7>_<page>.html、完本 /wanben/1_<page>、榜单 /paihangbang.html（8 榜单静态单页，用 ?page= 假参数让第 2 页起返回空以停翻页）。\n★发现页有两种列表结构：分类/完本页用 ul.txt-list-row5（li 含 s1分类/s2书名/s3最新章节/s4作者），榜单页用 ul.txt-list-row3（li 仅含 s1排名/s2书名/s5更新日期，无作者无章节）。bookList 先试 row5、回退 row3，并按 href 去重；榜单页作者与最新章节会留空，进入详情页后由 ruleBookInfo 补齐。\n来源：自制（AI 辅助）；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "📖桔纸书屋",
+    "bookSourceName": "📚桔纸书屋",
     "bookSourceType": 0,
     "bookSourceUrl": "https://m.juzhishuwu.net",
     "bookUrlPattern": "https?://m\\.juzhishuwu\\.(?:com|net)/xs/\\d+\\.html",
@@ -3048,7 +3048,7 @@
   {
     "bookSourceComment": "// Error: stream was reset: PROTOCOL_ERROR\n25.4.27\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🍒桔纸书屋",
+    "bookSourceName": "📚桔纸书屋·备",
     "bookSourceType": 0,
     "bookSourceUrl": "https://m.juzhishuwu.com/",
     "customOrder": 59,
@@ -3091,7 +3091,7 @@
   {
     "bookSourceComment": "全部 status=0\n连载 status=30\n完结 status=50\n来源：源仓库；上游：未标注；作者：未标注\n判定：exploreUrl 原字符串在 JSON 值内含未转义换行（严格解析报 Invalid control character），已重新序列化为 \\n 转义，内容逐字节等值；发现页 14 个分类保留\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "全免小说（优）",
+    "bookSourceName": "📚全免小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://qmbook.taoyuewenhua.net/##@遇知",
     "customOrder": 60,
@@ -3149,7 +3149,7 @@
   {
     "bookSourceComment": "20240528By_zhbyjm7783\n目录正文by: youke游客2580\n来源：源仓库；上游：未标注；作者：zhbyjm7783、youke游客2580\n备用：主入口域名 wap.washuwx.org，本入口域名 wap.washuwx.com\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "凡人小说·备",
+    "bookSourceName": "📚凡人小说·备",
     "bookSourceType": 0,
     "bookSourceUrl": "http://wap.washuwx.com",
     "customOrder": 61,
@@ -3193,7 +3193,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "红薯网站",
+    "bookSourceName": "📚红薯网站",
     "bookSourceType": 0,
     "bookSourceUrl": "https://g.hongshu.com/",
     "customOrder": 62,
@@ -3231,7 +3231,7 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "⭐ 酷我小说",
+    "bookSourceName": "📚酷我小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://appi.kuwo.cn",
     "customOrder": 63,
@@ -3283,7 +3283,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "爱随心看",
+    "bookSourceName": "📚爱随心看",
     "bookSourceType": 0,
     "bookSourceUrl": "http://m.suixkan.com",
     "bookUrlPattern": "http://m.suixkan.com/b/\\d+.html",
@@ -3343,7 +3343,7 @@
   {
     "bookSourceComment": "备用源URL：https://sma.yueyouxs.com\n备用源URL：http://m.suixkan.com\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🎉 阅友小说",
+    "bookSourceName": "📚阅友小说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://sma.yueyouxs.com",
     "customOrder": 65,
@@ -3398,7 +3398,7 @@
   {
     "bookSourceComment": "*By_聆听月与悦-2025.1.30\n来源：源仓库；上游：未标注；作者：聆听月与悦\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🍒大美书网",
+    "bookSourceName": "📚大美书网",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.dameishuwang.net/",
     "customOrder": 66,
@@ -3447,7 +3447,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "稻草书屋",
+    "bookSourceName": "📚稻草书屋",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.dcrbk.com",
     "bookUrlPattern": "https://www.dcrbk.com/book/\\w+/",
@@ -3501,8 +3501,9 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "笔趣阁⛅",
+    "bookSourceName": "📚笔趣阁",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.bqquge.org/",
     "customOrder": 68,
@@ -3547,13 +3548,12 @@
       "chapterUrl": "a@href"
     },
     "searchUrl": "https://www.bqquge.org/so/{{key}}{{page == 1 ? '' : '/' + page}}",
-    "weight": 0,
-    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "其他源的小说内容错误，然后自己手写\n来源：自制（手写）；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐ryw笔趣阁78",
+    "bookSourceName": "📚笔趣阁·备",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.biquge78.cc",
     "customOrder": 69,
@@ -3597,7 +3597,7 @@
   {
     "bookSourceComment": "精准搜索\n来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "🌐笔趣阁",
+    "bookSourceName": "📚笔趣阁·备2",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.biquge99.cc/",
     "bookUrlPattern": "https://www.biquge99.cc/book/\\d+/",
@@ -3654,7 +3654,7 @@
   {
     "bookSourceComment": "笔趣阁 www.byqg.cc 书源（2026-10 制作）。搜索走静态路径 /search/{关键字}.html（站点表单虽然是 GET /search?searchkey=，但那个地址返回空，真正的搜索入口由 default.js 的 handleSearch 拼成 /search/编码关键字.html）。详情页 /book/{id}.html；目录页 /chapter/{id}.html（目录用 select#linkIndex 的 option 自动跟随分页）；正文页 /chapter/{id}/{cid}.html，正文 div#content 为静态 <p> 段落，无广告、无分页。\n来源：自制；上游：未标注；作者：未标注\n判定：ruleExplore 原为 []（基线要求对象，Gson 会拒收），已转为 {}；本源无 exploreUrl，发现页不启用，搜索与阅读不受影响\n更新：2026-11-08",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "笔趣阁(byqg.cc)",
+    "bookSourceName": "📚笔趣阁·备3",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.byqg.cc",
     "bookUrlPattern": "https?://www\\.byqg\\.cc/book/[^/]+\\.html",
@@ -3703,9 +3703,9 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "// Error: 发现失效, 搜索失效\n//搜索必需6～20个字符之间，即3～7个汉字以内。\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
+    "bookSourceComment": "// Error: 发现失效, 搜索失效\n//搜索必需6～20个字符之间，即3～7个汉字以内。\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08\n更名说明：原名含（魔法），2026-11-09 命名统一改为「破万卷吧」。",
     "bookSourceGroup": "📚 小说",
-    "bookSourceName": "破万卷吧（魔法）",
+    "bookSourceName": "📚破万卷吧",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.powanjuan.cc/",
     "bookUrlPattern": "",
@@ -3765,7 +3765,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注；判定：爱推书君为跨品类荐书接口，按综合归组\n更新：2026-11-08",
     "bookSourceGroup": "🔍 综合",
-    "bookSourceName": "爱推书君",
+    "bookSourceName": "🔍爱推书君",
     "bookSourceType": 0,
     "bookSourceUrl": "https://pre-api.tuishujun.com/",
     "bookUrlPattern": "",
@@ -3828,7 +3828,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注；判定：六六影视为影视资源站（非纯小说），按综合归组\n更新：2026-11-08",
     "bookSourceGroup": "🔍 综合",
-    "bookSourceName": "六六影视（优）",
+    "bookSourceName": "🔍六六影视",
     "bookSourceType": 0,
     "bookSourceUrl": "https://66yy.net",
     "bookUrlPattern": "",
@@ -3902,7 +3902,7 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注；判定：宜搜为聚合搜索接口，返回多品类书目，按综合归组\n更新：2026-11-08",
     "bookSourceGroup": "🔍 综合",
-    "bookSourceName": "宜搜小说（优）",
+    "bookSourceName": "🔍宜搜小说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://api.ieasou.com",
     "customOrder": 75,
@@ -3951,7 +3951,8 @@
   },
   {
     "bookSourceComment": "需登录\n◎搜索格式◎\n1、搜索用户<关闭精确搜索>\n@用户名\n2、搜索合集<关闭精确搜索>\n#合集\n3、搜索粮单\n%粮单名<关闭精确搜索>\n4、搜索文章，直接搜索\n发现规则格式\n                                    🏷标签\n标签名::https://api.lofter.com/oldapi/tagPosts.api?product=lofter-android-6.13.0&method=newTagSearch&offset={{(page-1) *22}}&limit=22&firstpermalink=null&tag=标签名&type=new,{\"method\": \"POST\",\"body\":\"null\"}\n📃用户（搜索可以得到)\n部分目录章节比较多，加载时间久，出现目录加载失败，请尝试刷新，因为可能是请求失败导致的\n来源：未标注；上游：未标注；作者：未标注；判定：Lofter 为多品类社区（用户/合集/标签），按综合归组\n更新：2026-11-08",
-    "bookSourceName": "📖Lofter",
+    "bookSourceGroup": "🔍 综合",
+    "bookSourceName": "🔍Lofter",
     "bookSourceType": 0,
     "bookSourceUrl": "https://newsmiss.lofter.com",
     "customOrder": 76,
@@ -4009,13 +4010,12 @@
       "updateTime": "$.post.publishTime\n<js>\nif(/api-grain/.test(baseUrl)){\n\tresult = \"所属合集：\"+java.getString(\"$..postCollection.name\");\n\t}else{\nresult?java.timeFormat(parseInt(result)):java.get('time')\n}\n</js>\n##所属合集：$"
     },
     "searchUrl": "@js:\nlet prefix = key.charAt(0);\njava.put(\"prefix\",prefix);\nlet offset = '{\\{(page-1) *' + (prefix === '%' ? '10}' : (prefix === '@' ? '10}' : '20}')) + '}';\nlet baseUrl = \"https://api.lofter.com/newsearch/\"\nswitch(prefix) {\n    case '@':\n        result = baseUrl+'blog.json?key=' + key.slice(1)+ '&limit=10&offset=' + offset;\n        break;\n    case '#':\n    case '＃':\n        result = baseUrl+'collection.json?key=' + key.slice(1) + '&limit=20&offset=' + offset;\n        break;\n    case '%':\n        result = baseUrl+'grain.json?key='+key.slice(1)+'&limit=10&offset=' + offset;\n        break;\n    default:\n        let header = {\n            \"headers\": {\n                \"Content-Type\": \"application/x-www-form-urlencoded;charset=utf-8\",\n                \"deviceid\": java.androidId(),\n                \"if-modified-since\": String(new Date()).replace(/(.*?)\\s(.*?)\\s(.*?)\\s(.*?)GMT.*/,'$1, $3 $2 $4 GMT')\n            }\n        };\n        result = baseUrl+'post.json?key=' + key + '&sortType=0&offset=' + offset + '&limit=20,' + JSON.stringify(header);\n}\n",
-    "weight": 0,
-    "bookSourceGroup": "🔍 综合"
+    "weight": 0
   },
   {
-    "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注；判定：海词词典为词典工具站，非小说站，按综合归组\n判定：词典·仅查询（词条页即书页，bookUrl/chapterUrl 取 baseUrl；正文为整页释义，不适用于长篇阅读）\n复核：客户端阅读页实测正文为整页 HTML 源码（content=html），已改 content=text 取纯文本释义\n更新：2026-11-08",
+    "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注；判定：海词词典为词典工具站，非小说站，按综合归组\n判定：词典·仅查询（词条页即书页，bookUrl/chapterUrl 取 baseUrl；正文为整页释义，不适用于长篇阅读）\n复核：客户端阅读页实测正文为整页 HTML 源码（content=html），已改 content=text 取纯文本释义\n更新：2026-11-08\n更名说明：原名含（词典），2026-11-09 命名统一改为「海词词典」，词典类。",
     "bookSourceGroup": "🔍 综合",
-    "bookSourceName": "海词词典（词典）",
+    "bookSourceName": "🔍海词词典",
     "bookSourceType": 0,
     "bookSourceUrl": "http://dict.cn/",
     "bookUrlPattern": "",
@@ -4036,9 +4036,9 @@
     "ruleSearch": {
       "author": "@css:.phonetic@text",
       "bookList": "body",
+      "bookUrl": "@js:baseUrl",
       "lastChapter": "@css:.dict-basic-ul@text",
-      "name": "@js:decodeURI(baseUrl.split(\"/\").pop())",
-      "bookUrl": "@js:baseUrl"
+      "name": "@js:decodeURI(baseUrl.split(\"/\").pop())"
     },
     "ruleToc": {
       "chapterList": "body",
@@ -4049,8 +4049,9 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：自制（练手源）；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "🖼 漫画",
-    "bookSourceName": "漫蛙",
+    "bookSourceName": "🖼漫蛙",
     "bookSourceType": 2,
     "bookSourceUrl": "https://www.manwaku.com/",
     "customOrder": 78,
@@ -4086,12 +4087,12 @@
       "chapterUrl": "@href@js:a=result.split(\"/\")[3];b=`https://www.manwaku.com/api/comic/image/${a}?count=true`"
     },
     "searchUrl": "/api/search?type=mh&page={{page}}&pageSize=20&keyword={{key}}",
-    "weight": 0,
-    "bookSourceComment": "来源：自制（练手源）；上游：未标注；作者：未标注\n更新：2026-11-08"
+    "weight": 0
   },
   {
+    "bookSourceComment": "来源：自制（练手源）；上游：未标注；作者：未标注\n备用：主入口域名 www.manwaku.com，本入口域名 manwadz.cc\n更新：2026-11-08",
     "bookSourceGroup": "🖼 漫画",
-    "bookSourceName": "漫蛙·备",
+    "bookSourceName": "🖼漫蛙·备",
     "bookSourceType": 2,
     "bookSourceUrl": "https://manwadz.cc/",
     "customOrder": 79,
@@ -4127,12 +4128,12 @@
       "chapterUrl": "@href@js:a=result.split(\"/\")[3];b=`https://manwadz.cc/api/comic/image/${a}?count=true`"
     },
     "searchUrl": "/api/search?type=mh&page={{page}}&pageSize=20&keyword={{key}}",
-    "weight": 0,
-    "bookSourceComment": "来源：自制（练手源）；上游：未标注；作者：未标注\n备用：主入口域名 www.manwaku.com，本入口域名 manwadz.cc\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "天天的鸟蛋蛋 2025/9/30\n来源：未标注；上游：未标注；作者：天天的鸟蛋蛋\n更新：2026-11-08",
-    "bookSourceName": "学外漫画",
+    "bookSourceGroup": "🖼 漫画",
+    "bookSourceName": "🖼学外漫画",
     "bookSourceType": 2,
     "bookSourceUrl": "https://www.xwmanhua.com",
     "customOrder": 80,
@@ -4166,13 +4167,12 @@
       "chapterUrl": "href"
     },
     "searchUrl": "/search?types=comic&searhword={{key}}",
-    "weight": 0,
-    "bookSourceGroup": "🖼 漫画"
+    "weight": 0
   },
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "🖼 漫画",
-    "bookSourceName": "全免漫画（优）",
+    "bookSourceName": "🖼全免漫画",
     "bookSourceType": 2,
     "bookSourceUrl": "https://api-cdn.kaimanhua.com/",
     "customOrder": 81,
@@ -4226,71 +4226,13 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
-    "bookSourceGroup": "🎧 有声",
-    "bookSourceName": "音乐-网易",
-    "bookSourceType": 1,
-    "bookSourceUrl": "http://music.163.com#芜恙",
-    "bookUrlPattern": "https://v1.alapi.cn/api/music/search?keyword=",
-    "customOrder": 82,
-    "enabled": true,
-    "enabledCookieJar": false,
-    "enabledExplore": true,
-    "exploreUrl": "❀                                            语   种                                              ❀::\n华语::/discover/playlist/?order=hot&cat=华语\n欧美::/discover/playlist/?order=hot&cat=欧美\n日语::/discover/playlist/?order=hot&cat=日语\n韩语::/discover/playlist/?order=hot&cat=韩语\n粤语::/discover/playlist/?order=hot&cat=粤语\n小语种::/discover/playlist/?order=hot&cat=小语种\n\n❀                                            风   格                                              ❀::\n流行::/discover/playlist/?order=hot&cat=流行\n摇滚::/discover/playlist/?order=hot&cat=摇滚\n民谣::/discover/playlist/?order=hot&cat=民谣\n电子::/discover/playlist/?order=hot&cat=电子\n舞曲::/discover/playlist/?order=hot&cat=舞曲\n说唱::/discover/playlist/?order=hot&cat=说唱\n轻音乐::/discover/playlist/?order=hot&cat=轻音乐\n爵士::/discover/playlist/?order=hot&cat=爵士\n乡村::/discover/playlist/?order=hot&cat=乡村\nR&B/Soul::/discover/playlist/?order=hot&cat=R%26B%2FSoul\n古典::/discover/playlist/?order=hot&cat=古典\n民族::/discover/playlist/?order=hot&cat=民族\n英伦::/discover/playlist/?order=hot&cat=英伦\n金属::/discover/playlist/?order=hot&cat=金属\n朋克::/discover/playlist/?order=hot&cat=朋克\n蓝调::/discover/playlist/?order=hot&cat=蓝调\n雷鬼::/discover/playlist/?order=hot&cat=雷鬼\n世界音乐::/discover/playlist/?order=hot&cat=世界音乐\n拉丁::/discover/playlist/?order=hot&cat=拉丁\n另类/独立::/discover/playlist/?order=hot&cat=另类%2F独立\nNew Age::/discover/playlist/?order=hot&cat=New Age\n古风::/discover/playlist/?order=hot&cat=古风\n后摇::/discover/playlist/?order=hot&cat=后摇\nBossa Nova::/discover/playlist/?order=hot&cat=Bossa Nova\n\n❀                                            场   景                                              ❀::\n清晨::/discover/playlist/?order=hot&cat=清晨\n夜晚::/discover/playlist/?order=hot&cat=夜晚\n学习::/discover/playlist/?order=hot&cat=学习\n工作::/discover/playlist/?order=hot&cat=工作\n午休::/discover/playlist/?order=hot&cat=午休\n下午茶::/discover/playlist/?order=hot&cat=下午茶\n地铁::/discover/playlist/?order=hot&cat=地铁\n驾车::/discover/playlist/?order=hot&cat=驾车\n运动::/discover/playlist/?order=hot&cat=运动\n旅行::/discover/playlist/?order=hot&cat=旅行\n散步::/discover/playlist/?order=hot&cat=散步\n酒吧::/discover/playlist/?order=hot&cat=酒吧\n\n❀                                            情    感                                             ❀::\n怀旧::/discover/playlist/?order=hot&cat=怀旧\n清新::/discover/playlist/?order=hot&cat=清新\n浪漫::/discover/playlist/?order=hot&cat=浪漫\n性感::/discover/playlist/?order=hot&cat=性感\n伤感::/discover/playlist/?order=hot&cat=伤感\n治愈::/discover/playlist/?order=hot&cat=治愈\n放松::/discover/playlist/?order=hot&cat=放松\n孤独::/discover/playlist/?order=hot&cat=孤独\n感动::/discover/playlist/?order=hot&cat=感动\n兴奋::/discover/playlist/?order=hot&cat=兴奋\n快乐::/discover/playlist/?order=hot&cat=快乐\n安静::/discover/playlist/?order=hot&cat=安静\n思念::/discover/playlist/?order=hot&cat=思念\n\n❀                                            主   题                                              ❀::\n综艺::/discover/playlist/?order=hot&cat=综艺\n影视原声::/discover/playlist/?order=hot&cat=影视原声\nACG::/discover/playlist/?order=hot&cat=ACG\n儿童::/discover/playlist/?order=hot&cat=儿童\n校园::/discover/playlist/?order=hot&cat=校园\n游戏::/discover/playlist/?order=hot&cat=游戏\n70后::/discover/playlist/?order=hot&cat=70后\n80后::/discover/playlist/?order=hot&cat=80后\n90后::/discover/playlist/?order=hot&cat=90后\n网络歌曲::/discover/playlist/?order=hot&cat=网络歌曲\nKTV::/discover/playlist/?order=hot&cat=KTV\n经典::/discover/playlist/?order=hot&cat=经典\n翻唱::/discover/playlist/?order=hot&cat=翻唱\n吉他::/discover/playlist/?order=hot&cat=吉他\n钢琴::/discover/playlist/?order=hot&cat=钢琴\n器乐::/discover/playlist/?order=hot&cat=器乐\n榜单::/discover/playlist/?order=hot&cat=榜单\n00后::/discover/playlist/?order=hot&cat=00后",
-    "header": "",
-    "lastUpdateTime": 1735057762270,
-    "loginUrl": "",
-    "respondTime": 2830,
-    "ruleBookInfo": {
-      "author": "",
-      "coverUrl": "class.m-song-img@tag.img@src||class.u-cover@tag.img@data-src",
-      "init": "",
-      "intro": "",
-      "kind": "",
-      "lastChapter": "",
-      "name": "",
-      "tocUrl": ""
-    },
-    "ruleContent": {
-      "content": "@js:'http://music.163.com/song/media/outer/url?id='+baseUrl.match(/id=(\\d+)/)[1]+'.mp3'",
-      "nextContentUrl": "",
-      "sourceRegex": ""
-    },
-    "ruleExplore": {
-      "author": "@css:a[href^=\"/user\"]@text",
-      "bookList": "@css:#m-pl-container>li",
-      "bookUrl": "@css:p.dec>a@href||p.name>a@href",
-      "coverUrl": "@css:img@src@js:result.split(\"?\")[0]",
-      "kind": "@css:.tags>a@text",
-      "lastChapter": "",
-      "name": "@css:p.dec>a@text"
-    },
-    "ruleSearch": {
-      "author": "$.artists[*].name@js:java.put(\"author\",result);result",
-      "bookList": "$.result.songs",
-      "bookUrl": "https://music.163.com/song?id={{$.id}}",
-      "coverUrl": "",
-      "kind": "$.album.name",
-      "lastChapter": "",
-      "name": "$.name@js:java.put(\"name\",result);result"
-    },
-    "ruleToc": {
-      "chapterList": "id.song-list-pre-cache@class.f-hide@tag.a||class.tit",
-      "chapterName": "text",
-      "chapterUrl": "href",
-      "nextTocUrl": ""
-    },
-    "searchUrl": "http://music.163.com/api/search/get/web?csrf_token=&lpretag=&hlposttag=&s={{key}}&type=1&offset=0&total=true&limit=100",
-    "weight": 0
-  },
-  {
     "bookSourceComment": "💡与💍晋江除了发现不一样，其他的都一样\n💡默认不启用该源的搜索，可用发现\nby 酷安 @viviyaaa    分享注明出处\n来源：源仓库；上游：未标注；作者：酷安 @viviyaaa\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "💠晋江",
+    "bookSourceName": "📖晋江",
     "bookSourceType": 0,
     "bookSourceUrl": "晋江纯爱/无cp标签",
     "bookUrlPattern": "",
-    "customOrder": 83,
+    "customOrder": 82,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -4338,12 +4280,13 @@
     "weight": 0
   },
   {
+    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注；判定：bookSourceUrl 指向 m.qidian.com（起点正版书城），按出版书城归组\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "笔趣阁",
+    "bookSourceName": "📖笔趣阁",
     "bookSourceType": 0,
     "bookSourceUrl": "https://m.qidian.com",
     "customButton": false,
-    "customOrder": 84,
+    "customOrder": 83,
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
@@ -4395,8 +4338,7 @@
       "chapterUrl": "$.url"
     },
     "searchUrl": "@js:\nvar _g='';\ntry { _g=String(source.get('dp_adult')||''); } catch(e1){}\nif(!_g){ try { _g=String(source.get('dpgrade')||''); } catch(e2){} }\nif(!_g){ try { _g=String(cache.get('dpgrade')||''); } catch(e3){} }\nvar _a=((String(_g)==='1')||String(_g).indexOf('成人')>=0)?'1':'0';\n_dpAggHost() + '/api/search?key={{key}}&page={{page}}&type=novel&adult='+_a+'&all_src=1&batch=0&budget=25&sv=1';\n",
-    "weight": 0,
-    "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注；判定：bookSourceUrl 指向 m.qidian.com（起点正版书城），按出版书城归组\n更新：2026-11-08"
+    "weight": 0
   },
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
@@ -4405,7 +4347,7 @@
     "bookSourceType": 0,
     "bookSourceUrl": "https://book.sfacg.com##发现",
     "bookUrlPattern": "",
-    "customOrder": 85,
+    "customOrder": 84,
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
@@ -4460,11 +4402,11 @@
   {
     "bookSourceComment": "来源：未标注；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "📚轻小说吧",
+    "bookSourceName": "📖轻小说吧",
     "bookSourceType": 0,
     "bookSourceUrl": "https://book.sfacg.com#yc1101",
     "bookUrlPattern": "",
-    "customOrder": 86,
+    "customOrder": 85,
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
@@ -4523,7 +4465,7 @@
     "bookSourceType": 0,
     "bookSourceUrl": "https://book.sfacg.com#♤yc",
     "bookUrlPattern": "",
-    "customOrder": 87,
+    "customOrder": 86,
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
@@ -4578,10 +4520,10 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "日轻小说",
+    "bookSourceName": "📖日轻小说",
     "bookSourceType": 0,
     "bookSourceUrl": "[图片]http://www.sfacg.com",
-    "customOrder": 88,
+    "customOrder": 87,
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
@@ -4612,11 +4554,11 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "SF轻小说",
+    "bookSourceName": "📖SF轻小说",
     "bookSourceType": 0,
     "bookSourceUrl": "book.sfacg.com",
     "bookUrlPattern": "",
-    "customOrder": 89,
+    "customOrder": 88,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -4651,11 +4593,11 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "黑岩小说①",
+    "bookSourceName": "📖黑岩小说①",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.heiyan.com/",
     "bookUrlPattern": "",
-    "customOrder": 90,
+    "customOrder": 89,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -4707,11 +4649,11 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "若初文学",
+    "bookSourceName": "📖若初文学",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.ruochu.com/",
     "bookUrlPattern": "",
-    "customOrder": 91,
+    "customOrder": 90,
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
@@ -4755,11 +4697,11 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注；判定：潇湘书院为阅文旗下正版书城，按出版书城归组\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "潇湘书院",
+    "bookSourceName": "📖潇湘书院",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.xxsy.net/",
     "bookUrlPattern": "https://www.xxsy.net/book/\\d+",
-    "customOrder": 92,
+    "customOrder": 91,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -4816,12 +4758,12 @@
   {
     "bookSourceComment": "版本: 20261029\n作者: 知秋\n反馈群：766236637\ntg群：https://t.me/+dcNnFFZv5KtmYjIx\n书旗api密码加群或者tg拿，免费！\n书旗源，免费看全部。上锁正文以及正文评论走服务器，免费章节依旧走官方接口。\n来源：书旗（知秋）；上游：未标注；作者：知秋\n判定：ruleExplore 原为 []（基线要求对象），已转为 {}；发现分类由 exploreUrl 的 @js 生成，榜单列表沿用 ruleSearch.bookList\n复核：客户端发现页实测报 categorizedData is not a function（Rhino 下 const 失效），已 const→var 修复；分类与列表可加载\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "书旗小说（知秋）",
+    "bookSourceName": "📖书旗小说",
     "bookSourceType": 0,
     "bookSourceUrl": "https://ocean.shuqireader.com",
     "concurrentRate": "1000",
     "customButton": false,
-    "customOrder": 93,
+    "customOrder": 92,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -4877,10 +4819,10 @@
   {
     "bookSourceComment": "来源：源仓库；上游：未标注；作者：未标注；判定：UC 小说为正版书城接口，按出版书城归组\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "阿巴小说",
+    "bookSourceName": "📖阿巴小说",
     "bookSourceType": 0,
     "bookSourceUrl": "http://xiaoshuo.uc.cn",
-    "customOrder": 94,
+    "customOrder": 93,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -4927,13 +4869,13 @@
   {
     "bookSourceComment": "2026.11.04 基于 https://github.com/ch6vip/fqapp 书旗(shuqi)上游协议制作的 Legado 纯 APP 接口书源。\n【协议】纯JS复现官方 App 加密口：2048字节 keystream 二进制 XOR + base64（data 与 x-sq-public 各自从 keystream[0] 起算）+ MD5 签名（按键名升序拼 k=v& + skey 盐）+ enc18 派生 + 36键 x-sq-public（体内 platform=an / 头内 platform=2）。黄金向量与 Rust 单测逐一比对通过。\n【链路】搜索=render/search/native_v3；详情=reader/titlepage；目录=H5 /chapter?bid= 全量真章名，H5缺失(部分新书返回55字节location.replace)时降级 content.shuqireader.com/openapi/book/chapterlist（bscpubKey+MD5签名，卷数组→真章名+chapterId）；正文=免签 CDN JSONP 明文（2host×2flag×2scheme，VIP章亦可），失败降级 chapterinfo ROT13+base64；发现=H5 19个榜单 + 书库分类（服务端渲染，支持分页）。\n【卷名】仅当站点本身分卷(≥2卷且有卷名)时，在每卷第一章名前标注一次【卷名】；单卷/无卷名不加，章名保持原样。\n【UA】必须 okhttp/3.12.13：实测 www.shuqi.com 对浏览器 UA 一律返回 1120 字节 403 拦截页（伪装成正常 HTML），headers 键名必须大写 'User-Agent'。\n【登录】游客态完全可用，无需登录；登录界面仅提供状态检查/线路测速/切换/重置设备身份。\n【限频】concurrentRate=1/3000 且搜索规则内置 3 秒最小间隔，避免触发风控。\n【兼容】LegadoTeam 官方版 + legado-E（全纯JS，不依赖 BouncyCastle/android.util.Base64）。\n【注意】目录 H5 页约 1.2MB/本；搜索接口不支持分页（page 参数是模块名常量）。\n来源：书旗 App 协议（自写）；上游：github.com/ch6vip/fqapp；作者：ch6vip（fqapp 作者）\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "🌙 书旗小说(APP接口)",
+    "bookSourceName": "📖书旗小说·备",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.shuqi.com##书旗APP",
     "bookUrlPattern": "https?://(?:www\\.shuqi\\.com|shuqi\\.com|www\\.shuqireader\\.com|c1\\.shuqireader\\.com|c2\\.shuqireader\\.com)/(?:book/[0-9]+\\.html|reader\\?bid=[0-9]+(?:&cid=[0-9]+)?|httpserver/filecache/get_book_content_[0-9]+_[0-9]+_[0-9]+_0_0\\.html)",
     "concurrentRate": "1/3000",
     "customButton": false,
-    "customOrder": 95,
+    "customOrder": 94,
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
@@ -4992,10 +4934,10 @@
   {
     "bookSourceComment": "// Error: 发现失效\n来源：源仓库；上游：未标注；作者：未标注\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "多看阅读",
+    "bookSourceName": "📖多看阅读",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.duokan.com",
-    "customOrder": 96,
+    "customOrder": 95,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -5051,10 +4993,10 @@
   {
     "bookSourceComment": "// Error: 发现失效\n看免费，付费看不了，如深空彼岸\n来源：源仓库；上游：未标注；作者：未标注\n备用：主入口域名 www.duokan.com，本入口域名 www.dkmi.com\n更新：2026-11-08",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "多看阅读·备",
+    "bookSourceName": "📖多看阅读·备",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.dkmi.com/",
-    "customOrder": 97,
+    "customOrder": 96,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -5108,13 +5050,13 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "20241025修复发现\n20240222By_zhbyjm77833\n免费：vip=0\n全部：vip=9\n来源：源仓库；上游：未标注；作者：zhbyjm7783；判定：纵横中文网为正版付费书城，搜索接口只用于搜书，按出版书城归组\n更新：2026-11-08",
+    "bookSourceComment": "20241025修复发现\n20240222By_zhbyjm77833\n免费：vip=0\n全部：vip=9\n来源：源仓库；上游：未标注；作者：zhbyjm7783；判定：纵横中文网为正版付费书城，搜索接口只用于搜书，按出版书城归组\n更新：2026-11-08\n更名说明：原名含 api[搜书专用]，2026-11-09 命名统一改为「纵横中文网」，接口实现、搜书专用。",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "纵横中文网api[搜书专用]",
+    "bookSourceName": "📖纵横中文网",
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.zongheng.com/##zhbyjm7783",
     "bookUrlPattern": "",
-    "customOrder": 98,
+    "customOrder": 97,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -5175,12 +5117,12 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "vip章节请登录后更新目录\n来源：源仓库；上游：未标注；作者：未标注；判定：书耽为原创付费平台且需登录/验证码，按出版平台归组\n更新：2026-11-08",
+    "bookSourceComment": "vip章节请登录后更新目录\n来源：源仓库；上游：未标注；作者：未标注；判定：书耽为原创付费平台且需登录/验证码，按出版平台归组\n更新：2026-11-08\n更名说明：原名含【验证码】，2026-11-09 命名统一改为「书耽」；搜索需过站点验证码。",
     "bookSourceGroup": "📖 出版",
-    "bookSourceName": "书耽【验证码】",
+    "bookSourceName": "📖书耽",
     "bookSourceType": 0,
     "bookSourceUrl": "https://app.shubl.com",
-    "customOrder": 99,
+    "customOrder": 98,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -5244,7 +5186,7 @@
     "bookSourceType": 0,
     "bookSourceUrl": "https://www.shenhuazhihou.com",
     "bookUrlPattern": "https://www.shenhuazhihou.com/book/\\d+/",
-    "customOrder": 100,
+    "customOrder": 99,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
@@ -5289,15 +5231,16 @@
   {
     "bookSourceComment": "2026-11-08 修：域名迁移 org→com；2026-11-08 复测：规则在宿主机命中 100 条，模拟器到该站 CDN 边缘 TCP 不通，标 ♻️ 可重试\n来源：未标注；上游：未标注；作者：溪（原备注 BY:溪）\n更新：2026-11-08",
     "bookSourceGroup": "♻️ 间歇",
-    "bookSourceName": "🌐笔趣阁㉒ ♻️",
+    "bookSourceName": "📚笔趣阁 ♻️",
     "bookSourceType": 0,
     "bookSourceUrl": "http://www.iinbqg.com",
     "bookUrlPattern": "http://www.xinbqg.org/\\d+/\\d+/",
-    "customOrder": 101,
+    "customOrder": 100,
     "enabled": true,
     "enabledCookieJar": false,
     "enabledExplore": true,
     "exploreUrl": "[{\"title\":\"玄幻小说\",\"url\":\"/xuanhuanxiaoshuo/1_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"修真小说\",\"url\":\"/xiuzhenxiaoshuo/2_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"都市小说\",\"url\":\"/dushixiaoshuo/3_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"穿越小说\",\"url\":\"/chuanyuexiaoshuo/4_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"网游小说\",\"url\":\"/wangyouxiaoshuo/5_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}},{\"title\":\"科幻小说\",\"url\":\"/kehuanxiaoshuo/6_{{page}}.html\",\"style\":{\"layout_flexGrow\":0.25}}]",
+    "header": "User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36\nReferer: http://www.iinbqg.com/",
     "lastUpdateTime": 1692661475820,
     "loginUrl": "",
     "respondTime": 15672,
@@ -5341,7 +5284,6 @@
       "chapterUrl": "tag.a@href"
     },
     "searchUrl": "/modules/article/search.php?q={{key}},{\n \"headers\": {\n  \"User-Agent\": \"Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36\",\n  \"Referer\": \"http://www.iinbqg.com/\"\n }\n}",
-    "weight": 0,
-    "header": "User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 4 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36\nReferer: http://www.iinbqg.com/"
+    "weight": 0
   }
 ]
