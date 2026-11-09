@@ -25,8 +25,7 @@
       "jsDelivr模板": "",
       "受限路径": {
         "apps/tvbox/std/api.json": "451 内容审核拦截，不列作可用地址",
-        "apps/reading/书源.json": "451 内容审核拦截，不列作可用地址",
-        "apps/reading/订阅源.json": "451 内容审核拦截，不列作可用地址"
+        "apps/reading/书源.json": "451 内容审核拦截，不列作可用地址"
       }
     }
   },

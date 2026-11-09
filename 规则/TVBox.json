@@ -35,7 +35,7 @@
   "timeout范围": [5, 60],
   "classWordList": ["电影", "电视剧", "综艺", "动漫", "纪录片", "短剧", "直播", "体育", "少儿", "其它"],
   "adultKeywordRegex": "成人|色情|情色|涩情|里番|H漫|无码|有码|R18|18\\+|18禁|AV女优|约炮|裸聊|🔞",
-  "adultDomainListPath": "D:\\Dev\\SL_Dev\\SL_TVBOX\\参考资料\\阅读3.0-hectorqin\\app\\src\\main\\assets\\18PlusList.txt",
+  "adultDomainListPath": "参考资料\\阅读3.0-hectorqin\\app\\src\\main\\assets\\18PlusList.txt",
   "adultDomainSupplement": [],
   "修复": {
     "启用动作": ["F-01", "F-02", "F-03", "F-04", "F-05", "F-06", "F-07", "F-08", "F-09", "F-10", "F-11", "F-12"],

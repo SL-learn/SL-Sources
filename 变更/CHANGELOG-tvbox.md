@@ -27,4 +27,5 @@
 | 2.3.1 | 2026-11-08 | 65 站全量双契约复测；补 `cat_123TV.js` 与两份 drpy 引擎（`drpy2.min.js`、`huban_drpy2.min.js`）的 CatVod 别名；新增《影视仓分类对照.csv》逐站记录 TVBox 与 CatVod 分类数 | 2.3.0 只修了 13 个 js，壹影网与 drpy 引擎仍无 `homeContent`，影视仓下分类为空 | 否，文件路径与 key 不变 |
 | 2.4.0 | 2026-11-08 | 下架 `std_jar_vod_dmmiku`（♻️🎌异世界动漫），原文备份到 `记录/观察池/tvbox/备份/`；综合 53→52、合计 65→64；`api_all.json` 同步删条目并更新 `updateTime` | 该站分类正常但详情抛 `IndexOutOfBoundsException` 并挂起 122s；字节码证实 `li.data` 空集合取下标 0，根因为上游超时/空页面且 jar 无空判，无法修 | 否，文件路径与 key 不变 |
 | 2.4.0（2026-11-09 补丁） | 2026-11-09 | 修复 Gitee 版多线路索引：综合 → `api_all.json`、少儿 → `kids/api.json`、长辈 → `elders/api.json`，三条 url 互不相同；`规范/仓库通用规范.md` 改写 SYS-DIST-009、新增 SYS-DIST-013；`渲染.py --check` 强制「去重后长度 == 线路数」 | 2026-11-08 起 Gitee 索引三条线路统一指向 `api_all.json`，客户端切换「综合/少儿/长辈」后列表恒为同一份，线路切换失效 | 否，GitHub 版索引、站点与 key 不变 |
+| 2.4.1 | 2026-11-09 | 将上述多线路修复升为正式版本号并发布：Gitee 三线路 url 互不相同（综合 `api_all.json` / 少儿 `kids/api.json` / 长辈 `elders/api.json`）；同步 `version.json`、`更新时间.txt`、`清单/应用清单.csv`、`清单/版本对照表.csv`；新建 `tvbox-v2.4.1` 与 `tvbox-v2.4.1-gitee` 标签，旧 `tvbox-v2.4.0` 不动 | 2.4.0 的修复只在提交里，固定版本地址仍指向旧内容；需要新版本号承载修复，且规范禁止移动旧 tag | 否，文件路径与 key 不变，站点 52/4/8 |
 

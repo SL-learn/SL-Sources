@@ -1,8 +1,8 @@
 {
   "id": "tvbox",
   "name": "TVBox",
-  "version": "2.4.0",
-  "updated": "2026-11-08",
+  "version": "2.4.1",
+  "updated": "2026-11-09",
   "status": "beta",
   "index": "api_index.json",
   "index_local": "api_index_local.json",

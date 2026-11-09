@@ -25,5 +25,5 @@
 | Gitee | 由本地独立 `gitee` 分支承载，不与 GitHub 共用 `main`。在仓库外单独 worktree 检出 `gitee`，先 `git read-tree -u --reset main` 重建 `main` 的树，再执行 `python 工具/源生成/生成.py --platform gitee --owner gerenxiuxian` 按平台重渲染，提交后普通推送 `gitee:main` |
 | 平台差异 | 两端树差异只允许 `apps/tvbox/api_all.json`、`apps/tvbox/api_index.json` 两处：Gitee 版把 raw 基址换为 `gitee.com/gerenxiuxian/SL-Sources/raw/main`，且索引三条线路统一指向 `api_all.json` |
 | tag | `catmovie-v1.6.0` 只打 `main`、只推 GitHub；Gitee 侧另打 `catmovie-v1.6.0-gitee`；已有旧 tag 全部不动 |
-| 受限路径 | `apps/tvbox/std/api.json`、`apps/reading/书源.json`、`apps/reading/订阅源.json` 在 Gitee 仍被 451 拦截，保持不动 |
+| 受限路径 | 2026-11-09 实测：`apps/tvbox/std/api.json`、`apps/reading/书源.json` 在 Gitee 仍为 451；`apps/reading/订阅源.json` 已恢复可访问（302→200），不再列入受限路径 |
 | 禁止 | force push、改写已有历史；平台产物差异不靠改历史解决，靠渲染脚本按平台重建 |
