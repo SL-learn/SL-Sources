@@ -213,7 +213,7 @@
     },
     {
       "key": "std_js_vod_age",
-      "name": "🎌AGE-动漫",
+      "name": "🎌AGE-动画",
       "type": 3,
       "api": "./js/AGE动漫.js",
       "style": {
