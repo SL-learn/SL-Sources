@@ -18,20 +18,20 @@
       "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_short/api.json"
     },
     {
-      "name": "天微·影视",
-      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_yingshi/api.json"
-    },
-    {
-      "name": "天微·动漫",
-      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_donghua/api.json"
-    },
-    {
       "name": "天微·体育",
       "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_sport/api.json"
     },
     {
       "name": "天微·音乐",
       "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_music/api.json"
+    },
+    {
+      "name": "天微·影视",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_yingshi/api.json"
+    },
+    {
+      "name": "天微·动漫",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_donghua/api.json"
     },
     {
       "name": "SL·少儿",

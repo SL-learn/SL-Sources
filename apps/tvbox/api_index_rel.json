@@ -18,20 +18,20 @@
       "url": "./TW_short/api.json"
     },
     {
-      "name": "天微·影视",
-      "url": "./TW_yingshi/api.json"
-    },
-    {
-      "name": "天微·动漫",
-      "url": "./TW_donghua/api.json"
-    },
-    {
       "name": "天微·体育",
       "url": "./TW_sport/api.json"
     },
     {
       "name": "天微·音乐",
       "url": "./TW_music/api.json"
+    },
+    {
+      "name": "天微·影视",
+      "url": "./TW_yingshi/api.json"
+    },
+    {
+      "name": "天微·动漫",
+      "url": "./TW_donghua/api.json"
     },
     {
       "name": "SL·少儿",
