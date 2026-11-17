@@ -1,16 +1,49 @@
 {
   "updateTime": "2026-11-17",
   "urls": [
-    { "name": "天微·综合", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_std/api.json" },
-    { "name": "天微·影视", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_main/api.json" },
-    { "name": "天微·动漫", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_anime/api.json" },
-    { "name": "天微·智教", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_smart/api.json" },
-    { "name": "天微·短剧", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_short/api.json" },
-    { "name": "天微·体育", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_sport/api.json" },
-    { "name": "天微·音乐", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_music/api.json" },
-    { "name": "天微·曲艺", "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_quyi/api.json" },
-    { "name": "SL·综合",   "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/SL_std/api.json" },
-    { "name": "SL·少儿",   "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/SL_kids/api.json" },
-    { "name": "SL·长辈",   "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/SL_elders/api.json" }
+    {
+      "name": "天微·综合",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_std/api.json"
+    },
+    {
+      "name": "天微·智教",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_smart/api.json"
+    },
+    {
+      "name": "天微·曲艺",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_quyi/api.json"
+    },
+    {
+      "name": "天微·短剧",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_short/api.json"
+    },
+    {
+      "name": "天微·影视",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_yingshi/api.json"
+    },
+    {
+      "name": "天微·动漫",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_donghua/api.json"
+    },
+    {
+      "name": "天微·体育",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_sport/api.json"
+    },
+    {
+      "name": "天微·音乐",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/TW_music/api.json"
+    },
+    {
+      "name": "SL·少儿",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/SL_kids/api.json"
+    },
+    {
+      "name": "SL·长辈",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/SL_elders/api.json"
+    },
+    {
+      "name": "SL·综合",
+      "url": "https://raw.githubusercontent.com/SL-learn/SL-Sources/main/apps/tvbox/SL_comprehensive/api.json"
+    }
   ]
 }
