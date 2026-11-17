@@ -286,7 +286,7 @@
     },
     {
       "key": "荐片",
-      "name": "☀荐片🔹磁力",
+      "name": "☀荐片🔹磁链",
       "api": "csp_Jianpian",
       "type": 3,
       "ext": "https://api.ztcgi.com",
@@ -296,7 +296,7 @@
     },
     {
       "key": "80S",
-      "name": "☀八零🔹磁力",
+      "name": "☀八零🔹磁链",
       "type": 3,
       "api": "csp_BLSGod",
       "playerType": 1,
@@ -306,7 +306,7 @@
     },
     {
       "key": "修罗",
-      "name": "☀修罗🔹磁力",
+      "name": "☀修罗🔹磁链",
       "api": "csp_Xlys",
       "type": 3,
       "ext": "https://xl01.com.de",
@@ -1039,8 +1039,8 @@
       "changeable": 1
     },
     {
-      "key": "嫖嫖嫖",
-      "name": "☀嫖嫖🔹秒播",
+      "key": "朴朴嫖",
+      "name": "☀朴朴🔹秒播",
       "type": 3,
       "api": "csp_XBPQ",
       "ext": {
@@ -1193,7 +1193,7 @@
     },
     {
       "key": "csp_Mp4Mov",
-      "name": "☀磁力🔹在线",
+      "name": "☀磁链🔹在线",
       "type": 3,
       "api": "csp_Mp4Mov",
       "searchable": 1,
@@ -1202,7 +1202,7 @@
     },
     {
       "key": "csp_New6v",
-      "name": "☀磁力🔹新六",
+      "name": "☀磁链🔹新六",
       "type": 3,
       "api": "csp_New6v",
       "searchable": 1,
@@ -1212,7 +1212,7 @@
     },
     {
       "key": "csp_SeedHub",
-      "name": "☀磁力🔹狐播",
+      "name": "☀磁链🔹狐播",
       "type": 3,
       "api": "csp_SeedHub",
       "searchable": 1,
@@ -1221,7 +1221,7 @@
     },
     {
       "key": "csp_KubaCL",
-      "name": "☀磁力🔹酷吧",
+      "name": "☀磁链🔹酷吧",
       "type": 3,
       "api": "csp_KubaCL",
       "searchable": 1,
@@ -1230,7 +1230,7 @@
     },
     {
       "key": "csp_MeijuMi",
-      "name": "☀磁力🔹美剧",
+      "name": "☀磁链🔹美剧",
       "type": 3,
       "api": "csp_MeijuMi",
       "searchable": 1,
@@ -1239,7 +1239,7 @@
     },
     {
       "key": "csp_Xunlei8",
-      "name": "☀磁力🔹迅雷",
+      "name": "☀磁链🔹迅雷",
       "type": 3,
       "api": "csp_Xunlei8",
       "searchable": 1,
@@ -1465,11 +1465,11 @@
       "changeable": 1
     },
     {
-      "key": "奇米动漫",
-      "name": "🦸‍♂️奇米🔹动漫",
+      "key": "奇妙动漫",
+      "name": "🦸‍♂️奇妙🔹动漫",
       "type": 3,
       "api": "./js/drpy2.min.js",
-      "ext": "./js/奇米动漫.js",
+      "ext": "./js/奇妙动漫.js",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1

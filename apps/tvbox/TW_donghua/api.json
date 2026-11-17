@@ -263,11 +263,11 @@
       "changeable": 1
     },
     {
-      "key": "奇米动漫",
-      "name": "奇米⭐动漫",
+      "key": "奇妙动漫",
+      "name": "奇妙⭐动漫",
       "type": 3,
       "api": "./js/drpy2.min.js",
-      "ext": "./js/奇米动漫.js",
+      "ext": "./js/奇妙动漫.js",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
