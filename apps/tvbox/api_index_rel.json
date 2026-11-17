@@ -1,17 +1,49 @@
 {
-  "updateTime": "2026-11-08 18:25",
+  "updateTime": "2026-11-17",
   "urls": [
     {
-      "name": "综合",
-      "url": "./std/api.json"
+      "name": "天微·综合",
+      "url": "./TW_std/api.json"
     },
     {
-      "name": "少儿",
-      "url": "./kids/api.json"
+      "name": "天微·影视",
+      "url": "./TW_main/api.json"
     },
     {
-      "name": "长辈",
-      "url": "./elders/api.json"
+      "name": "天微·动漫",
+      "url": "./TW_anime/api.json"
+    },
+    {
+      "name": "天微·智教",
+      "url": "./TW_smart/api.json"
+    },
+    {
+      "name": "天微·短剧",
+      "url": "./TW_short/api.json"
+    },
+    {
+      "name": "天微·体育",
+      "url": "./TW_sport/api.json"
+    },
+    {
+      "name": "天微·音乐",
+      "url": "./TW_music/api.json"
+    },
+    {
+      "name": "天微·曲艺",
+      "url": "./TW_quyi/api.json"
+    },
+    {
+      "name": "SL·综合",
+      "url": "./SL_std/api.json"
+    },
+    {
+      "name": "SL·少儿",
+      "url": "./SL_kids/api.json"
+    },
+    {
+      "name": "SL·长辈",
+      "url": "./SL_elders/api.json"
     }
   ]
 }
